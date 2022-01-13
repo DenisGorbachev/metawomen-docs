@@ -3,9 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
-                        <base href="/">
-        
+        <title>Risks - Coliquidity</title>
+                
 
         <!-- Custom HTML head -->
         
@@ -83,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="quick-links.html">Quick links</a></li><li class="chapter-item expanded affix "><a href="what-is-coliquidity.html">What is Coliquidity?</a></li><li class="chapter-item expanded affix "><a href="making-money.html">Making money</a></li><li class="chapter-item expanded affix "><a href="why-should-i-use-coliquidity.html">Why should i use it?</a></li><li class="chapter-item expanded affix "><a href="how-does-it-works.html">How does it works?</a></li><li class="chapter-item expanded affix "><a href="risks.html">Risks</a></li><li class="chapter-item expanded affix "><a href="examples.html">Examples</a></li><li class="chapter-item expanded affix "><a href="FAQ.html">FAQ</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="quick-links.html">Quick links</a></li><li class="chapter-item expanded affix "><a href="what-is-coliquidity.html">What is Coliquidity?</a></li><li class="chapter-item expanded affix "><a href="making-money.html">Making money</a></li><li class="chapter-item expanded affix "><a href="why-should-i-use-coliquidity.html">Why should i use it?</a></li><li class="chapter-item expanded affix "><a href="how-does-it-works.html">How does it works?</a></li><li class="chapter-item expanded affix "><a href="risks.html" class="active">Risks</a></li><li class="chapter-item expanded affix "><a href="examples.html">Examples</a></li><li class="chapter-item expanded affix "><a href="FAQ.html">FAQ</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -144,14 +143,63 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="risks"><a class="header" href="#risks">Risks</a></h1>
+<h2 id="what-are-the-risks"><a class="header" href="#what-are-the-risks">What are the risks?</a></h2>
+<ul>
+<li><a href="#who-is-bearing-impermanent-loss-risk?">Impermanent loss risk</a></li>
+<li>Minimal <a href="#for-existing-non-stablecoin-pools">for stablecoin pools</a>.</li>
+<li>Equivalent to long position <a href="#for-existing-stablecoin-pools">for non-stablecoin pools</a>.</li>
+<li>Smart contract hack risk</li>
+<li>Will be minimized with audits (we have partnered with Zokyo).</li>
+<li>Time-value risk (you need to deposit tokens &amp; wait for somebody to take the other side of your coliquidity position):</li>
+<li>Will be minimized with high volume &amp; high user count of the Coliquidity platform.</li>
+</ul>
+<h2 id="what-are-the-non-risks"><a class="header" href="#what-are-the-non-risks">What are the non-risks?</a></h2>
+<ul>
+<li>No smart contract ownership risk</li>
+<li>Coliquidity contract owner can only change the fee, can’t change balances.</li>
+<li>No upgradeable proxy risk:</li>
+<li>Coliquidity contracts are deployed without an upgradeable proxy.</li>
+<li>There will be a version with an upgradeable proxy used during beta testing.</li>
+<li>No stuck funds risk:</li>
+<li>You can always withdraw your tokens if nobody takes the other side of your coliquidity position.</li>
+</ul>
+<h2 id="why-coliquidity-is-less-risky-than-providing-liquidity"><a class="header" href="#why-coliquidity-is-less-risky-than-providing-liquidity">Why Coliquidity is less risky than providing liquidity?</a></h2>
+<p><strong>Short version</strong></p>
+<ul>
+<li>Because you don’t need to buy the second token.</li>
+</ul>
+<p><strong>Long version</strong></p>
+<ul>
+<li>Suppose you provide liquidity directly. You make money if the price is stable. You lose money if the price goes down, and you lose twice, because both sides of your position are worth less (base token is worth less because the price is down + quote token is worth less because its quantity has decreased due to selling).</li>
+<li>Suppose you provide one-sided liquidity via Coliquidity. You make money if the price is stable, because Coliquidity gives you the same LP fees (proportional to your liquidity amount). You lose money if the price goes down, but you lose less than with regular liquidity provisioning, because only the quote token quantity is decreased (you don’t hold the base token, so it doesn’t influence your PnL).</li>
+<li>Coliquidity makes your position behave differently from regular liquidity provider position. You make money if the price goes up (but not as much as with a long position). You lose money if the price goes down (but not as much as with a long position). Essentially, it’s an under-leveraged long position (if you provide the quote token) or an under-leveraged short position (if you provide the base token).</li>
+</ul>
+<p><strong>Simulations</strong></p>
+<ul>
+<li>(WARN_UNRECOGNIZED_ELEMENT: RICH_LINK)
+(see scenarios with “High volatility” = FALSE, they are essentially stablecoin pools)</li>
+</ul>
+<h2 id="who-is-bearing-impermanent-loss-risk"><a class="header" href="#who-is-bearing-impermanent-loss-risk">Who is bearing impermanent loss risk?</a></h2>
+<p>If one provider takes a loss, the other provider makes a profit. This happens because providers withdraw the same type of tokens that they deposited. So, if Alice deposits ABC, Bob deposits USDT, then ABC-USDT price goes up, there will be less ABC and more USDT in the pool, so Alice will take a loss, and Bob will make a profit. It works the other way, too: if the ABC-USDT price goes down, there will be more ABC and less USDT in the pool, so Alice will make a profit, and Bob will take a loss.</p>
+<p>The risk is symmetric:</p>
+<ul>
+<li>If the price goes up, Alice loses and Bob wins</li>
+<li>If the price goes down, Alice wins and Bob loses</li>
+</ul>
+<p>It works a bit like a perpetual swap, but the traders don’t pay trading fees - instead, they receive liquidity provider fees (both of them).</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="how-does-it-works.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
+                                                    <a rel="next" href="examples.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -159,7 +207,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="how-does-it-works.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
+                                    <a rel="next" href="examples.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                             </nav>
 
         </div>

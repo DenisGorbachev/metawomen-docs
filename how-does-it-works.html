@@ -3,9 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
-                        <base href="/">
-        
+        <title>How does it works? - Coliquidity</title>
+                
 
         <!-- Custom HTML head -->
         
@@ -83,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="quick-links.html">Quick links</a></li><li class="chapter-item expanded affix "><a href="what-is-coliquidity.html">What is Coliquidity?</a></li><li class="chapter-item expanded affix "><a href="making-money.html">Making money</a></li><li class="chapter-item expanded affix "><a href="why-should-i-use-coliquidity.html">Why should i use it?</a></li><li class="chapter-item expanded affix "><a href="how-does-it-works.html">How does it works?</a></li><li class="chapter-item expanded affix "><a href="risks.html">Risks</a></li><li class="chapter-item expanded affix "><a href="examples.html">Examples</a></li><li class="chapter-item expanded affix "><a href="FAQ.html">FAQ</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="quick-links.html">Quick links</a></li><li class="chapter-item expanded affix "><a href="what-is-coliquidity.html">What is Coliquidity?</a></li><li class="chapter-item expanded affix "><a href="making-money.html">Making money</a></li><li class="chapter-item expanded affix "><a href="why-should-i-use-coliquidity.html">Why should i use it?</a></li><li class="chapter-item expanded affix "><a href="how-does-it-works.html" class="active">How does it works?</a></li><li class="chapter-item expanded affix "><a href="risks.html">Risks</a></li><li class="chapter-item expanded affix "><a href="examples.html">Examples</a></li><li class="chapter-item expanded affix "><a href="FAQ.html">FAQ</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -144,14 +143,55 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="how-does-it-work"><a class="header" href="#how-does-it-work">How does it work?</a></h1>
+<ul>
+<li><a href="#for-new-pools">For new pools</a></li>
+<li><a href="#for-existing-stablecoin-pools">For existing stablecoin pools</a></li>
+<li><a href="#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a></li>
+</ul>
+<h2 id="for-new-pools"><a class="header" href="#for-new-pools">For new pools</a></h2>
+<ul>
+<li>The project deposits ABC tokens into the Coliquidity smart contract.</li>
+<li>The investors deposit WETH tokens into the Coliquidity smart contract.</li>
+<li>When there is enough WETH liquidity, the project triggers the creation of a new pool though Coliquidity contract.</li>
+<li>The Coliquidity contract deploys a new ABC-WETH pool using combined liquidity from the project &amp; the investors.</li>
+</ul>
+<h2 id="for-existing-stablecoin-pools"><a class="header" href="#for-existing-stablecoin-pools">For existing stablecoin pools</a></h2>
+<ul>
+<li>Alice &amp; Bob decide to put their stablecoins into the DAI-USDT pool to earn LP fees.</li>
+<li>Alice deposits DAI tokens into the Coliquidity smart contract.</li>
+<li>Bob deposits USDT tokens into the Coliquidity smart contract.</li>
+<li>The Coliquidity contract combines DAI + USDT and puts them into the DAI-USDT pool.</li>
+<li>When either Alice or Bob requests a withdrawal, Alice gets her DAI deposit + DAI fees, Bob gets his USDT deposit + USDT fees.</li>
+<li>If DAI-USDT price doesn’t change: both Alice &amp; Bob earn the fees.</li>
+<li>If DAI-USDT price does change: this scenario is equivalent to “<a href="#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a>”</li>
+</ul>
+<p>See also:</p>
+<ul>
+<li><a href="#what-if-a-single-provider-requests-a-withdrawal?">What if a single provider requests a withdrawal?</a></li>
+</ul>
+<h2 id="for-existing-non-stablecoin-pools"><a class="header" href="#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a></h2>
+<ul>
+<li>Alice deposits ABC tokens into the Coliquidity smart contract.</li>
+<li>Bob deposits WETH tokens into the Coliquidity smart contract.</li>
+<li>The Coliquidity contract combines ABC + WETH and puts them into the ABC-WETH pool.</li>
+<li>When either Alice or Bob requests a withdrawal, Alice gets her ABC deposit + ABC fees, Bob gets his WETH deposit + WETH fees.</li>
+<li>If ABC-WETH price doesn’t change: both Alice &amp; Bob earn the fees.</li>
+<li>If ABC-WETH price goes up: there will be less ABC and more WETH in the pool, so Alice will get less ABC + ABC fees, Bob will get more WETH + WETH fees. It works like a long position for Bob.</li>
+<li>If ABC-WETH price goes down: there will be more ABC and less WETH in the pool, so Alice will get more ABC + ABC fees, Bob will get less WETH + WETH fees. It works like a short position for Alice (e.g. she believed ABC would crash short-term but recover long-term, so she put her ABC in the pool to make more ABC short-term).</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="why-should-i-use-coliquidity.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
+                                                    <a rel="next" href="risks.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -159,7 +199,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="why-should-i-use-coliquidity.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
+                                    <a rel="next" href="risks.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                             </nav>
 
         </div>
