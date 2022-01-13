@@ -9,4 +9,4 @@
 
 See also:
 
-- [What is Coliquidity](#what-is-coliquidity?)
+- [What is Coliquidity](what-is-coliquidity.md)

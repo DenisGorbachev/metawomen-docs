@@ -1,4 +1,6 @@
-# Can I try Coliquidity on testnet?
+# FAQ
+
+## Can I try Coliquidity on testnet?
 
 Yes, you can try it on the following networks:
 
@@ -18,14 +20,14 @@ Click “Contract > Read contract” to see the list of available calls:
 - Use “positionsByMaker” to see your positions in which you are the maker (offer creator)
 - Use “positionsByMaker” to see your positions in which you are the taker (position creator)
 
-# When can I withdraw?
+## When can I withdraw?
 
 - Regular positions: you can withdraw anytime.
 - Timelocked positions: you can withdraw as soon as the lock period finishes.
 
 The timelocked positions are created by accepting timelocked offers. The app will clearly mark such offers & show the lock period, so that you can decide if you want to accept it. Normally, timelocked offers come with additional benefits (for example, extra project tokens).
 
-# Why Coliquidity is more profitable than buying tokens?
+## Why Coliquidity is more profitable than buying tokens?
 
 **Short version**
 
@@ -35,7 +37,7 @@ The timelocked positions are created by accepting timelocked offers. The app wil
 **Long version**
 
 - Suppose you buy & sell the token directly. You lose on LP fees & slippage two times (both when buying & when selling). Your profit depends on the price change, minus LP fees, minus slippage.
-- Suppose you provide [one-sided](#how-does-it-works?) liquidity via Coliquidity. You earn LP fees, you have no slippage. Your profit is a function of the price difference plus gains on fees.
+- Suppose you provide [one-sided](how-it-works.md) liquidity via Coliquidity. You earn LP fees, you have no slippage. Your profit is a function of the price difference plus gains on fees.
 - Coliquidity makes your position less sensitive to price difference. That means you lose less & gain less compared to a regular long position. However, Coliquidity gives you LP fees. Therefore, Coliquidity gives you a better risk/reward profile (because price sensitivity is decreased symmetrically, but the fees are always a plus)
 
 **Simulations**
@@ -46,13 +48,13 @@ The timelocked positions are created by accepting timelocked offers. The app wil
   **Note**
   Coliquidity works best for long-term positions (it accumulates more LP fees). For very short-term positions, it’s better to simply buy & sell tokens. One exception is high-volume high-volatility markets - in these it’s more profitable to use Coliquidity even for short-term positions.
 
-# I run the ABC project. Should I provide ABC tokens into the Coliquidity contract?
+## I run the ABC project. Should I provide ABC tokens into the Coliquidity contract?
 
 Yes, if you want to get more liquidity.
 
 More liquidity → Less slippage → More traders → Higher volume.
 
-# How much will I receive if I withdraw now?
+## How much will I receive if I withdraw now?
 
 WithdrawalAmount = PoolLiquidity \* PoolShare
 
@@ -64,7 +66,7 @@ Short example:
 
 We’re working on a UI update where you will be able to see the withdrawal amount automatically (no manual calculations).
 
-# What if a single provider requests a withdrawal?
+## What if a single provider requests a withdrawal?
 
 The smart contract will check **the timelock** of the coliquidity position:
 
@@ -79,7 +81,7 @@ The smart contract will check **the timelock** of the coliquidity position:
 - The provider can change the default action from “send the token” to “leave the token in the Coliquidity contract” by setting “reinvest” option to “true”. This is recommended for providers who want to invest for long term.
 - Both providers will receive tokens at the same time, even if only a single provider requests a withdrawal. This implementation prevents a deadlock, which could happen if both provider votes were required and one of the providers would become unavailable.
 
-# Is Coliquidity the same as Uniswap V3?
+## Is Coliquidity the same as Uniswap V3?
 
 No, it’s a different concept.
 
@@ -90,7 +92,7 @@ With Coliquidity, you’re making money immediately & always. With Uniswap, you�
 
 Proof: [Uniswap docs](https://help.uniswap.org/en/articles/5406286-faq-provide-liquidity-on-uniswap-v3) (search for “single-sided liquidity”).
 
-# Does Coliquidity work in a bear market?
+## Does Coliquidity work in a bear market?
 
 Yes, you can make money using Coliquidity in a bear market. For example:
 
@@ -101,13 +103,13 @@ Yes, you can make money using Coliquidity in a bear market. For example:
 - There is more ETH in the pool / less USDT in the pool.
 - You take out more ETH, because your pool share stays the same (always, no matter whether it’s bull or bear market).
 
-# What pairs support Coliquidity?
+## What pairs support Coliquidity?
 
 Any pair with a liquidity pool supports Coliquidity.
 
 We will build an application where the users could provide coliquidity for a single side of the position, see the offers of other users & provide the second side of the mutual coliquidity position.
 
-# What exchanges support Coliquidity?
+## What exchanges support Coliquidity?
 
 All decentralized exchanges that use liquidity pools can also use Coliquidity. For example:
 
@@ -117,7 +119,7 @@ All decentralized exchanges that use liquidity pools can also use Coliquidity. F
 - TraderJoe
 - … many more
 
-# What blockchains support Coliquidity?
+## What blockchains support Coliquidity?
 
 Any EVM-compatible blockchain supports Coliquidity. For example:
 
@@ -131,7 +133,7 @@ Any EVM-compatible blockchain supports Coliquidity. For example:
 
 We have plans to port Coliquidity to blockchains with other VM implementations (e.g. Solana).
 
-# Who pays for gas?
+## Who pays for gas?
 
 The user who called the Coliquidity smart contract pays for gas.
 
@@ -139,7 +141,7 @@ If the call results in opening a new pool, the user pays for opening a new pool 
 
 We also have plans to integrate Coliquidity with the [Ethereum Gas Station Network](https://docs.opengsn.org/). As soon as this integration is implemented, the users won’t need to pay for gas anymore.
 
-# What is 1-Click Liquidity?
+## What is 1-Click Liquidity?
 
 1-Click Liquidity is a widget for providing liquidity into your pool.
 
@@ -151,7 +153,7 @@ All without leaving your project website.
 
 Interested to learn more? Schedule a call with us (if you have a direct contact), or send a message to our general [Telegram group](https://t.me/ShieldFinanceHQ).
 
-# How to prepare for a token launch?
+## How to prepare for a token launch?
 
 _Note: this is a temporary instruction for project owners. We are currently developing a user interface that would automate most of these steps._
 
@@ -175,7 +177,7 @@ _Note: this is a temporary instruction for project owners. We are currently deve
 1. Deposit liquidity into Coliquidity smart contract:
 1. Open Coliquidity
 
-## Example for $TAUR-$BUSD mainnet pool
+### Example for $TAUR-$BUSD mainnet pool
 
 1. Approve on [TAUR contract page](https://www.bscscan.com/token/0x19b99162adaab85134e781ac0048c275c31b205a#writeContract):
 1. method:
@@ -192,7 +194,7 @@ _Note: this is a temporary instruction for project owners. We are currently deve
 1. pausedUntil: 0
 1. lockedUntil: 0
 
-# Does Coliquidity protect from a rugpull?
+## Does Coliquidity protect from a rugpull?
 
 Yes - if the project sets Offer.lockedUntil parameter to a specific timestamp in future. No rugpull is possible until Offer.lockedUntil is passed.
 
@@ -200,20 +202,20 @@ Here’s a more technical explanation. Coliquidity provides a special parameter:
 
 Please note that Offer.lockedUntil can be set to 0, which allows withdrawals anytime.
 
-# Is liquidity mining possible with Coliquidity?
+## Is liquidity mining possible with Coliquidity?
 
 Yes, please see details below:
 
 - For users: simply provide liquidity using the Coliquidity smart contract.
 - For projects: Please note that LP tokens do not show up in the users’ wallets - they are locked in the Coliquidity contract. That means you need to adjust the reward calculation algorithm to make a call to fetch the LP token balance from the Coliquidity contract. Otherwise, you can run the same liquidity mining program as you planned.
 
-# Can I short tokens with Coliquidity?
+## Can I short tokens with Coliquidity?
 
 Yes, you can short the tokens that you own. Please note that when you close the short, you will receive a lot of tokens that you’ve shorted. This happens because closing the short means withdrawing liquidity, and you receive the same token when you withdraw from the pool.
 
 To maximize profit, you should short the tokens that are going down right now, but will be going up in future (according to your analysis).
 
-# Can I migrate my existing liquidity to Coliquidity?
+## Can I migrate my existing liquidity to Coliquidity?
 
 - If you plan to provide liquidity with only one token: yes, you can migrate liquidity manually using the following steps (we’ll automate this in our app soon):
 - Withdraw liquidity from the pool.
@@ -221,22 +223,22 @@ To maximize profit, you should short the tokens that are going down right now, b
 - Deposit liquidity into the Coliquidity contract.
 - If you plan to provide liquidity with both tokens: no need to migrate. However, please consider that one of the tokens may go down in value relative to another token. With Coliquidity, you can prevent such loss by converting the full position into this token and providing liquidity using only this token.
 
-# Is Coliquidity related to Market Crash Protection?
+## Is Coliquidity related to Market Crash Protection?
 
 Coliquidity and Market Crash Protection are two different products. We intend to develop them separately, see which one generates more revenue & focus on that one (choose the most successful product).
 
-# Is Coliquidity similar to Uniswap?
+## Is Coliquidity similar to Uniswap?
 
 Coliquidity works with existing decentralized exchanges - it doesn’t replace them. So the answer has two parts:
 
 - Yes, you can use Coliquidity to provide liquidity into the pools on Uniswap / SushiSwap / PancakeSwap / other exchanges.
 - No, you can’t use Coliquidity to buy & sell tokens (you can just use existing exchanges).
 
-Additionally, Coliquidity is similar to Uniswap because it’s also a marketplace ([read more](#is-coliquidity-a-marketplace?)).
+Additionally, Coliquidity is similar to Uniswap because it’s also a marketplace ([read more](#is-coliquidity-a-marketplace)).
 
-See also: [Is Coliquidity the same as Uniswap V3?](#is-coliquidity-the-same-as-uniswap-v3?)
+See also: [Is Coliquidity the same as Uniswap V3?](#is-coliquidity-the-same-as-uniswap-v3)
 
-# Is Coliquidity a marketplace?
+## Is Coliquidity a marketplace?
 
 Yes, Coliquidity matches the liquidity providers who have different tokens & want to deposit into the same pool together. For example:
 
@@ -247,9 +249,9 @@ Yes, Coliquidity matches the liquidity providers who have different tokens & wan
 
 Being a marketplace is **a competitive advantage**. People start trading where others are already trading. So if we get a core user base, it will grow naturally, and people will be wary of using competitors (who are not original implementers of the idea).
 
-We will get the core user base by executing our [marketing plan](#what-is-your-marketing-plan?) for Coliquidity.
+We will get the core user base by executing our [marketing plan](#what-is-your-marketing-plan) for Coliquidity.
 
-# What is your marketing plan?
+## What is your marketing plan?
 
 - Launch [Moonshot](https://docs.google.com/document/d/1kzOJbNYqf1kqeMbNsRVADGGh8zwNwMHvSbz0ZngdAOg/edit#) to demonstrate the benefits of Coliquidity to other projects.
 - Ask other projects to tell their followers that they can use Coliquidity to provide liquidity in the project's pool:
@@ -261,18 +263,18 @@ We will get the core user base by executing our [marketing plan](#what-is-your-m
 - New influencers who don’t know about us yet.
 - Ask our marketing partners to spread the information about Coliquidity via word-of-mouth in Telegram groups & Twitter comments.
 
-# Do you have competitors?
+## Do you have competitors?
 
 As of 08 Jan 2022, we have not heard of any projects with the same idea.
 
-# How will you open a liquidity pool on PancakeSwap?
+## How will you open a liquidity pool on PancakeSwap?
 
 We will use Coliquidity to open the SHLD-WBNB pool on PancakeSwap. The specific plan will be announced closer to launch date. However, we can share some details already:
 
 - The price will be lower than on SHLD-WETH pool (to incentivize traders to buy immediately on launch).
 - The Coliquidity pool will have a hard cap (to incentivize providers to deposit earlier to secure their allocation).
 
-# What is the project status?
+## What is the project status?
 
 Updated on Nov 08, 2021:
 
@@ -282,11 +284,11 @@ Updated on Nov 08, 2021:
 - Done: [Used Coliquidity during $TAUR token launch](https://medium.com/marnotaur/add-your-one-sided-liquidity-to-taur-busd-pool-36314059e546)
 - Working now: get more partners to launch their tokens using Coliquidity.
 
-# Do you already have users?
+## Do you already have users?
 
 Yes, we already have users on Binance Smart Chain Mainnet (people who deposited during the [Marnotaur token launch](https://medium.com/marnotaur/add-your-one-sided-liquidity-to-taur-busd-pool-36314059e546)).
 
-# What is Coliquidity launch date?
+## What is Coliquidity launch date?
 
 The Coliquidity launch is split into two phases:
 

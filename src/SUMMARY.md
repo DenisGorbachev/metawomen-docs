@@ -2,13 +2,15 @@
 
 [Quick links](quick-links.md)
 
-[What is Coliquidity?](what-is-coliquidity.md)
+[What is Coliquidity](what-is-coliquidity.md)
 
 [Making money](making-money.md)
 
-[Why should i use it?](why-should-i-use-coliquidity.md)
+[Why should i use Coliquidity](why-should-i-use-coliquidity.md)
 
-[How does it works?](how-does-it-works.md)
+[How it works](how-it-works.md)
+
+[Pricing](pricing.md)
 
 [Risks](risks.md)
 

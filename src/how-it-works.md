@@ -1,4 +1,4 @@
-# How does it work?
+# How it works
 
 - [For new pools](#for-new-pools)
 - [For existing stablecoin pools](#for-existing-stablecoin-pools)
@@ -23,7 +23,7 @@
 
 See also:
 
-- [What if a single provider requests a withdrawal?](#what-if-a-single-provider-requests-a-withdrawal?)
+- [What if a single provider requests a withdrawal?](FAQ.md#what-if-a-single-provider-requests-a-withdrawal)
 
 ## For existing non-stablecoin pools
 
