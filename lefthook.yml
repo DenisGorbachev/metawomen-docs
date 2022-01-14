@@ -1,0 +1,6 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint-markdown:
+      glob: "*.md"
+      run: yarn lint:markdown {staged_files}

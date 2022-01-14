@@ -1,6 +1,6 @@
 # Can you show by example how to make money using Coliquidity?
 
-### Specific example for $TAUR token
+## Specific example for $TAUR token
 
 Short version:
 
@@ -21,7 +21,7 @@ Detailed instruction:
 9. Confirm transactions.
 10. Celebrate! You have withdrawn **more BUSD** than you deposited.
 
-### General example for any token
+## General example for any token
 
 1. Find a token that is going up.
 2. Ensure that this token has already been deposited into the Coliquidity smart contract by the project team.
