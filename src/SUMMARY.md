@@ -1,21 +1,17 @@
 # Summary
 
-[Quick links](quick-links.md)
-
 [What is Coliquidity](what-is-coliquidity.md)
+[Should I use Coliquidity?](why-should-i-use-coliquidity.md)
+[How can I make money with Coliquidity?](making-money.md)
 
-[Making money](making-money.md)
+## General
 
-[Why should i use Coliquidity](why-should-i-use-coliquidity.md)
+- [How it works](how-it-works.md)
+- [Pricing](pricing.md)
+- [Risks](risks.md)
+- [Examples](examples.md)
+- [FAQ](FAQ.md)
 
-[How it works](how-it-works.md)
+## Rebrand
 
-[Pricing](pricing.md)
-
-[Risks](risks.md)
-
-[Examples](examples.md)
-
-[FAQ](FAQ.md)
-
-[Rebrand FAQ](RebrandFAQ.md)
+- [FAQ](RebrandFAQ.md)
