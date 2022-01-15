@@ -1,10 +1,12 @@
 # Summary
 
+<!-- markdownlint-disable MD025 -->
+
 [What is Coliquidity](what-is-coliquidity.md)
 [Should I use Coliquidity?](why-should-i-use-coliquidity.md)
 [How can I make money with Coliquidity?](making-money.md)
 
-## General
+# General
 
 - [How it works](how-it-works.md)
 - [Pricing](pricing.md)
@@ -12,6 +14,6 @@
 - [Examples](examples.md)
 - [FAQ](FAQ.md)
 
-## Rebrand
+# Rebrand
 
 - [FAQ](RebrandFAQ.md)
