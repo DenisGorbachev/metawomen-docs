@@ -4,9 +4,6 @@
 
 Shield Finance is rebranding to Coliquidity. It's a new product that allows users to provide one-sided liquidity for any token pair ([learn more](./how-it-works.md)). Thus, we are changing the following:
 
-
-
-
 * shieldfinance.io -> coliquidity.app
 * $SHLD token on Ethereum -> $COLI token on Binance Smart Chain
 * $BULL token on Ethereum -> $BULL token on Binance Smart Chain
@@ -29,6 +26,11 @@ After the migration happens, you should follow the same process as in "[How to c
 ](https://shield-finance.medium.com/how-to-claim-bull-token-airdrop-7255443fd704)" (using the new contract on Binance Smart Chain).
 
 We will provide more details closer to the [migration date](#when-is-it-happening).
+
+## Do I need to pay a fee to claim the tokens?
+
+* To claim $COLI: no fee.
+* To claim $BULL: single transaction fee.
 
 ## What will happen with old $SHLD and $BULL tokens?
 
