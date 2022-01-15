@@ -17,3 +17,5 @@
 [Examples](examples.md)
 
 [FAQ](FAQ.md)
+
+[Rebrand FAQ](RebrandFAQ.md)
