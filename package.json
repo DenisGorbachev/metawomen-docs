@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "mdbook serve",
     "lint": "yarn lint:markdown",
-    "lint:markdown": "markdownlint --fix --ignore node_modules **/*.md"
+    "lint:markdown": "markdownlint --fix --ignore node_modules **/*.md",
+    "postinstall": "lefthook install"
   },
   "dependencies": {
     "markdown-link-check": "^3.9.0",
