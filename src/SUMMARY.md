@@ -2,7 +2,7 @@
 
 <!-- markdownlint-disable MD025 -->
 
-[What is Coliquidity](what-is-coliquidity.md)
+[What is Coliquidity?](what-is-coliquidity.md)
 [Should I use Coliquidity?](why-should-i-use-coliquidity.md)
 [How can I make money with Coliquidity?](making-money.md)
 
