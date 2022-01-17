@@ -25,10 +25,10 @@ Detailed instruction:
 
 1. Find a token that is going up.
 2. Ensure that this token has already been deposited into the Coliquidity smart contract by the project team.
-3. If not: you can ask the project team to do it (send them a link to this FAQ).
-4. Open the Coliquidity app using the link provided by the project team (should contain the preset for their token).
-5. Fill the form to deposit liquidity.
-6. Wait until the token goes up.
-7. Open the Coliquidity app to withdraw liquidity.
-8. Fill the form to withdraw liquidity.
-9. Celebrate! You have withdrawn **more money** than you deposited.
+   - If not: you can ask the project team to do it (send them a link to this FAQ).
+3. Open the Coliquidity app using the link provided by the project team (should contain the preset for their token).
+4. Fill the form to deposit liquidity.
+5. Wait until the token goes up.
+6. Open the Coliquidity app to withdraw liquidity.
+7. Fill the form to withdraw liquidity.
+8. Celebrate! You have withdrawn **more money** than you deposited.

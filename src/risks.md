@@ -8,17 +8,17 @@
 - Smart contract hack risk
 - Will be minimized with audits (we have partnered with Zokyo).
 - Time-value risk (you need to deposit tokens & wait for somebody to take the other side of your coliquidity position):
-- Will be minimized with high volume & high user count of the Coliquidity platform.
+  - Will be minimized with high volume & high user count of the Coliquidity platform.
 
 ## What are the non-risks?
 
 - No smart contract ownership risk
 - Coliquidity contract owner can only change the fee, can’t change balances.
 - No upgradeable proxy risk:
-- Coliquidity contracts are deployed without an upgradeable proxy.
-- There will be a version with an upgradeable proxy used during beta testing.
+  - Coliquidity contracts are deployed without an upgradeable proxy.
+  - There will be a version with an upgradeable proxy used during beta testing.
 - No stuck funds risk:
-- You can always withdraw your tokens if nobody takes the other side of your coliquidity position.
+  - You can always withdraw your tokens if nobody takes the other side of your coliquidity position.
 
 ## Why Coliquidity is less risky than providing liquidity?
 

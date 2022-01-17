@@ -72,8 +72,8 @@ The smart contract will check **the timelock** of the coliquidity position:
 
 - If the timelock hasn’t expired yet, the smart contract will deny withdrawal.
 - If the timelock has expired, the smart contract will withdraw the requested part of the position:
-- Send token 1 to the provider of token 1.
-- Send token 2 to the provider of token 2.
+  - Send token 1 to the provider of token 1.
+  - Send token 2 to the provider of token 2.
 
 **Notes:**
 
@@ -158,41 +158,46 @@ Interested to learn more? Schedule a call with us (if you have a direct contact)
 _Note: this is a temporary instruction for project owners. We are currently developing a user interface that would automate most of these steps._
 
 1. Choose how much liquidity you want to see in the pool:
-1. We recommend to choose the token amount equivalent to $150000 - $200000.
-1. Approve liquidity amount for depositing into Coliquidity smart contract:
-1. Open your token contract on blockchain explorer
-1. Click “Contract”
-1. Click “Write contract”
-1. Find “approve” function
-1. Fill approve function form:
-1. Address: [Coliquidity address - see below]
-1. Open [Coliquidity Info](https://app.shieldfinance.io/coliquidity/info)
-1. Find the address for your network
-1. Copy the address
-1. Amount: [Amount of tokens multiplied by 10 in power of [decimals]]
-1. **Important: the amount must be multiplied by 10 ^ [your token decimals], otherwise you will approve an insufficient amount.**
-1. Click “Write”
-1. Confirm transaction
-1. Wait until transaction is confirmed
-1. Deposit liquidity into Coliquidity smart contract:
-1. Open Coliquidity
+
+   - We recommend to choose the token amount equivalent to $150000 - $200000.
+
+2. Approve liquidity amount for depositing into Coliquidity smart contract:
+
+   - Open your token contract on blockchain explorer
+   - Click “Contract”
+   - Click “Write contract”
+   - Find “approve” function
+   - Fill approve function form:
+     - Address: [Coliquidity address - see below]
+       - Open [Coliquidity Info](https://app.shieldfinance.io/coliquidity/info)
+       - Find the address for your network
+       - Copy the address
+     - Amount: [Amount of tokens multiplied by 10 in power of [decimals]]
+       - **Important: the amount must be multiplied by 10 ^ [your token decimals], otherwise you will approve an insufficient amount.**
+   - Click “Write”
+   - Confirm transaction
+   - Wait until transaction is confirmed
+
+3. Deposit liquidity into Coliquidity smart contract:
+
+   - Open Coliquidity
 
 ### Example for $TAUR-$BUSD mainnet pool
 
 1. Approve on [TAUR contract page](https://www.bscscan.com/token/0x19b99162adaab85134e781ac0048c275c31b205a#writeContract):
-1. method:
-1. address: 0xcd9dc4C48DDC0e578bd2C42254841f0223b88a3F
-1. amount: 120000 TAUR \* 10 ^ 18 decimals = 120000000000000000000000
+   - method:
+   - address: 0xcd9dc4C48DDC0e578bd2C42254841f0223b88a3F
+   - amount: 120000 TAUR \* 10 ^ 18 decimals = 120000000000000000000000
 1. Create offer on [Coliquidity contract page](https://bscscan.com/address/0xcd9dc4C48DDC0e578bd2C42254841f0223b88a3F#writeContract):
-1. makerToken: 0x19b99162adaab85134e781ac0048c275c31b205a
-1. makerAmount: 120000 TAUR \* 10 ^ 18 decimals = 120000000000000000000000
-1. taker: 0x0000000000000000000000000000000000000000
-1. takerTokens: [0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56]
-1. makerDenominator: 0
-1. takerDenominator: 0
-1. reinvest: true
-1. pausedUntil: 0
-1. lockedUntil: 0
+   - makerToken: 0x19b99162adaab85134e781ac0048c275c31b205a
+   - makerAmount: 120000 TAUR \* 10 ^ 18 decimals = 120000000000000000000000
+   - taker: 0x0000000000000000000000000000000000000000
+   - takerTokens: [0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56]
+   - makerDenominator: 0
+   - takerDenominator: 0
+   - reinvest: true
+   - pausedUntil: 0
+   - lockedUntil: 0
 
 ## Does Coliquidity protect from a rugpull?
 
@@ -218,9 +223,9 @@ To maximize profit, you should short the tokens that are going down right now, b
 ## Can I migrate my existing liquidity to Coliquidity?
 
 - If you plan to provide liquidity with only one token: yes, you can migrate liquidity manually using the following steps (we’ll automate this in our app soon):
-- Withdraw liquidity from the pool.
-- (Optional) Consolidate position: swap one token for another to double the size of your liquidity position.
-- Deposit liquidity into the Coliquidity contract.
+  - Withdraw liquidity from the pool.
+  - (Optional) Consolidate position: swap one token for another to double the size of your liquidity position.
+  - Deposit liquidity into the Coliquidity contract.
 - If you plan to provide liquidity with both tokens: no need to migrate. However, please consider that one of the tokens may go down in value relative to another token. With Coliquidity, you can prevent such loss by converting the full position into this token and providing liquidity using only this token.
 
 ## Is Coliquidity related to Market Crash Protection?
@@ -255,12 +260,12 @@ We will get the core user base by executing our [marketing plan](#what-is-your-m
 
 - Launch [Moonshot](https://docs.google.com/document/d/1kzOJbNYqf1kqeMbNsRVADGGh8zwNwMHvSbz0ZngdAOg/edit#) to demonstrate the benefits of Coliquidity to other projects.
 - Ask other projects to tell their followers that they can use Coliquidity to provide liquidity in the project's pool:
-- Our current partners.
-- New projects who need to create a new liquidity pool.
+  - Our current partners.
+  - New projects who need to create a new liquidity pool.
 - Ask influencers to tell their followers that they can use Coliquidity to make more money in long-term positions.
-- Our private investors-influencers.
-- New influencers who are already supporting us.
-- New influencers who don’t know about us yet.
+  - Our private investors-influencers.
+  - New influencers who are already supporting us.
+  - New influencers who don’t know about us yet.
 - Ask our marketing partners to spread the information about Coliquidity via word-of-mouth in Telegram groups & Twitter comments.
 
 ## Do you have competitors?
@@ -293,8 +298,8 @@ Yes, we already have users on Binance Smart Chain Mainnet (people who deposited 
 The Coliquidity launch is split into two phases:
 
 - [Done] Soft launch: Coliquidity will be used to launch the tokens of partner projects:
-- Already launched the [Marnotaur](https://marnotaur.com/en) token.
-- Accepting proposals from new partners to launch their tokens.
+  - Already launched the [Marnotaur](https://marnotaur.com/en) token.
+  - Accepting proposals from new partners to launch their tokens.
 - Full launch: Coliquidity will become available for the general public.
 
 The full launch date will be announced on our social media channels - please follow us on [Telegram](https://t.me/ShieldFinanceHQ) & [Twitter](https://twitter.com/ShieldFinance) to get notified earlier.
