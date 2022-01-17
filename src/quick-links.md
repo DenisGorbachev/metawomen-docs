@@ -6,4 +6,4 @@
 
 **[Risks](risks.md#what-are-the-risks)** | **[Non-Risks](risks.md#what-are-the-non-risks)**
 
-**[Try on Testnet](FAQ.md#can-i-try-coliquidity-on-testnet)**
+**[Try on Testnet](faq/ForProjectOwners.md#can-i-try-coliquidity-on-testnet)**

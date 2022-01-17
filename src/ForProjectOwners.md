@@ -9,5 +9,5 @@ Drawbacks:
 
 - Community members can remove liquidity in future. Solutions:
   - Lock liquidity by setting a date until which they can’t withdraw.
-  - Incentivize holding liquidity through a [liquidity mining program](FAQ.md#is-liquidity-mining-possible-with-coliquidity).
+  - Incentivize holding liquidity through a [liquidity mining program](faq/ForProjectOwners.md#is-liquidity-mining-possible-with-coliquidity).
     Learn more: [Coliquidity for new pools](how-it-works.md#for-new-pools) | [How much does it cost?](pricing.md)

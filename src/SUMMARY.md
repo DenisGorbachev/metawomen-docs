@@ -13,8 +13,9 @@
 - [For yield farmers](ForYieldFarmers.md)
 - [For long-term investors](ForLongTermInvestors.md)
 - [Examples](examples.md)
-- [FAQ](FAQ.md)
 
-# Rebrand
+# FAQ
 
-- [FAQ](RebrandFAQ.md)
+- [For project owners](faq/ForProjectOwners.md)
+- [For traders](faq/ForTraders.md)
+- [About rebrand](faq/Rebrand.md)

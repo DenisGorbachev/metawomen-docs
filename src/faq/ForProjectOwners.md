@@ -1,4 +1,4 @@
-# FAQ
+# FAQ for project owners
 
 ## What’s the best way to make money with Coliquidity?
 
@@ -56,12 +56,6 @@ The timelocked positions are created by accepting timelocked offers. The app wil
   **Note**
   Coliquidity works best for long-term positions (it accumulates more LP fees). For very short-term positions, it’s better to simply buy & sell tokens. One exception is high-volume high-volatility markets - in these it’s more profitable to use Coliquidity even for short-term positions.
 
-## I run the ABC project. Should I provide ABC tokens into the Coliquidity contract?
-
-Yes, if you want to get more liquidity.
-
-More liquidity → Less slippage → More traders → Higher volume.
-
 ## How much will I receive if I withdraw now?
 
 WithdrawalAmount = PoolLiquidity \* PoolShare
@@ -117,16 +111,6 @@ Any pair with a liquidity pool supports Coliquidity.
 
 We will build an application where the users could provide coliquidity for a single side of the position, see the offers of other users & provide the second side of the mutual coliquidity position.
 
-## What exchanges support Coliquidity?
-
-All decentralized exchanges that use liquidity pools can also use Coliquidity. For example:
-
-- Uniswap
-- SushiSwap
-- PancakeSwap
-- TraderJoe
-- … many more
-
 ## What blockchains support Coliquidity?
 
 Any EVM-compatible blockchain supports Coliquidity. For example:
@@ -140,14 +124,6 @@ Any EVM-compatible blockchain supports Coliquidity. For example:
 - … many more
 
 We have plans to port Coliquidity to blockchains with other VM implementations (e.g. Solana).
-
-## Who pays for gas?
-
-The user who called the Coliquidity smart contract pays for gas.
-
-If the call results in opening a new pool, the user pays for opening a new pool as well. We recommend that projects make this call from their account, so that regular traders don’t have to pay for opening the pool.
-
-We also have plans to integrate Coliquidity with the [Ethereum Gas Station Network](https://docs.opengsn.org/). As soon as this integration is implemented, the users won’t need to pay for gas anymore.
 
 ## What is 1-Click Liquidity?
 
@@ -222,11 +198,11 @@ Yes, please see details below:
 - For users: simply provide liquidity using the Coliquidity smart contract.
 - For projects: Please note that LP tokens do not show up in the users’ wallets - they are locked in the Coliquidity contract. That means you need to adjust the reward calculation algorithm to make a call to fetch the LP token balance from the Coliquidity contract. Otherwise, you can run the same liquidity mining program as you planned.
 
-## Can I short tokens with Coliquidity?
+## I run the ABC project. Should I provide ABC tokens into the Coliquidity contract?
 
-Yes, you can short the tokens that you own. Please note that when you close the short, you will receive a lot of tokens that you’ve shorted. This happens because closing the short means withdrawing liquidity, and you receive the same token when you withdraw from the pool.
+Yes, if you want to get more liquidity.
 
-To maximize profit, you should short the tokens that are going down right now, but will be going up in future (according to your analysis).
+More liquidity → Less slippage → More traders → Higher volume.
 
 ## Can I migrate my existing liquidity to Coliquidity?
 
@@ -279,13 +255,6 @@ We will get the core user base by executing our [marketing plan](#what-is-your-m
 ## Do you have competitors?
 
 As of 08 Jan 2022, we have not heard of any projects with the same idea.
-
-## How will you open a liquidity pool on PancakeSwap?
-
-We will use Coliquidity to open the SHLD-WBNB pool on PancakeSwap. The specific plan will be announced closer to launch date. However, we can share some details already:
-
-- The price will be lower than on SHLD-WETH pool (to incentivize traders to buy immediately on launch).
-- The Coliquidity pool will have a hard cap (to incentivize providers to deposit earlier to secure their allocation).
 
 ## What is the project status?
 
