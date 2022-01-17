@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>How it works - Coliquidity</title>
+        <title>Examples - Coliquidity</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="what-is-coliquidity.html">What is Coliquidity?</a></li><li class="chapter-item expanded affix "><li class="part-title">General</li><li class="chapter-item expanded "><a href="how-it-works.html" class="active"><strong aria-hidden="true">1.</strong> How it works</a></li><li class="chapter-item expanded "><a href="pricing.html"><strong aria-hidden="true">2.</strong> Pricing</a></li><li class="chapter-item expanded "><a href="risks.html"><strong aria-hidden="true">3.</strong> Risks</a></li><li class="chapter-item expanded "><a href="ForProjectOwners.html"><strong aria-hidden="true">4.</strong> For project owners</a></li><li class="chapter-item expanded "><a href="ForYieldFarmers.html"><strong aria-hidden="true">5.</strong> For yield farmers</a></li><li class="chapter-item expanded "><a href="ForLongTermInvestors.html"><strong aria-hidden="true">6.</strong> For long-term investors</a></li><li class="chapter-item expanded "><a href="examples.html"><strong aria-hidden="true">7.</strong> Examples</a></li><li class="chapter-item expanded affix "><li class="part-title">FAQ</li><li class="chapter-item expanded "><a href="faq/ForProjectOwners.html"><strong aria-hidden="true">8.</strong> For project owners</a></li><li class="chapter-item expanded "><a href="faq/ForTraders.html"><strong aria-hidden="true">9.</strong> For traders</a></li><li class="chapter-item expanded "><a href="faq/Rebrand.html"><strong aria-hidden="true">10.</strong> About rebrand</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="WhatIsColiquidity.html">What is Coliquidity?</a></li><li class="chapter-item expanded affix "><li class="part-title">General</li><li class="chapter-item expanded "><a href="HowItWorks.html"><strong aria-hidden="true">1.</strong> How it works</a></li><li class="chapter-item expanded "><a href="Pricing.html"><strong aria-hidden="true">2.</strong> Pricing</a></li><li class="chapter-item expanded "><a href="Risks.html"><strong aria-hidden="true">3.</strong> Risks</a></li><li class="chapter-item expanded "><a href="ForProjectOwners.html"><strong aria-hidden="true">4.</strong> For project owners</a></li><li class="chapter-item expanded "><a href="ForYieldFarmers.html"><strong aria-hidden="true">5.</strong> For yield farmers</a></li><li class="chapter-item expanded "><a href="ForLongTermInvestors.html"><strong aria-hidden="true">6.</strong> For long-term investors</a></li><li class="chapter-item expanded "><a href="Examples.html" class="active"><strong aria-hidden="true">7.</strong> Examples</a></li><li class="chapter-item expanded affix "><li class="part-title">FAQ</li><li class="chapter-item expanded "><a href="faq/ForProjectOwners.html"><strong aria-hidden="true">8.</strong> For project owners</a></li><li class="chapter-item expanded "><a href="faq/ForTraders.html"><strong aria-hidden="true">9.</strong> For traders</a></li><li class="chapter-item expanded "><a href="faq/Rebrand.html"><strong aria-hidden="true">10.</strong> About rebrand</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,53 +143,52 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="how-it-works"><a class="header" href="#how-it-works">How it works</a></h1>
+                        <h1 id="can-you-show-by-example-how-to-make-money-using-coliquidity"><a class="header" href="#can-you-show-by-example-how-to-make-money-using-coliquidity">Can you show by example how to make money using Coliquidity?</a></h1>
+<h2 id="specific-example-for-taur-token"><a class="header" href="#specific-example-for-taur-token">Specific example for $TAUR token</a></h2>
+<p>Short version:</p>
+<ol>
+<li>Deposit BUSD.</li>
+<li>Wait until TAUR goes up.</li>
+<li>Withdraw more BUSD (trend profit + liquidity provider fees)</li>
+</ol>
+<p>Detailed instruction:</p>
+<ol>
+<li>Open deposit page for $TAUR token: <a href="https://app.shieldfinance.io/coliquidity/deposit?preset=MarnotaurMainnet">click here</a>.</li>
+<li>Input “Amount to deposit” (how much BUSD you want to provide).</li>
+<li>Click “Deposit”.</li>
+<li>Confirm transactions.</li>
+<li>Wait until $TAUR goes up.</li>
+<li>Open withdraw page for $TAUR token: <a href="https://app.shieldfinance.io/coliquidity/withdraw?preset=MarnotaurMainnet">click here</a>.</li>
+<li>Find your position.</li>
+<li>Click “Withdraw”.</li>
+<li>Confirm transactions.</li>
+<li>Celebrate! You have withdrawn <strong>more BUSD</strong> than you deposited.</li>
+</ol>
+<h2 id="general-example-for-any-token"><a class="header" href="#general-example-for-any-token">General example for any token</a></h2>
+<ol>
+<li>Find a token that is going up.</li>
+<li>Ensure that this token has already been deposited into the Coliquidity smart contract by the project team.
 <ul>
-<li><a href="#for-new-pools">For new pools</a></li>
-<li><a href="#for-existing-stablecoin-pools">For existing stablecoin pools</a></li>
-<li><a href="#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a></li>
+<li>If not: you can ask the project team to do it (send them a link to this FAQ).</li>
 </ul>
-<h2 id="for-new-pools"><a class="header" href="#for-new-pools">For new pools</a></h2>
-<ul>
-<li>The project deposits ABC tokens into the Coliquidity smart contract.</li>
-<li>The investors deposit WETH tokens into the Coliquidity smart contract.</li>
-<li>When there is enough WETH liquidity, the project triggers the creation of a new pool though Coliquidity contract.</li>
-<li>The Coliquidity contract deploys a new ABC-WETH pool using combined liquidity from the project &amp; the investors.</li>
-</ul>
-<h2 id="for-existing-stablecoin-pools"><a class="header" href="#for-existing-stablecoin-pools">For existing stablecoin pools</a></h2>
-<ul>
-<li>Alice &amp; Bob decide to put their stablecoins into the DAI-USDT pool to earn LP fees.</li>
-<li>Alice deposits DAI tokens into the Coliquidity smart contract.</li>
-<li>Bob deposits USDT tokens into the Coliquidity smart contract.</li>
-<li>The Coliquidity contract combines DAI + USDT and puts them into the DAI-USDT pool.</li>
-<li>When either Alice or Bob requests a withdrawal, Alice gets her DAI deposit + DAI fees, Bob gets his USDT deposit + USDT fees.</li>
-<li>If DAI-USDT price doesn’t change: both Alice &amp; Bob earn the fees.</li>
-<li>If DAI-USDT price does change: this scenario is equivalent to “<a href="#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a>”</li>
-</ul>
-<p>See also:</p>
-<ul>
-<li><a href="faq/ForProjectOwners.html#what-if-a-single-provider-requests-a-withdrawal">What if a single provider requests a withdrawal?</a></li>
-</ul>
-<h2 id="for-existing-non-stablecoin-pools"><a class="header" href="#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a></h2>
-<ul>
-<li>Alice deposits ABC tokens into the Coliquidity smart contract.</li>
-<li>Bob deposits WETH tokens into the Coliquidity smart contract.</li>
-<li>The Coliquidity contract combines ABC + WETH and puts them into the ABC-WETH pool.</li>
-<li>When either Alice or Bob requests a withdrawal, Alice gets her ABC deposit + ABC fees, Bob gets his WETH deposit + WETH fees.</li>
-<li>If ABC-WETH price doesn’t change: both Alice &amp; Bob earn the fees.</li>
-<li>If ABC-WETH price goes up: there will be less ABC and more WETH in the pool, so Alice will get less ABC + ABC fees, Bob will get more WETH + WETH fees. It works like a long position for Bob.</li>
-<li>If ABC-WETH price goes down: there will be more ABC and less WETH in the pool, so Alice will get more ABC + ABC fees, Bob will get less WETH + WETH fees. It works like a short position for Alice (e.g. she believed ABC would crash short-term but recover long-term, so she put her ABC in the pool to make more ABC short-term).</li>
-</ul>
+</li>
+<li>Open the Coliquidity app using the link provided by the project team (should contain the preset for their token).</li>
+<li>Fill the form to deposit liquidity.</li>
+<li>Wait until the token goes up.</li>
+<li>Open the Coliquidity app to withdraw liquidity.</li>
+<li>Fill the form to withdraw liquidity.</li>
+<li>Celebrate! You have withdrawn <strong>more money</strong> than you deposited.</li>
+</ol>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="what-is-coliquidity.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="ForLongTermInvestors.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="pricing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="faq/ForProjectOwners.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -199,11 +198,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="what-is-coliquidity.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="ForLongTermInvestors.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="pricing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="faq/ForProjectOwners.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>
