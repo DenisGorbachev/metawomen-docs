@@ -10,4 +10,4 @@ Drawbacks:
 - Short-term profit is lower. However:
   - Short-term loss is lower (same risk-reward ratio).
   - Long-term profit is higher: LP fees are always positive (**better** risk-reward ratio with additional fees).
-    Learn more: [Coliquidity for existing non-stablecoin pools](how-it-works.md#for-existing-non-stablecoin-pools) | [How much does it cost?](pricing.md)
+    Learn more: [Coliquidity for existing non-stablecoin pools](HowItWorks.md#for-existing-non-stablecoin-pools) | [How much does it cost?](Pricing.md)

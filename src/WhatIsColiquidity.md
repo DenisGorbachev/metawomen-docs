@@ -3,7 +3,7 @@
 Coliquidity is **a new way to trade crypto**:
 
 - More profitable than buying tokens ([proof](faq/ForProjectOwners.md#why-coliquidity-is-more-profitable-than-buying-tokens)).
-- Less risky than providing liquidity ([proof](risks.md#why-coliquidity-is-less-risky-than-providing-liquidity)).
+- Less risky than providing liquidity ([proof](Risks.md#why-coliquidity-is-less-risky-than-providing-liquidity)).
 
 Normally you need to deposit two tokens into the liquidity pool to earn liquidity provider fees. However, Coliquidity allows you to deposit **only one token**. You don’t need to buy the other token at all. Coliquidity will match your deposit with someone else’s deposit for another token.
 

@@ -3,8 +3,8 @@
 ## What are the risks?
 
 - [Impermanent loss risk](#who-is-bearing-impermanent-loss-risk)
-- Minimal [for stablecoin pools](how-it-works.md#for-existing-stablecoin-pools).
-- Equivalent to long position [for non-stablecoin pools](how-it-works.md#for-existing-non-stablecoin-pools).
+- Minimal [for stablecoin pools](HowItWorks.md#for-existing-stablecoin-pools).
+- Equivalent to long position [for non-stablecoin pools](HowItWorks.md#for-existing-non-stablecoin-pools).
 - Smart contract hack risk
 - Will be minimized with audits (we have partnered with Zokyo).
 - Time-value risk (you need to deposit tokens & wait for somebody to take the other side of your coliquidity position):

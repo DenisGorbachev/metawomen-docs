@@ -2,17 +2,17 @@
 
 <!-- markdownlint-disable MD025 -->
 
-[What is Coliquidity?](what-is-coliquidity.md)
+[What is Coliquidity?](WhatIsColiquidity.md)
 
 # General
 
-- [How it works](how-it-works.md)
-- [Pricing](pricing.md)
-- [Risks](risks.md)
+- [How it works](HowItWorks.md)
+- [Pricing](Pricing.md)
+- [Risks](Risks.md)
 - [For project owners](ForProjectOwners.md)
 - [For yield farmers](ForYieldFarmers.md)
 - [For long-term investors](ForLongTermInvestors.md)
-- [Examples](examples.md)
+- [Examples](Examples.md)
 
 # FAQ
 

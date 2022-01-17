@@ -7,4 +7,4 @@ As a yield farmer, you can provide ETH without buying the tokens:
   Drawbacks:
 - Some projects may not have a Coliquidity pool. Solution:
   - Use a combined strategy: if there’s a Coliquidity pool, provide only one token, if not, provide both tokens.
-    Learn more: [Coliquidity for existing stablecoin pools](how-it-works.md#for-existing-stablecoin-pools) | [How much does it cost?](pricing.md)
+    Learn more: [Coliquidity for existing stablecoin pools](HowItWorks.md#for-existing-stablecoin-pools) | [How much does it cost?](Pricing.md)

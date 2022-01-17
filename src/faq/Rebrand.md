@@ -2,7 +2,7 @@
 
 ## What is happening?
 
-Shield Finance is rebranding to Coliquidity. It's a new product that allows users to provide one-sided liquidity for any token pair ([learn more](../how-it-works.md)). Thus, we are changing the following:
+Shield Finance is rebranding to Coliquidity. It's a new product that allows users to provide one-sided liquidity for any token pair ([learn more](../HowItWorks.md)). Thus, we are changing the following:
 
 - shieldfinance.io -> coliquidity.app
 - $SHLD token on Ethereum -> $COLI token on Binance Smart Chain
