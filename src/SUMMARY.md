@@ -3,7 +3,6 @@
 <!-- markdownlint-disable MD025 -->
 
 [What is Coliquidity?](what-is-coliquidity.md)
-[How can I make money with Coliquidity?](making-money.md)
 
 # General
 
