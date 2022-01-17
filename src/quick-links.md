@@ -1,6 +1,6 @@
 # Quick links
 
-**[For project owners](why-should-i-use-coliquidity.md#why-should-i-use-coliquidity-as-a-project-owner)** | **[For yield farmers](why-should-i-use-coliquidity.md#why-should-i-use-coliquidity-as-a-yield-farmer)** | **[For long-term investors](why-should-i-use-coliquidity.md#why-should-i-use-coliquidity-as-a-long-term-investor)**
+**[For project owners](ForProjectOwners.md)** | **[For yield farmers](ForYieldFarmers.md)** | **[For long-term investors](ForLongTermInvestors.md)**
 
 **[How it works](how-it-works.md)** | **[Pricing](pricing.md)**
 
