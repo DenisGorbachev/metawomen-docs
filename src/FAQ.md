@@ -42,7 +42,7 @@ The timelocked positions are created by accepting timelocked offers. The app wil
 
 **Simulations**
 
-- (WARN_UNRECOGNIZED_ELEMENT: RICH_LINK)
+- [Coliquidity Simulations](https://docs.google.com/spreadsheets/d/1IL5mPngi4a0mJvuTeiMpebVobhgyK8yAOEfxaMBkBvo/edit#)
   (see scenarios with “High volatility” = TRUE)
 
   **Note**
