@@ -108,9 +108,12 @@ function playground_text(playground) {
 
         let text = playground_text(code_block);
         let classes = code_block.querySelector('code').classList;
-        let has_2018 = classes.contains("edition2018");
-        let edition = has_2018 ? "2018" : "2015";
-
+        let edition = "2015";
+        if(classes.contains("edition2018")) {
+            edition = "2018";
+        } else if(classes.contains("edition2021")) {
+            edition = "2021";
+        }
         var params = {
             version: "stable",
             optimize: "0",
@@ -133,7 +136,15 @@ function playground_text(playground) {
             body: JSON.stringify(params)
         })
         .then(response => response.json())
-        .then(response => result_block.innerText = response.result)
+        .then(response => {
+            if (response.result.trim() === '') {
+                result_block.innerText = "No output";
+                result_block.classList.add("result-no-output");
+            } else {
+                result_block.innerText = response.result;
+                result_block.classList.remove("result-no-output");
+            }
+        })
         .catch(error => result_block.innerText = "Playground Communication: " + error.message);
     }
 
@@ -151,12 +162,13 @@ function playground_text(playground) {
     if (window.ace) {
         // language-rust class needs to be removed for editable
         // blocks or highlightjs will capture events
-        Array
-            .from(document.querySelectorAll('code.editable'))
+        code_nodes
+            .filter(function (node) {return node.classList.contains("editable"); })
             .forEach(function (block) { block.classList.remove('language-rust'); });
 
         Array
-            .from(document.querySelectorAll('code:not(.editable)'))
+        code_nodes
+            .filter(function (node) {return !node.classList.contains("editable"); })
             .forEach(function (block) { hljs.highlightBlock(block); });
     } else {
         code_nodes.forEach(function (block) { hljs.highlightBlock(block); });
@@ -359,7 +371,14 @@ function playground_text(playground) {
     });
 
     themePopup.addEventListener('click', function (e) {
-        var theme = e.target.id || e.target.parentElement.id;
+        var theme;
+        if (e.target.className === "theme") {
+            theme = e.target.id;
+        } else if (e.target.parentElement.className === "theme") {
+            theme = e.target.parentElement.id;
+        } else {
+            return;
+        }
         set_theme(theme);
     });
 
@@ -554,6 +573,33 @@ function playground_text(playground) {
                 break;
         }
     });
+    const sidebarList = document.querySelector('.sidebar-scrollbox > .chapter')
+    const socials = [
+        { name: 'Website', link: 'https://dev.shieldfinance.io' },
+        { name: 'Shield Finance App', link: 'https://dev.shieldfinance.io/menu' },
+        { name: 'Telegram', link: 'https://t.me/ShieldFinanceHQ' },
+        { name: 'Twitter', link: 'https://twitter.com/ShieldFinance' },
+        { name: 'Medium', link: 'https://medium.com/shield-finance-hq' },
+        { name: 'GitHub', link: 'https://github.com/ShieldFinanceHQ' },
+        { name: 'Discord', link: 'https://discord.gg/vxjTVeesWG' },
+        { name: 'Linkedin', link: 'https://www.linkedin.com/company/shield-finance-hq' },
+        { name: 'Reddit', link: 'https://www.reddit.com/r/ShieldFinanceHQ' },
+    ]
+    const socialsTitle = document.createElement('li')
+    socialsTitle.textContent = 'Community'
+    socialsTitle.classList.add('part-title')
+    sidebarList.append(socialsTitle)
+
+    socials.forEach((item) => {
+        const li = document.createElement('li')
+        const a = document.createElement('a')
+        li.classList.add('chapter-item', 'expanded')
+        a.href = item.link
+        a.textContent = item.name
+        a.setAttribute('target', '_blank')
+        sidebarList.append(li)
+        li.append(a)
+    })
 })();
 
 (function clipboard() {
@@ -658,3 +704,5 @@ function playground_text(playground) {
         }, { passive: true });
     })();
 })();
+
+
