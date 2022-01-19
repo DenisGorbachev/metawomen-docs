@@ -10,7 +10,7 @@ function checkLinkTypeWarnings() {
   RESULT_OUTPUT_FILE="$1"
   REMARK_COMMAND="$2"
 
-  remark --use "$REMARK_COMMAND" -q ./src 2>&1 | tee "${RESULT_OUTPUT_FILE}"
+  remark --use "$REMARK_COMMAND" -q . 2>&1 | tee "${RESULT_OUTPUT_FILE}"
   if grep -q 'warning' "${RESULT_OUTPUT_FILE}"; then
     hasError="true"
   fi
