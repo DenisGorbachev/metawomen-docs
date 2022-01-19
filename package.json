@@ -9,13 +9,17 @@
     "dev": "mdbook serve",
     "lint": "yarn lint:markdown",
     "lint:markdown": "markdownlint --fix --ignore node_modules **/*.md",
-    "postinstall": "lefthook install"
+    "postinstall": "lefthook install",
+    "check:markdown-links": "bash ./checkMarkdownLinks.sh"
   },
   "dependencies": {
     "markdown-link-check": "^3.9.0",
     "markdownlint-cli": "^0.30.0"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "^0.7.7"
+    "@arkweid/lefthook": "^0.7.7",
+    "remark-cli": "^10.0.1",
+    "remark-lint-no-dead-urls": "^1.1.0",
+    "remark-validate-links": "^11.0.2"
   }
 }
