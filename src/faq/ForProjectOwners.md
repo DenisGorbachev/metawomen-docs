@@ -195,8 +195,7 @@ Please note that Offer.lockedUntil can be set to 0, which allows withdrawals any
 
 Yes, please see details below:
 
-- For users: simply provide liquidity using the Coliquidity smart contract.
-- For projects: Please note that LP tokens do not show up in the users’ wallets - they are locked in the Coliquidity contract. That means you need to adjust the reward calculation algorithm to make a call to fetch the LP token balance from the Coliquidity contract. Otherwise, you can run the same liquidity mining program as you planned.
+Please note that LP tokens do not show up in the users’ wallets - they are locked in the Coliquidity contract. That means you need to adjust the reward calculation algorithm to make a call to fetch the LP token balance from the Coliquidity contract. Otherwise, you can run the same liquidity mining program as you planned.
 
 ## I run the ABC project. Should I provide ABC tokens into the Coliquidity contract?
 

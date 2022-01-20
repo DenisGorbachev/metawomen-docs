@@ -10,7 +10,7 @@ Normally you need to deposit two tokens into the liquidity pool to earn liquidit
 Benefits:
 
 - You get liquidity provider fees
-- You get liquidity mining bonuses
+- You get liquidity mining bonuses (if they are provided by the project)
 - You don’t pay the trading fees (you earn them instead)
 - You don’t lose on slippage.
 

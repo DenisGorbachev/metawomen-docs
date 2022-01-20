@@ -18,6 +18,10 @@ If the call results in opening a new pool, the user pays for opening a new pool 
 
 We also have plans to integrate Coliquidity with the [Ethereum Gas Station Network](https://docs.opengsn.org/). As soon as this integration is implemented, the users won’t need to pay for gas anymore.
 
+## Is liquidity mining possible with Coliquidity?
+
+Yes, simply provide liquidity using the Coliquidity smart contract.
+
 ## How will you open a liquidity pool on PancakeSwap?
 
 We will use Coliquidity to open the SHLD-WBNB pool on PancakeSwap. The specific plan will be announced closer to launch date. However, we can share some details already:
