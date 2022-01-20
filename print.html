@@ -154,7 +154,7 @@
 <p>Benefits:</p>
 <ul>
 <li>You get liquidity provider fees</li>
-<li>You get liquidity mining bonuses</li>
+<li>You get liquidity mining bonuses (if they are provided by the project)</li>
 <li>You don’t pay the trading fees (you earn them instead)</li>
 <li>You don’t lose on slippage.</li>
 </ul>
@@ -537,10 +537,7 @@ Coliquidity works best for long-term positions (it accumulates more LP fees). Fo
 <p>Please note that Offer.lockedUntil can be set to 0, which allows withdrawals anytime.</p>
 <h2 id="is-liquidity-mining-possible-with-coliquidity"><a class="header" href="#is-liquidity-mining-possible-with-coliquidity">Is liquidity mining possible with Coliquidity?</a></h2>
 <p>Yes, please see details below:</p>
-<ul>
-<li>For users: simply provide liquidity using the Coliquidity smart contract.</li>
-<li>For projects: Please note that LP tokens do not show up in the users’ wallets - they are locked in the Coliquidity contract. That means you need to adjust the reward calculation algorithm to make a call to fetch the LP token balance from the Coliquidity contract. Otherwise, you can run the same liquidity mining program as you planned.</li>
-</ul>
+<p>Please note that LP tokens do not show up in the users’ wallets - they are locked in the Coliquidity contract. That means you need to adjust the reward calculation algorithm to make a call to fetch the LP token balance from the Coliquidity contract. Otherwise, you can run the same liquidity mining program as you planned.</p>
 <h2 id="i-run-the-abc-project-should-i-provide-abc-tokens-into-the-coliquidity-contract"><a class="header" href="#i-run-the-abc-project-should-i-provide-abc-tokens-into-the-coliquidity-contract">I run the ABC project. Should I provide ABC tokens into the Coliquidity contract?</a></h2>
 <p>Yes, if you want to get more liquidity.</p>
 <p>More liquidity → Less slippage → More traders → Higher volume.</p>
@@ -632,6 +629,8 @@ Coliquidity works best for long-term positions (it accumulates more LP fees). Fo
 <p>The user who called the Coliquidity smart contract pays for gas.</p>
 <p>If the call results in opening a new pool, the user pays for opening a new pool as well. We recommend that projects make this call from their account, so that regular traders don’t have to pay for opening the pool.</p>
 <p>We also have plans to integrate Coliquidity with the <a href="https://docs.opengsn.org/">Ethereum Gas Station Network</a>. As soon as this integration is implemented, the users won’t need to pay for gas anymore.</p>
+<h2 id="is-liquidity-mining-possible-with-coliquidity-1"><a class="header" href="#is-liquidity-mining-possible-with-coliquidity-1">Is liquidity mining possible with Coliquidity?</a></h2>
+<p>Yes, simply provide liquidity using the Coliquidity smart contract.</p>
 <h2 id="how-will-you-open-a-liquidity-pool-on-pancakeswap"><a class="header" href="#how-will-you-open-a-liquidity-pool-on-pancakeswap">How will you open a liquidity pool on PancakeSwap?</a></h2>
 <p>We will use Coliquidity to open the SHLD-WBNB pool on PancakeSwap. The specific plan will be announced closer to launch date. However, we can share some details already:</p>
 <ul>
