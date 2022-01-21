@@ -4,3 +4,8 @@ language = "en"
 multilingual = true
 src = "src"
 title = "Coliquidity"
+
+[output.html]
+edit-url-template = "https://github.com/ShieldFinanceHQ/docs/edit/main/{path}"
+git-repository-url = "https://github.com/ShieldFinanceHQ/docs"
+git-repository-icon = "fa-github"
