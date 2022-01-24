@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 hasError="false"
 
 function throw() {
