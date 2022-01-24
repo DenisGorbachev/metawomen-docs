@@ -4,7 +4,8 @@ pre-commit:
     lint-markdown:
       glob: "*.md"
       run: yarn lint:markdown {staged_files}
-    check-markdown-links:
+    lint-markdown-links:
       skip: false
       glob: "*.md"
-      run: yarn check:markdown-links {all_files}
+      run: yarn lint:markdown:links {all_files}
+      # lint all_files, because renames may introduce broken links
