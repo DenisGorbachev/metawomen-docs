@@ -6,12 +6,14 @@
   "author": "Denis Gorbachev <829578+DenisGorbachev@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
+    "postinstall": "lefthook install",
     "dev": "mdbook serve",
-    "lint": "yarn lint:markdown",
-    "lint:markdown": "yarn lint:markdown:text . && yarn lint:markdown:links .",
-    "lint:markdown:text": "markdownlint --fix --ignore node_modules",
-    "lint:markdown:links": "remark --use remark-validate-links --use remark-lint-no-dead-urls --ignore-path .gitignore -q -f",
-    "postinstall": "lefthook install"
+    "lint:all": "yarn lint:code:all && yarn lint:markdown:all",
+    "lint:code": "eslint --fix --ignore-path .gitignore --max-warnings=0",
+    "lint:code:all": "yarn lint:code .",
+    "lint:markdown:all": "yarn lint:markdown:text . && yarn lint:markdown:links .",
+    "lint:markdown:text": "markdownlint --fix --ignore-path .gitignore",
+    "lint:markdown:links": "remark --use remark-validate-links --use remark-lint-no-dead-urls --ignore-path .gitignore -q -f"
   },
   "dependencies": {
     "markdown-link-check": "^3.9.0",
