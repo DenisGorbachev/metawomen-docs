@@ -4,9 +4,9 @@
 
 Shield Finance is rebranding to Coliquidity. It's a new product that allows users to provide one-sided liquidity for any token pair ([learn more](../HowItWorks.md)). Thus, we are changing the following:
 
-- shieldfinance.io -> coliquidity.app
-- $SHLD token on Ethereum -> $COLI token on Binance Smart Chain
-- $BULL token on Ethereum -> $BULL token on Binance Smart Chain
+- <https://shieldfinance.io/> -> <https://www.coliquidity.com/>
+- $SHLD token on Ethereum -> $COLI token on Ethereum and Binance Smart Chain (token name update + bridge)
+- $BULL token on Ethereum -> $BULL token on Binance Smart Chain (full token migration)
 
 ## When is it happening?
 
