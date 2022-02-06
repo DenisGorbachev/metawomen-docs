@@ -6,6 +6,6 @@ src = "src"
 title = "Coliquidity"
 
 [output.html]
-edit-url-template = "https://github.com/ShieldFinanceHQ/docs/edit/main/{path}"
-git-repository-url = "https://github.com/ShieldFinanceHQ/docs"
+edit-url-template = "https://github.com/Coliquidity/docs/edit/main/{path}"
+git-repository-url = "https://github.com/Coliquidity/docs"
 git-repository-icon = "fa-github"

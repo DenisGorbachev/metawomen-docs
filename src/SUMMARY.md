@@ -14,6 +14,14 @@
 - [For long-term investors](ForLongTermInvestors.md)
 - [Examples](Examples.md)
 
+<!---
+# $COLI token
+
+- [Utility](ColiUtility.md)
+- [Addresses](ColiAddresses.md)
+- [How to buy?](ColiBuy.md)
+-->
+
 # FAQ
 
 - [For project owners](faq/ForProjectOwners.md)

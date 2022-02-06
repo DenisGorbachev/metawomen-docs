@@ -7,9 +7,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "mdbook serve",
-    "lint": "yarn lint:markdown && lint:markdown:links",
-    "lint:markdown": "markdownlint --fix --ignore node_modules .",
-    "lint:markdown:links": "remark --use remark-validate-links --use remark-lint-no-dead-urls -q -f",
+    "lint": "yarn lint:markdown",
+    "lint:markdown": "yarn lint:markdown:text . && yarn lint:markdown:links .",
+    "lint:markdown:text": "markdownlint --fix --ignore node_modules",
+    "lint:markdown:links": "remark --use remark-validate-links --use remark-lint-no-dead-urls --ignore-path .gitignore -q -f",
     "postinstall": "lefthook install"
   },
   "dependencies": {

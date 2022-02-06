@@ -2,7 +2,8 @@ pre-commit:
   parallel: true
   commands:
     lint-markdown:
-      run: bash lint-markdown.sh
+      glob: "*.md"
+      run: yarn lint:markdown:text {staged_files} && git update-index -g
     lint-markdown-links:
       glob: "*.md"
-      run: yarn lint:markdown:links . {all_files} # lint all files, because renames may introduce broken links
+      run: yarn lint:markdown:links {all_files} # lint all files, because renames may introduce broken links

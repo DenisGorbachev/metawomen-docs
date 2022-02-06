@@ -643,18 +643,16 @@ function playground_text(playground) {
   });
   const sidebarList = document.querySelector(".sidebar-scrollbox > .chapter");
   const socials = [
-    { name: "Website", link: "https://dev.shieldfinance.io" },
-    { name: "Coliquidity App", link: "https://dev.shieldfinance.io/menu" },
-    { name: "Telegram", link: "https://t.me/ShieldFinanceHQ" },
-    { name: "Twitter", link: "https://twitter.com/ShieldFinance" },
-    { name: "Medium", link: "https://medium.com/shield-finance-hq" },
-    { name: "GitHub", link: "https://github.com/ShieldFinanceHQ" },
+    { name: "Website", link: "https://www.coliquidity.com" },
+    { name: "Coliquidity App", link: "https://www.coliquidity.com/menu" },
+    { name: "Telegram", link: "https://t.me/Coliquidity" },
+    { name: "Twitter", link: "https://twitter.com/Coliquidity" },
+    { name: "Anchor Podcasts", link: "https://anchor.fm/Coliquidity" },
+    { name: "Medium", link: "https://coliquidity.medium.com/" },
+    { name: "GitHub", link: "https://github.com/Coliquidity" },
     { name: "Discord", link: "https://discord.gg/vxjTVeesWG" },
-    {
-      name: "LinkedIn",
-      link: "https://www.linkedin.com/company/shield-finance-hq",
-    },
-    { name: "Reddit", link: "https://www.reddit.com/r/ShieldFinanceHQ" },
+    { name: "LinkedIn", link: "https://www.linkedin.com/company/coliquidity" },
+    { name: "Reddit", link: "https://www.reddit.com/r/Coliquidity" },
   ];
   const socialsTitle = document.createElement("li");
   socialsTitle.textContent = "Community";
