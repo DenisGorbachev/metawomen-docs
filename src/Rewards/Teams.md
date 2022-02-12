@@ -1,7 +1,7 @@
 # Rewards Program Teams
 
 * You can get bonuses by creating or joining a team.
-* You can invite your friends or followers.
+* You can create a team with your friends or followers.
 * As a team leader, you will get +30% bonus of your team's payout.
 * As a team member, you will get +10% bonus of your personal payout.
 
