@@ -24,7 +24,7 @@ We plan to run the rewards program indefinitely, while it continues to attract n
 
 ## How can I buy the COLI token?
 
-You can buy directly on Uniswap or PancakeSwap. The links for buying are available below. When you open the link, you need to agree to import the COLI token address (done automatically on the page for buying):
+You can buy directly on Uniswap or PancakeSwap. The links for buying are available below. When you open the link, you should agree to import the COLI token address (done automatically on the page for buying):
 
 * [Buy COLI on PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0x3470C81026C8085b7B743695f851353043Ff0d0D)
 * [Buy COLI on Uniswap](https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd49efa7bc0d339d74f487959c573d518ba3f8437&use=V2)
@@ -35,7 +35,7 @@ Yes.
 
 ## Why are you doing this?
 
-We want to get users for [Coliquidity](../WhatIsColiquidity.md) (our product). We require people to answer questions about our product to get the rewards.
+We want to attract users for [Coliquidity](../WhatIsColiquidity.md) (our product). To attract users, we are giving rewards. Also, we educate users about Coliquidity by requiring them to answer questions about our product to receive the rewards.
 
 ## If I buy now, will I get rewards at the next distribution?
 
