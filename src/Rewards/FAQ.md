@@ -22,7 +22,14 @@ We'll use our marketing budget and the "Rewards" allocation according to the tok
 
 We plan to run the rewards program indefinitely, while it continues to attract new users for Coliquidity (our product).
 
-## Can I sell $COLI later?
+## How can I buy the COLI token?
+
+You can buy directly on Uniswap or PancakeSwap. The links for buying are available below. When you open the link, you need to agree to import the COLI token address (done automatically on the page for buying):
+
+* [Buy COLI on PancakeSwap](https://pancakeswap.finance/swap?outputCurrency=0x3470C81026C8085b7B743695f851353043Ff0d0D)
+* [Buy COLI on Uniswap](https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0xd49efa7bc0d339d74f487959c573d518ba3f8437&use=V2)
+
+## Can I sell the COLI token later?
 
 Yes.
 
