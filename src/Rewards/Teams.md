@@ -16,7 +16,7 @@ There's no minimum requirement - you can create or join the team with any amount
 
 ### How can I create a team?
 
-Just ask other people to [join your team](#how-can-i-join-a-team) by giving them your publicly available wallet address.
+Just ask other people to [join your team](#how-can-i-join-a-team) by giving them your publicly available wallet address. You can use an existing address or create a new one.
 
 Your public wallet address is your team ID. So technically, you already have a team. However, only teams with 3+ members qualify for bonuses - that's why you need to team up with other people.
 
