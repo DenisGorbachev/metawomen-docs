@@ -16,7 +16,7 @@ If you don't want to answer the questions, you can [join the team](Teams.md), an
 
 ## How will you pay the rewards?
 
-We'll use the "Rewards" allocation according to the tokenomics.
+We'll use our marketing budget and the "Rewards" allocation according to the tokenomics.
 
 ## How long will you run the rewards program?
 
