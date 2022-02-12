@@ -12,6 +12,8 @@ If you don't want to answer the questions, you can [join the team](Teams.md), an
 
 The questions will be about [Coliquidity](../WhatIsColiquidity.md) (our product). We will prepare 3-5 new questions every week. The questions form will be protected by a CAPTCHA to stop the bots.
 
+If you don't want to answer the questions, you can [join the team](Teams.md), and the team leader will do it for you.
+
 ## How will you pay the rewards?
 
 We'll use the "Rewards" allocation according to the tokenomics.
