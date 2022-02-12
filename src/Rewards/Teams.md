@@ -32,7 +32,7 @@ This transaction doesn't send any money - it only confirms your team membership.
 
 Yes.
 
-### Will I receive additional rewards if I join the team in the middle of the payout period?
+### Will I receive additional bonus if I join the team now?
 
 Yes, you will receive additional rewards proportional to the time you were in a team. For example, if you join a team on Monday, you will receive additional `+10% * (1 / 7)` on Tuesday (because you were in a team for 1 of 7 days).
 

@@ -2,11 +2,15 @@
 
 ## How can I get the rewards?
 
-* [Buy COLI](https://pancakeswap.finance/swap?outputCurrency=0x3470C81026C8085b7B743695f851353043Ff0d0D)
+* [Buy COLI](#how-can-i-buy-the-coli-token)
 * [Lock COLI](Locks.md)
 * [Answer questions](#what-questions-should-i-answer) each week.
 
 If you don't want to answer the questions, you can [join the team](Teams.md), and the team leader will do it for you.
+
+## When can I get the rewards?
+
+Every week on Tuesday at 10:00 UTC.
 
 ## What questions should I answer?
 
@@ -37,9 +41,13 @@ Yes.
 
 We want to attract users for [Coliquidity](../WhatIsColiquidity.md) (our product). To attract users, we are giving rewards. Also, we educate users about Coliquidity by requiring them to answer questions about our product to receive the rewards.
 
-## If I buy now, will I get rewards at the next distribution?
+## If I buy COLI now, when do I get the rewards?
 
-Yes, you will get rewards proportionally. For example, if you buy on Monday, you will receive 1% * 1/7 on Tuesday (because you held for 1 of 7 days).
+You will get the rewards at the next distribution date + every week afterwards.
+
+For the first week, you will get rewards proportionally to the deposit active time.
+
+Also read: [How can I get the rewards?](#how-can-i-get-the-rewards)
 
 ## I have another question
 
