@@ -20,7 +20,7 @@ We'll use our marketing budget and the "Rewards" allocation according to the tok
 
 ## How long will you run the rewards program?
 
-We plan to run the rewards program indefinitely, until we will be getting new users for Coliquidity (our product).
+We plan to run the rewards program indefinitely, while it continues to attract new users for Coliquidity (our product).
 
 ## Can I sell $COLI later?
 
