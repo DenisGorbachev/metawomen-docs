@@ -15,3 +15,11 @@ For example: you invest $2000 to buy 1000000 COLI at $0.0020, then COLI goes 2x 
 
 * Min members: 3
 * Min amount: any
+
+## Learn more
+
+* [Locks](Locks.md)
+* [Teams](Teams.md)
+* [Specification](Specification.md)
+* [Frequently Asked Questions](FAQ.md)
+* [Ask New Question](https://t.me/Coliquidity)
