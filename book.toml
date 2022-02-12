@@ -5,6 +5,9 @@ multilingual = true
 src = "src"
 title = "Coliquidity"
 
+[build]
+create-missing = false
+
 [output.html]
 edit-url-template = "https://github.com/Coliquidity/docs/edit/main/{path}"
 git-repository-url = "https://github.com/Coliquidity/docs"

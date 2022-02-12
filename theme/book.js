@@ -333,7 +333,7 @@ function playground_text(playground) {
     themeToggleButton.focus()
   }
 
-  var default_theme = 'coal'
+  var default_theme = 'default'
 
   function get_theme() {
     var theme

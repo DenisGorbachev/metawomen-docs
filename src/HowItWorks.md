@@ -23,7 +23,7 @@
 
 See also:
 
-- [What if a single provider requests a withdrawal?](faq/ForProjectOwners.md#what-if-a-single-provider-requests-a-withdrawal)
+- [What if a single provider requests a withdrawal?](FAQ/ForProjectOwners.md#what-if-a-single-provider-requests-a-withdrawal)
 
 ## For existing non-stablecoin pools
 

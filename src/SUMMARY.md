@@ -14,6 +14,15 @@
 - [For long-term investors](ForLongTermInvestors.md)
 - [Examples](Examples.md)
 
+# Rewards Program
+
+- [Summary](Rewards/Summary.md)
+- [Locks](Rewards/Locks.md)
+- [Teams](Rewards/Teams.md)
+- [Specification](Rewards/Specification.md)
+- [Examples](Rewards/Examples.md)
+- [FAQ](Rewards/FAQ.md)
+
 <!---
 # $COLI token
 
@@ -24,6 +33,6 @@
 
 # FAQ
 
-- [For project owners](faq/ForProjectOwners.md)
-- [For traders](faq/ForTraders.md)
-- [About rebrand](faq/Rebrand.md)
+- [For project owners](FAQ/ForProjectOwners.md)
+- [For traders](FAQ/ForTraders.md)
+- [About rebrand](FAQ/Rebrand.md)
