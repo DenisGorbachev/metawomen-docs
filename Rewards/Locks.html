@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>For traders - Coliquidity</title>
+        <title>Locks - Coliquidity</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../WhatIsColiquidity.html">What is Coliquidity?</a></li><li class="chapter-item expanded affix "><li class="part-title">General</li><li class="chapter-item expanded "><a href="../HowItWorks.html"><strong aria-hidden="true">1.</strong> How it works</a></li><li class="chapter-item expanded "><a href="../Pricing.html"><strong aria-hidden="true">2.</strong> Pricing</a></li><li class="chapter-item expanded "><a href="../Risks.html"><strong aria-hidden="true">3.</strong> Risks</a></li><li class="chapter-item expanded "><a href="../ForProjectOwners.html"><strong aria-hidden="true">4.</strong> For project owners</a></li><li class="chapter-item expanded "><a href="../ForYieldFarmers.html"><strong aria-hidden="true">5.</strong> For yield farmers</a></li><li class="chapter-item expanded "><a href="../ForLongTermInvestors.html"><strong aria-hidden="true">6.</strong> For long-term investors</a></li><li class="chapter-item expanded "><a href="../Examples.html"><strong aria-hidden="true">7.</strong> Examples</a></li><li class="chapter-item expanded affix "><li class="part-title">FAQ</li><li class="chapter-item expanded "><a href="../faq/ForProjectOwners.html"><strong aria-hidden="true">8.</strong> For project owners</a></li><li class="chapter-item expanded "><a href="../faq/ForTraders.html" class="active"><strong aria-hidden="true">9.</strong> For traders</a></li><li class="chapter-item expanded "><a href="../faq/Rebrand.html"><strong aria-hidden="true">10.</strong> About rebrand</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../WhatIsColiquidity.html">What is Coliquidity?</a></li><li class="chapter-item expanded affix "><li class="part-title">General</li><li class="chapter-item expanded "><a href="../HowItWorks.html"><strong aria-hidden="true">1.</strong> How it works</a></li><li class="chapter-item expanded "><a href="../Pricing.html"><strong aria-hidden="true">2.</strong> Pricing</a></li><li class="chapter-item expanded "><a href="../Risks.html"><strong aria-hidden="true">3.</strong> Risks</a></li><li class="chapter-item expanded "><a href="../ForProjectOwners.html"><strong aria-hidden="true">4.</strong> For project owners</a></li><li class="chapter-item expanded "><a href="../ForYieldFarmers.html"><strong aria-hidden="true">5.</strong> For yield farmers</a></li><li class="chapter-item expanded "><a href="../ForLongTermInvestors.html"><strong aria-hidden="true">6.</strong> For long-term investors</a></li><li class="chapter-item expanded "><a href="../Examples.html"><strong aria-hidden="true">7.</strong> Examples</a></li><li class="chapter-item expanded affix "><li class="part-title">Rewards Program</li><li class="chapter-item expanded "><a href="../Rewards/Summary.html"><strong aria-hidden="true">8.</strong> Summary</a></li><li class="chapter-item expanded "><a href="../Rewards/Locks.html" class="active"><strong aria-hidden="true">9.</strong> Locks</a></li><li class="chapter-item expanded "><a href="../Rewards/Teams.html"><strong aria-hidden="true">10.</strong> Teams</a></li><li class="chapter-item expanded "><a href="../Rewards/Specification.html"><strong aria-hidden="true">11.</strong> Specification</a></li><li class="chapter-item expanded "><a href="../Rewards/Examples.html"><strong aria-hidden="true">12.</strong> Examples</a></li><li class="chapter-item expanded "><a href="../Rewards/FAQ.html"><strong aria-hidden="true">13.</strong> FAQ</a></li><li class="chapter-item expanded affix "><li class="part-title">FAQ</li><li class="chapter-item expanded "><a href="../FAQ/ForProjectOwners.html"><strong aria-hidden="true">14.</strong> For project owners</a></li><li class="chapter-item expanded "><a href="../FAQ/ForTraders.html"><strong aria-hidden="true">15.</strong> For traders</a></li><li class="chapter-item expanded "><a href="../FAQ/Rebrand.html"><strong aria-hidden="true">16.</strong> About rebrand</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -120,7 +120,7 @@
                                                                         <a href="https://github.com/Coliquidity/docs" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                                                                        <a href="https://github.com/Coliquidity/docs/edit/main/src/faq/ForTraders.md" title="Suggest an edit" aria-label="Suggest an edit">
+                                                                        <a href="https://github.com/Coliquidity/docs/edit/main/src/Rewards/Locks.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
                         
@@ -149,41 +149,25 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="faq-for-traders"><a class="header" href="#faq-for-traders">FAQ for traders</a></h1>
-<h2 id="what-exchanges-support-coliquidity"><a class="header" href="#what-exchanges-support-coliquidity">What exchanges support Coliquidity?</a></h2>
-<p>All decentralized exchanges that use liquidity pools can also use Coliquidity. For example:</p>
+                        <h1 id="locks"><a class="header" href="#locks">Locks</a></h1>
 <ul>
-<li>Uniswap</li>
-<li>SushiSwap</li>
-<li>PancakeSwap</li>
-<li>TraderJoe</li>
-<li>… many more</li>
+<li>You should lock your $COLI deposit for 3 months to receive the rewards.</li>
+<li>You should unlock your $COLI deposit manually in 3 days after the lock expires.</li>
+<li>You can auto-prolong your $COLI deposit for 3 months by doing nothing - just don't unlock, and you will automatically receive the rewards for the next 3 months.</li>
 </ul>
-<h2 id="who-pays-for-gas"><a class="header" href="#who-pays-for-gas">Who pays for gas?</a></h2>
-<p>The user who called the Coliquidity smart contract pays for gas.</p>
-<p>If the call results in opening a new pool, the user pays for opening a new pool as well. We recommend that projects make this call from their account, so that regular traders don’t have to pay for opening the pool.</p>
-<p>We also have plans to integrate Coliquidity with the <a href="https://docs.opengsn.org/">Ethereum Gas Station Network</a>. As soon as this integration is implemented, the users won’t need to pay for gas anymore.</p>
-<h2 id="is-liquidity-mining-possible-with-coliquidity"><a class="header" href="#is-liquidity-mining-possible-with-coliquidity">Is liquidity mining possible with Coliquidity?</a></h2>
-<p>Yes, simply provide liquidity using the Coliquidity smart contract.</p>
-<h2 id="how-will-you-open-a-liquidity-pool-on-pancakeswap"><a class="header" href="#how-will-you-open-a-liquidity-pool-on-pancakeswap">How will you open a liquidity pool on PancakeSwap?</a></h2>
-<p>We will use Coliquidity to open the SHLD-WBNB pool on PancakeSwap. The specific plan will be announced closer to launch date. However, we can share some details already:</p>
-<ul>
-<li>The price will be lower than on SHLD-WETH pool (to incentivize traders to buy immediately on launch).</li>
-<li>The Coliquidity pool will have a hard cap (to incentivize providers to deposit earlier to secure their allocation).</li>
-</ul>
-<h2 id="can-i-short-tokens-with-coliquidity"><a class="header" href="#can-i-short-tokens-with-coliquidity">Can I short tokens with Coliquidity?</a></h2>
-<p>Yes, you can short the tokens that you own. Please note that when you close the short, you will receive a lot of tokens that you’ve shorted. This happens because closing the short means withdrawing liquidity, and you receive the same token when you withdraw from the pool.</p>
-<p>To maximize profit, you should short the tokens that are going down right now, but will be going up in future (according to your analysis).</p>
+<h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
+<h3 id="i-already-have-coli-can-i-lock-them-too"><a class="header" href="#i-already-have-coli-can-i-lock-them-too">I already have $COLI. Can I lock them too?</a></h3>
+<p>Yes.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../faq/ForProjectOwners.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../Rewards/Summary.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../faq/Rebrand.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="../Rewards/Teams.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -193,11 +177,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../faq/ForProjectOwners.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../Rewards/Summary.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../faq/Rebrand.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="../Rewards/Teams.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>
