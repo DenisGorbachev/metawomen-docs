@@ -12,7 +12,7 @@ If you don't want to answer the questions, you can [join the team](Teams.md), an
 
 ### How much exactly can I get?
 
-* You can get 1% weekly (67% APY) on your COLI deposit in BUSD.
+* You can get **1% weekly (67% APY)** on your COLI deposit in BUSD.
 * Exact formula: `PriceOfColi * AmountOfColi * 1%`
 * Example:
   * You invest $2000 to buy 1000000 COLI at $0.0020.
