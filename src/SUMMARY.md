@@ -17,11 +17,9 @@
 # Rewards Program
 
 - [Summary](Rewards/Summary.md)
+- [FAQ](Rewards/FAQ.md)
 - [Locks](Rewards/Locks.md)
 - [Teams](Rewards/Teams.md)
-- [Specification](Rewards/Specification.md)
-- [Examples](Rewards/Examples.md)
-- [FAQ](Rewards/FAQ.md)
 
 <!---
 # $COLI token

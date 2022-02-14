@@ -14,6 +14,5 @@ Yes.
 
 * [Locks](Locks.md)
 * [Teams](Teams.md)
-* [Specification](Specification.md)
 * [Frequently Asked Questions](FAQ.md)
 * [Ask New Question](https://t.me/Coliquidity)
