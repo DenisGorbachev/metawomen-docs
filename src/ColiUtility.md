@@ -1,1 +1,0 @@
-# $COLI token utility

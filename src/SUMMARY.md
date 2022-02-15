@@ -21,13 +21,12 @@
 - [Locks](Rewards/Locks.md)
 - [Teams](Rewards/Teams.md)
 
-<!---
-# $COLI token
+# COLI token
 
-- [Utility](ColiUtility.md)
-- [Addresses](ColiAddresses.md)
-- [How to buy?](ColiBuy.md)
--->
+- [Utility](COLI/Utility.md)
+- [Addresses](COLI/Addresses.md)
+- [How to buy?](COLI/Buy.md)
+- [FAQ](COLI/FAQ.md)
 
 # FAQ
 
