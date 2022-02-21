@@ -2,12 +2,14 @@
 
 * You can get bonuses by creating or joining a team.
 * You can create a team with your followers on social media.
-* As a team leader, you will get +30% bonus of your team's payout.
+* As a team leader, you will get +30% bonus of your whole team's payout.
 * As a team member, you will get +10% bonus of your personal payout.
 
 All bonuses are paid in addition to normal payout.
 
 There's no minimum requirement - you can create or join the team with any amount of COLI.
+
+It is very profitable to be a team leader. See how
 
 * [How can I create a team?](#how-can-i-create-a-team)
 * [How can I join a team?](#how-can-i-join-a-team)

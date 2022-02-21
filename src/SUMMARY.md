@@ -14,12 +14,12 @@
 - [For long-term investors](ForLongTermInvestors.md)
 - [Examples](Examples.md)
 
-# Rewards Program
+# Rewards For COLI Holders
 
-- [Summary](Rewards/Summary.md)
-- [FAQ](Rewards/FAQ.md)
-- [Locks](Rewards/Locks.md)
-- [Teams](Rewards/Teams.md)
+- [Summary](RewardsForHolders/Summary.md)
+- [FAQ](RewardsForHolders/FAQ.md)
+- [Locks](RewardsForHolders/Locks.md)
+- [Teams](RewardsForHolders/Teams.md)
 
 # COLI token
 

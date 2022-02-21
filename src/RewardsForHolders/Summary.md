@@ -1,4 +1,4 @@
-# Rewards Program
+# Rewards Program for COLI Holders
 
 * You can get **1% weekly (67% APY)** paid in Binance USD stablecoin ([learn more](FAQ.md#how-much-exactly-can-i-get)).
 * To get the rewards, you should [buy](https://pancakeswap.finance/swap?outputCurrency=0x3470C81026C8085b7B743695f851353043Ff0d0D) & [lock COLI](Locks.md).

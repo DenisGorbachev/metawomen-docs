@@ -36,11 +36,25 @@ Also read: [How can I get the rewards?](#how-can-i-get-the-rewards)
 
 You will receive Binance USD stablecoin (BUSD) ([learn more](https://www.binance.com/en/busd)).
 
+### What blockchain will the program work on?
+
+Binance Smart Chain.
+
+We'll consider adding other blockchains.
+
+### How do you calculate the COLI price?
+
+COLI price = average of "weekly average prices of all COLI liquidity pools".
+
 ### What questions should I answer?
 
 The questions will be about [Coliquidity](../WhatIsColiquidity.md) (our product). We will prepare 3-5 new questions every week. The questions form will be protected by a CAPTCHA to stop the bots.
 
 If you don't want to answer the questions, you can [join the team](Teams.md), and the team leader will do it for you.
+
+### Will I get the reward if I answer some questions incorrectly?
+
+No.
 
 ### How will you pay the rewards?
 
