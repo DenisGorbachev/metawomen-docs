@@ -18,7 +18,7 @@
 
 - [Summary](RewardsForHolders/Summary.md)
 - [FAQ](RewardsForHolders/FAQ.md)
-- [Locks](RewardsForHolders/Locks.md)
+- [Locks](RewardsForHolders/Staking.md)
 - [Teams](RewardsForHolders/Teams.md)
 
 # COLI token

@@ -5,7 +5,7 @@
 ### How can I get the rewards?
 
 * [Buy COLI](#how-can-i-buy-the-coli-token)
-* [Lock COLI](Locks.md)
+* [Stake COLI](Staking.md)
 * [Answer questions](#what-questions-should-i-answer) each week.
 
 If you don't want to answer the questions, you can [join the team](Teams.md), and the team leader will do it for you.
@@ -89,7 +89,7 @@ Please send it to our [Telegram group](https://t.me/Coliquidity).
 
 ### Learn more
 
-* [Locks](Locks.md)
+* [Staking](Staking.md)
 * [Teams](Teams.md)
 * [Frequently Asked Questions](FAQ.md)
 * [Ask New Question](https://t.me/Coliquidity)

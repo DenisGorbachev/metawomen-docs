@@ -11,7 +11,7 @@ Payout is positively correlated with COLI price - see the formula below:
 
 ## Learn more
 
-* [Locks](Locks.md)
+* [Staking](Staking.md)
 * [Teams](Teams.md)
 * [Specification](Specification.md)
 * [Frequently Asked Questions](FAQ.md)

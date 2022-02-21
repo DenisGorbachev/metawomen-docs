@@ -64,7 +64,7 @@ We will disqualify people for creating fake teams.
 
 ## Learn more
 
-* [Locks](Locks.md)
+* [Staking](Staking.md)
 * [Teams](Teams.md)
 * [Frequently Asked Questions](FAQ.md)
 * [Ask New Question](https://t.me/Coliquidity)
