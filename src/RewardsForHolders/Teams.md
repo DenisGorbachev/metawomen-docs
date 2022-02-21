@@ -1,15 +1,23 @@
 # Rewards Program Teams
 
-* You can get bonuses by creating or joining a team.
-* You can create a team with your followers on social media.
-* As a team leader, you will get +30% bonus of your whole team's payout.
+* Team leaders can get +30% bonus on the total team's payout (see below).
+* Team members can get the questions answered by the team leader (see below).
 
-All bonuses are paid in addition to normal payout.
+## For team leaders
 
-There's no minimum requirement - you can create or join the team with any amount of COLI.
+* You can get +30% bonus of your whole team's payout by creating a team.
+* You can create a team with your followers on social media, or with your friends from a chat group.
+* All bonuses are paid in addition to normal payout.
+* There's no minimum requirement - you can create or join the team with any amount of COLI.
 
 * [How much can I earn as a team leader?](#how-much-can-i-earn-as-a-team-leader)
 * [How can I create a team?](#how-can-i-create-a-team)
+
+## For team members
+
+* The team leader will answer the questions on your behalf. This is good because you save time & get a more guaranteed payout (remember: correct answers are needed to receive the reward each week).
+* If you prefer to answer the questions yourself, you should [create your own team](#how-can-i-create-a-team).
+
 * [How can I join a team?](#how-can-i-join-a-team)
 
 ## FAQ
@@ -39,12 +47,6 @@ Your public wallet address is your team ID. So technically, you already have a t
 * Confirm the transaction
 
 This transaction doesn't send any money - it only confirms your team membership.
-
-### Why should I join the team?
-
-The team leader will answer the questions on your behalf. You'll save time & ensure that you get the reward.
-
-Remember: if you answer the questions incorrectly, you won't receive the reward for the current week.
 
 ### Can I change the team?
 
