@@ -10,13 +10,16 @@
 * All bonuses are paid in addition to normal payout.
 * There's no minimum requirement - you can create or join the team with any amount of COLI.
 
+Learn more:
+
 * [How much can I earn as a team leader?](#how-much-can-i-earn-as-a-team-leader)
 * [How can I create a team?](#how-can-i-create-a-team)
 
 ## For team members
 
-* The team leader will answer the questions on your behalf. This is good because you save time & get a more guaranteed payout (remember: correct answers are needed to receive the reward each week).
-* If you prefer to answer the questions yourself, you should [create your own team](#how-can-i-create-a-team).
+* The team leader will answer the questions on your behalf. You save time and get a more predictable payout (remember: correct answers are needed to receive the reward each week).
+
+Learn more:
 
 * [How can I join a team?](#how-can-i-join-a-team)
 
@@ -28,7 +31,8 @@ It is very profitable to be a team leader. See the calculation:
 
 * You invest $500.
 * You attract 2 team members who invest $5000 each ($10000 total).
-* You get $35 **every week** ($30 from your team deposit + $5 from your own deposit).
+* You get $35 **weekly** ($30 from your team deposit + $5 from your own deposit).
+* $35 weekly = $1820 in a year.
 
 If $COLI price doubles, you get double reward ([see why](FAQ.md#how-much-exactly-can-i-get)).
 
