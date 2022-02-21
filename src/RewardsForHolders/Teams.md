@@ -3,18 +3,28 @@
 * You can get bonuses by creating or joining a team.
 * You can create a team with your followers on social media.
 * As a team leader, you will get +30% bonus of your whole team's payout.
-* As a team member, you will get +10% bonus of your personal payout.
 
 All bonuses are paid in addition to normal payout.
 
 There's no minimum requirement - you can create or join the team with any amount of COLI.
 
-It is very profitable to be a team leader. See how
-
+* [How much can I earn as a team leader?](#how-much-can-i-earn-as-a-team-leader)
 * [How can I create a team?](#how-can-i-create-a-team)
 * [How can I join a team?](#how-can-i-join-a-team)
 
 ## FAQ
+
+### How much can I earn as a team leader?
+
+It is very profitable to be a team leader. See the calculation:
+
+* You invest $500.
+* You attract 2 team members who invest $5000 each ($10000 total).
+* You get $35 **every week** ($30 from your team deposit + $5 from your own deposit).
+
+If $COLI price doubles, you get double reward ([see why](FAQ.md#how-much-exactly-can-i-get)).
+
+You can also sell $COLI later.
 
 ### How can I create a team?
 
@@ -30,17 +40,19 @@ Your public wallet address is your team ID. So technically, you already have a t
 
 This transaction doesn't send any money - it only confirms your team membership.
 
+### Why should I join the team?
+
+The team leader will answer the questions on your behalf. You'll save time & ensure that you get the reward.
+
+Remember: if you answer the questions incorrectly, you won't receive the reward for the current week.
+
 ### Can I change the team?
 
 Yes.
 
-### Will I receive additional bonus if I join the team now?
-
-Yes, you will receive additional rewards proportional to the time you were in a team. For example, if you join a team on Monday, you will receive additional `+10% * (1 / 7)` on Tuesday (because you were in a team for 1 of 7 days).
-
 ### Can I create a team with only myself?
 
-No, you need at least 3 members.
+No, every team needs at least 3 members (you + 2 additional members).
 
 We will disqualify people for creating fake teams.
 
