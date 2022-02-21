@@ -24,6 +24,10 @@ If you don't want to answer the questions, you can [join the team](Teams.md), an
 
 Every week on Tuesday at 10:00 UTC.
 
+### How can I withdraw the rewards?
+
+You will receive the rewards automatically. We will send them to the same wallet address that you used to deposit $COLI (on Binance Smart Chain).
+
 ### If I buy COLI now, when do I get the rewards?
 
 You will get the rewards at the next distribution date + every week afterwards.
