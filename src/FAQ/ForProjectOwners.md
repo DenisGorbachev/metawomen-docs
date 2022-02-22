@@ -10,10 +10,9 @@ Since “LP fees profit” is always positive, it is always better to use Coliqu
 
 ## Can I try Coliquidity on testnet?
 
-Yes, you can try it on the following networks:
+Yes, you can try it on the following pages:
 
-- [Try on Ethereum Ropsten](https://ropsten.etherscan.io/address/0x1aD607f7eED0185a6fbE397f40774Cf2c9C1f5B3#writeContract)
-- [Try on Binance Smart Chain Testnet](https://testnet.bscscan.com/address/0x5740dCDB74A6BD1e5064Ad06226FFdCd13e05649#writeContract)
+- [Marnotaur Testnet preset](https://www.coliquidity.com/deposit?preset=MarnotaurTestnet)
 
 Click “Contract > Write contract” to see the list of available methods:
 

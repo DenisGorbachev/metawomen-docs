@@ -16,10 +16,10 @@
 
 # Rewards For COLI Holders
 
-- [Summary](RewardsForHolders/Summary.md)
-- [FAQ](RewardsForHolders/FAQ.md)
-- [Locks](RewardsForHolders/Staking.md)
-- [Teams](RewardsForHolders/Teams.md)
+- [Summary](Rewards/Summary.md)
+- [FAQ](Rewards/FAQ.md)
+- [Locks](Rewards/Staking.md)
+- [Teams](Rewards/Teams.md)
 
 # COLI token
 
