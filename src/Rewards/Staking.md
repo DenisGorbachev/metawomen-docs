@@ -1,9 +1,9 @@
 # Staking
 
 * You should stake your $COLI to receive the rewards.
+* You will get **1% weekly (67% APY)** paid in Binance USD stablecoin ([learn more](FAQ.md#how-much-exactly-can-i-get)).
 * Min stake time: 3 months.
-* Max stake time: 12 months.
-* You can increase your rewards by staking COLI for longer period: +10% per each additional month.
+* Max stake time: 36 months.
 
 ## FAQ
 

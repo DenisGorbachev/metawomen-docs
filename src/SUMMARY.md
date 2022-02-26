@@ -32,4 +32,3 @@
 
 - [For project owners](FAQ/ForProjectOwners.md)
 - [For traders](FAQ/ForTraders.md)
-- [About rebrand](FAQ/Rebrand.md)

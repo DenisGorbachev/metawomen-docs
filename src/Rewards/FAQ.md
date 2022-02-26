@@ -2,14 +2,6 @@
 
 <!-- markdownlint-disable MD001 -->
 
-### How can I get the rewards?
-
-* [Buy COLI](#how-can-i-buy-the-coli-token)
-* [Stake COLI](Staking.md)
-* [Answer questions](#what-questions-should-i-answer) each week.
-
-If you don't want to answer the questions, you can [join the team](Teams.md), and the team leader will do it for you.
-
 ### How much exactly can I get?
 
 * You can get **1% weekly (67% APY)** on your COLI deposit in BUSD.
@@ -18,7 +10,15 @@ If you don't want to answer the questions, you can [join the team](Teams.md), an
   * You invest $2000 to buy 1000000 COLI at $0.0020.
   * COLI price goes 2x up to $0.0040.
   * Your deposit value increases to $4000.
-  * You get paid `0.0040 * 1000000 * 1%` = `$4000 * 1%` = `$40` in one week.
+  * You get paid `$4000 * 1%` = `$40` in one week.
+
+### How can I get the rewards?
+
+* [Buy COLI](#how-can-i-buy-the-coli-token)
+* [Stake COLI](Staking.md)
+* [Answer questions](#what-questions-should-i-answer) each week.
+
+If you don't want to answer the questions, you can [join the team](Teams.md), and the team leader will do it for you.
 
 ### When can I get the rewards?
 
