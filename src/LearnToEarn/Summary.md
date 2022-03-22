@@ -1,37 +1,47 @@
 # Coliquidity Learn-To-Earn Game
 
-You can win up to $1000 BUSD in every round of the Coliquidity game. The game is based on a Learn-To-Earn concept: you need to answer questions about Coliquidity in order to win the prize.
+You can win $250 BUSD in 5 minutes once a week in the Coliquidity game. The game is based on a Learn-To-Earn concept: you need to answer questions about [Coliquidity](../WhatIsColiquidity.md) (our product).
 
 ## How to win
 
-The round starts every Thursday at 07:00 UTC. The round lasts for 24 hours. During the round, you need to answer 1 question about [Coliquidity](../WhatIsColiquidity.md). The winning probability depends on the amount of assets that you're holding ([learn more](#how-is-the-winning-probability-calculated)).
+The round starts every Thursday at 07:00 UTC. The round lasts for 24 hours. During the round, you need to answer 1 question about [Coliquidity](../WhatIsColiquidity.md).
 
-Full instruction:
+**Important:** [Join our channel](https://t.me/ColiquidityAnnouncements) to get notified when the new round starts (every week).
 
-1. Join the [Coliquidity Announcements channel](https://t.me/ColiquidityAnnouncements) to get notified when the new round starts (every week).
-2. Enable the notifications for our channel (long tap the channel -> "Enable notifications").
-3. Receive a notification about the new round.
-4. Open the game page (use the link in the notification).
-5. Enter your public wallet address (Binance Smart Chain network).
-6. Read a small text about Coliquidity.
-7. Answer 1 question (find the answer in the text).
-8. Wait for 24 hours.
-9. Check if you have won!
+Also, please enable the notifications for our channel (long tap the channel -> "Enable notifications").
 
-We will send BUSD directly to the winner's address & announce it on our social media channels.
+### How is the winning probability calculated?
 
-## Terms
+Your winning probability depends on how much money you have on your address. Higher balance = higher chance of winning. If you have multiple addresses, you can submit them together.
+
+Your balance is calculated as the USD equivalent of specific tokens on your addresses. [COLI token](../COLI/FAQ.md) gets a 5x multiplier, other tokens get a 1x multiplier. The following tokens are included in the calculation: COLI, ETH, BNB, USDT, USDC, BUSD, DAI. [Click here to see the formulas](#formulas).
+
+This is required to stop the bots - otherwise they would join the game with zero balances.
+
+You **don't need** to bet your money. You just need to answer questions about our product. The capital calculation is automatic, it's only used to determine your chance of winning.
+
+To prove that you own the address, you'll need to sign a message. It's fast & free (no transaction fee). This is necessary to stop the malicious actors from submitting the addresses that they don't own.
+
+## Full instruction
+
+1. Receive a notification when the new round starts from [our channel](https://t.me/ColiquidityAnnouncements).
+2. Open the game page.
+3. Read a small text about Coliquidity.
+4. Answer 1 question (find the answer in the text).
+5. Provide your public address for the reward.
+
+We will send the reward directly to the winner's address & announce it on our social media channels.
+
+### Formulas
+
+#### Constants
 
 * Round duration: 24 hours
 * Round start: every Thursday at 07:00 UTC
 * Prize amount:
   * First round: $250
-  * Second round: TBD
-  * General: `Total Participating Capital / 1000` (max: $1000) (learn more)
+  * Next rounds: TBD
 * Prize currency: BUSD
-* Win probability formula
-
-### Formulas
 
 #### Winning Probability
 
@@ -51,7 +61,7 @@ Capital On Address = Sum of [USD Equivalents](#usd-equivalent) of [Assets](#asse
 
 #### USD Equivalent
 
-USD Equivalent = [Multiplier for Asset](#multiplier) × Amount of Asset × Price of Asset in USD at the start of the round
+USD Equivalent = [Multiplier](#multiplier) × Amount × Price in USD at the start of the round
 
 #### Assets
 
@@ -59,23 +69,17 @@ Supported assets: [COLI](../COLI/FAQ.md), ETH, BNB, WETH, WBNB, USDT, USDC, BUSD
 
 We're open to adding more assets in the future.
 
+#### Blockchains
+
+Supported blockchains: Ethereum, Binance Smart Chain
+
 #### Multiplier
 
-Multiplier = 3 for COLI, 1 for others.
+Multiplier = 5 for COLI, 1 for others.
 
 COLI holders have an advantage in the game. However, it is not a hard requirement to hold COLI - it's possible to win even without it. The game is designed to maximize participation, so that more people learn about Coliquidity and our upcoming [Rewards Program](../Rewards/Summary.md).
 
 ## Frequently Asked Questions
-
-### How is the winning probability calculated?
-
-Your winning probability depends on how much money you have on your address. Higher balance = higher chance of winning.
-
-This is required to fight the bots - otherwise they could submit many addresses with zero balances.
-
-If you have multiple addresses, you can submit all of them in a single answer, and we'll sum the balances on them. No need to answer multiple times.
-
-[Click here to see the formulas](#formulas)
 
 ### How is it related to Rewards Program?
 
