@@ -14,6 +14,10 @@
 - [For long-term investors](ForLongTermInvestors.md)
 - [Examples](Examples.md)
 
+# Learn-To-Earn Game
+
+- [Summary](LearnToEarn/Summary.md)
+
 # Rewards For COLI Holders
 
 - [Summary](Rewards/Summary.md)
