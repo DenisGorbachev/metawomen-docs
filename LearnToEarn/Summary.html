@@ -150,37 +150,39 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="coliquidity-learn-to-earn-game"><a class="header" href="#coliquidity-learn-to-earn-game">Coliquidity Learn-To-Earn Game</a></h1>
-<p>You can win up to $1000 BUSD in every round of the Coliquidity game. The game is based on a Learn-To-Earn concept: you need to answer questions about Coliquidity in order to win the prize.</p>
+<p>You can win $250 BUSD in 5 minutes once a week in the Coliquidity game. The game is based on a Learn-To-Earn concept: you need to answer questions about <a href="../WhatIsColiquidity.html">Coliquidity</a> (our product).</p>
 <h2 id="how-to-win"><a class="header" href="#how-to-win">How to win</a></h2>
-<p>The round starts every Thursday at 07:00 UTC. The round lasts for 24 hours. During the round, you need to answer 1 question about <a href="../WhatIsColiquidity.html">Coliquidity</a>. The winning probability depends on the amount of assets that you're holding (<a href="#how-is-the-winning-probability-calculated">learn more</a>).</p>
-<p>Full instruction:</p>
+<p>The round starts every Thursday at 07:00 UTC. The round lasts for 24 hours. During the round, you need to answer 1 question about <a href="../WhatIsColiquidity.html">Coliquidity</a>.</p>
+<p><strong>Important:</strong> <a href="https://t.me/ColiquidityAnnouncements">Join our channel</a> to get notified when the new round starts (every week).</p>
+<p>Also, please enable the notifications for our channel (long tap the channel -&gt; &quot;Enable notifications&quot;).</p>
+<h3 id="how-is-the-winning-probability-calculated"><a class="header" href="#how-is-the-winning-probability-calculated">How is the winning probability calculated?</a></h3>
+<p>Your winning probability depends on how much money you have on your address. Higher balance = higher chance of winning. If you have multiple addresses, you can submit them together.</p>
+<p>Your balance is calculated as the USD equivalent of specific tokens on your addresses. <a href="../COLI/FAQ.html">COLI token</a> gets a 5x multiplier, other tokens get a 1x multiplier. The following tokens are included in the calculation: COLI, ETH, BNB, USDT, USDC, BUSD, DAI. <a href="#formulas">Click here to see the formulas</a>.</p>
+<p>This is required to stop the bots - otherwise they would join the game with zero balances.</p>
+<p>You <strong>don't need</strong> to bet your money. You just need to answer questions about our product. The capital calculation is automatic, it's only used to determine your chance of winning.</p>
+<p>To prove that you own the address, you'll need to sign a message. It's fast &amp; free (no transaction fee). This is necessary to stop the malicious actors from submitting the addresses that they don't own.</p>
+<h2 id="full-instruction"><a class="header" href="#full-instruction">Full instruction</a></h2>
 <ol>
-<li>Join the <a href="https://t.me/ColiquidityAnnouncements">Coliquidity Announcements channel</a> to get notified when the new round starts (every week).</li>
-<li>Enable the notifications for our channel (long tap the channel -&gt; &quot;Enable notifications&quot;).</li>
-<li>Receive a notification about the new round.</li>
-<li>Open the game page (use the link in the notification).</li>
-<li>Enter your public wallet address (Binance Smart Chain network).</li>
+<li>Receive a notification when the new round starts from <a href="https://t.me/ColiquidityAnnouncements">our channel</a>.</li>
+<li>Open the game page.</li>
 <li>Read a small text about Coliquidity.</li>
 <li>Answer 1 question (find the answer in the text).</li>
-<li>Wait for 24 hours.</li>
-<li>Check if you have won!</li>
+<li>Provide your public address for the reward.</li>
 </ol>
-<p>We will send BUSD directly to the winner's address &amp; announce it on our social media channels.</p>
-<h2 id="terms"><a class="header" href="#terms">Terms</a></h2>
+<p>We will send the reward directly to the winner's address &amp; announce it on our social media channels.</p>
+<h3 id="formulas"><a class="header" href="#formulas">Formulas</a></h3>
+<h4 id="constants"><a class="header" href="#constants">Constants</a></h4>
 <ul>
 <li>Round duration: 24 hours</li>
 <li>Round start: every Thursday at 07:00 UTC</li>
 <li>Prize amount:
 <ul>
 <li>First round: $250</li>
-<li>Second round: TBD</li>
-<li>General: <code>Total Participating Capital / 1000</code> (max: $1000) (learn more)</li>
+<li>Next rounds: TBD</li>
 </ul>
 </li>
 <li>Prize currency: BUSD</li>
-<li>Win probability formula</li>
 </ul>
-<h3 id="formulas"><a class="header" href="#formulas">Formulas</a></h3>
 <h4 id="winning-probability"><a class="header" href="#winning-probability">Winning Probability</a></h4>
 <p>Winning Probability = <a href="#your-capital">Your Capital</a> / <a href="#total-capital">Total Capital</a></p>
 <h4 id="your-capital"><a class="header" href="#your-capital">Your Capital</a></h4>
@@ -190,19 +192,16 @@
 <h4 id="capital-on-address"><a class="header" href="#capital-on-address">Capital On Address</a></h4>
 <p>Capital On Address = Sum of <a href="#usd-equivalent">USD Equivalents</a> of <a href="#assets">Assets</a> on Address</p>
 <h4 id="usd-equivalent"><a class="header" href="#usd-equivalent">USD Equivalent</a></h4>
-<p>USD Equivalent = <a href="#multiplier">Multiplier for Asset</a> × Amount of Asset × Price of Asset in USD at the start of the round</p>
+<p>USD Equivalent = <a href="#multiplier">Multiplier</a> × Amount × Price in USD at the start of the round</p>
 <h4 id="assets"><a class="header" href="#assets">Assets</a></h4>
 <p>Supported assets: <a href="../COLI/FAQ.html">COLI</a>, ETH, BNB, WETH, WBNB, USDT, USDC, BUSD, DAI</p>
 <p>We're open to adding more assets in the future.</p>
+<h4 id="blockchains"><a class="header" href="#blockchains">Blockchains</a></h4>
+<p>Supported blockchains: Ethereum, Binance Smart Chain</p>
 <h4 id="multiplier"><a class="header" href="#multiplier">Multiplier</a></h4>
-<p>Multiplier = 3 for COLI, 1 for others.</p>
+<p>Multiplier = 5 for COLI, 1 for others.</p>
 <p>COLI holders have an advantage in the game. However, it is not a hard requirement to hold COLI - it's possible to win even without it. The game is designed to maximize participation, so that more people learn about Coliquidity and our upcoming <a href="../Rewards/Summary.html">Rewards Program</a>.</p>
 <h2 id="frequently-asked-questions"><a class="header" href="#frequently-asked-questions">Frequently Asked Questions</a></h2>
-<h3 id="how-is-the-winning-probability-calculated"><a class="header" href="#how-is-the-winning-probability-calculated">How is the winning probability calculated?</a></h3>
-<p>Your winning probability depends on how much money you have on your address. Higher balance = higher chance of winning.</p>
-<p>This is required to fight the bots - otherwise they could submit many addresses with zero balances.</p>
-<p>If you have multiple addresses, you can submit all of them in a single answer, and we'll sum the balances on them. No need to answer multiple times.</p>
-<p><a href="#formulas">Click here to see the formulas</a></p>
 <h3 id="how-is-it-related-to-rewards-program"><a class="header" href="#how-is-it-related-to-rewards-program">How is it related to Rewards Program?</a></h3>
 <p>The Learn-To-Earn Game is a &quot;smaller cousin&quot; of <a href="../Rewards/Summary.html">The Rewards Program</a>. The game is easier to start with, because you don't need to hold the COLI token. However, the game prize is a fixed amount, whereas in the Rewards Program payout is 1% weekly (scales up with your deposit).</p>
 <table><thead><tr><th></th><th>Rewards Program</th><th>Learn-To-Earn Game</th></tr></thead><tbody>
