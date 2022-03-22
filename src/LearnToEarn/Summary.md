@@ -51,7 +51,7 @@ Capital On Address = Sum of [USD Equivalents](#usd-equivalent) of [Assets](#asse
 
 #### USD Equivalent
 
-USD Equivalent = [Multiplier for Asset](#multiplier) *Amount of Asset* Price of Asset in USD at the start of the round
+USD Equivalent = [Multiplier for Asset](#multiplier) × Amount of Asset × Price of Asset in USD at the start of the round
 
 #### Assets
 
