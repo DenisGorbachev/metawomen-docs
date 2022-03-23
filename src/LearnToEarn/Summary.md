@@ -26,19 +26,17 @@ We will send the reward directly to the winner's address & announce it on our so
 
 Your winning probability depends on how much money you have on your address. Higher balance = higher chance of winning. If you have multiple addresses, you can submit them all at once.
 
-The COLI holders have an advantage, since the [COLI token](../COLI/FAQ.md) comes with a 5x multiplier. However, you don't need to hold COLI to win, because ETH, BNB, USDT, USDC, BUSD, DAI have a 1x multiplier.
+The COLI holders have an advantage, since the [COLI token](../COLI/Summary.md) comes with a 5x multiplier. However, you don't need to hold COLI to win, because ETH, BNB, USDT, USDC, BUSD, DAI have a 1x multiplier.
 
 Your balance is calculated as the USD equivalent of the tokens on your addresses. [Click here to see the formulas](#formulas).
+
+Please note that winning probability will be calculated separately for each address. So if you submit multiple addresses that you don't own, you will actually _decrease_ your probability (because there will be a non-zero chance that one of those addresses would win).
 
 ### Why did you design it this way?
 
 This system is designed to stop the bots - otherwise they would join the game with zero balances.
 
 You **don't need** to bet your money. You just need to answer questions about our product. The capital calculation is automatic, it's only used to determine your chance of winning.
-
-### How do I prove that I own the address?
-
-To prove that you own the address, you'll need to sign a message. It's fast & free (no transaction fee). This is necessary to stop the malicious actors from submitting the addresses that they don't own.
 
 ### How is it related to Rewards Program?
 
@@ -83,7 +81,7 @@ USD Equivalent = [Multiplier](#multiplier) × Amount × Price in USD at the star
 
 #### Assets
 
-Supported assets: [COLI](../COLI/FAQ.md), ETH, BNB, WETH, WBNB, USDT, USDC, BUSD, DAI
+Supported assets: [COLI](../COLI/Summary.md), ETH, BNB, WETH, WBNB, USDT, USDC, BUSD, DAI
 
 We're open to adding more assets in the future.
 

@@ -14,6 +14,10 @@
 - [For long-term investors](ForLongTermInvestors.md)
 - [Examples](Examples.md)
 
+# COLI token
+
+- [Summary](COLI/Summary.md)
+
 # Learn-To-Earn Game
 
 - [Summary](LearnToEarn/Summary.md)
@@ -24,13 +28,6 @@
 - [FAQ](Rewards/FAQ.md)
 - [Locks](Rewards/Staking.md)
 - [Teams](Rewards/Teams.md)
-
-# COLI token
-
-- [Utility](COLI/Utility.md)
-- [Addresses](COLI/Addresses.md)
-- [How to buy?](COLI/Buy.md)
-- [FAQ](COLI/FAQ.md)
 
 # FAQ
 
