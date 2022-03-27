@@ -38,6 +38,14 @@ This system is designed to stop the bots - otherwise they would join the game wi
 
 You **don't need** to bet your money. You just need to answer questions about our product. The capital calculation is automatic, it's only used to determine your chance of winning.
 
+### What is the snapshot time?
+
+The snapshot for capital calculation is taken on the next block after the round starts. For example, if the round starts at 07:00:00 UTC, and the next block comes at 07:00:01 UTC, then this block will be used for the snapshot.
+
+If the next block comes exactly at the round start timestamp, then this block will be used for the snapshot. We use "greater or equal" when comparing the block timestamp & the round start timestamp.
+
+If you have funds in DeFi protocols, you can momentarily withdraw them for the snapshot, and then put them back after the snapshot.
+
 ### How is it related to Rewards Program?
 
 The Learn-To-Earn Game is a "smaller cousin" of [The Rewards Program](../Rewards/Summary.md). The game is easier to start with, because you don't need to hold the COLI token. However, the game prize is a fixed amount, whereas in the Rewards Program payout is 1% weekly (scales up with your deposit).
