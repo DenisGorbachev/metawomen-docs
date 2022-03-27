@@ -398,6 +398,10 @@ Learn more: <a href="HowItWorks.html#for-existing-non-stablecoin-pools">Coliquid
 <h3 id="why-did-you-design-it-this-way"><a class="header" href="#why-did-you-design-it-this-way">Why did you design it this way?</a></h3>
 <p>This system is designed to stop the bots - otherwise they would join the game with zero balances.</p>
 <p>You <strong>don't need</strong> to bet your money. You just need to answer questions about our product. The capital calculation is automatic, it's only used to determine your chance of winning.</p>
+<h3 id="what-is-the-snapshot-time"><a class="header" href="#what-is-the-snapshot-time">What is the snapshot time?</a></h3>
+<p>The snapshot for capital calculation is taken on the next block after the round starts. For example, if the round starts at 07:00:00 UTC, and the next block comes at 07:00:01 UTC, then this block will be used for the snapshot.</p>
+<p>If the next block comes exactly at the round start timestamp, then this block will be used for the snapshot. We use &quot;greater or equal&quot; when comparing the block timestamp &amp; the round start timestamp.</p>
+<p>If you have funds in DeFi protocols, you can momentarily withdraw them for the snapshot, and then put them back after the snapshot.</p>
 <h3 id="how-is-it-related-to-rewards-program"><a class="header" href="#how-is-it-related-to-rewards-program">How is it related to Rewards Program?</a></h3>
 <p>The Learn-To-Earn Game is a &quot;smaller cousin&quot; of <a href="LearnToEarn/../Rewards/Summary.html">The Rewards Program</a>. The game is easier to start with, because you don't need to hold the COLI token. However, the game prize is a fixed amount, whereas in the Rewards Program payout is 1% weekly (scales up with your deposit).</p>
 <table><thead><tr><th></th><th>Rewards Program</th><th>Learn-To-Earn Game</th></tr></thead><tbody>
