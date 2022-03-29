@@ -21,6 +21,7 @@
 # Learn-To-Earn Game
 
 - [Summary](LearnToEarn/Summary.md)
+- [Teams](LearnToEarn/Teams.md)
 
 # Rewards For COLI Holders
 
