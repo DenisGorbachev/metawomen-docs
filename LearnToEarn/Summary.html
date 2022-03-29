@@ -154,7 +154,7 @@
 <h2 id="how-to-win"><a class="header" href="#how-to-win">How to win</a></h2>
 <p>The round starts every Thursday at 07:00 UTC. The round lasts for 24 hours. During the round, you need to answer 1 question about <a href="../WhatIsColiquidity.html">Coliquidity</a>.</p>
 <p><strong>Important:</strong> <a href="https://t.me/ColiquidityAnnouncements">Join our channel</a> to get notified when the new round starts (every week). Please enable the notifications for our channel (long tap the channel -&gt; &quot;Enable notifications&quot;).</p>
-<p>See also: <a href="#how-is-the-winning-probability-calculated">How is the winning probability calculated?</a></p>
+<p>See also: <a href="#how-is-the-winning-chance-calculated">How is the winning chance calculated?</a></p>
 <h2 id="full-instruction"><a class="header" href="#full-instruction">Full instruction</a></h2>
 <ol>
 <li>Receive a notification when the new round starts from <a href="https://t.me/ColiquidityAnnouncements">our channel</a>.</li>
@@ -162,14 +162,16 @@
 <li>Read a small text about Coliquidity.</li>
 <li>Answer 1 question (find the answer in the text).</li>
 <li>Provide your public address for the reward.</li>
+<li>Provide your team leader's public address for the reward (<a href="./Teams.html">learn more about the teams</a>)</li>
 </ol>
-<p>We will send the reward directly to the winner's address &amp; announce it on our social media channels.</p>
+<p>We will send the reward directly to the winning team leader &amp; member address. After sending, we'll announce it on our social media channels.</p>
 <h2 id="frequently-asked-questions"><a class="header" href="#frequently-asked-questions">Frequently Asked Questions</a></h2>
-<h3 id="how-is-the-winning-probability-calculated"><a class="header" href="#how-is-the-winning-probability-calculated">How is the winning probability calculated?</a></h3>
-<p>Your winning probability depends on how much money you have on your address. Higher balance = higher chance of winning. If you have multiple addresses, you can submit them all at once.</p>
+<h3 id="how-is-the-winning-chance-calculated"><a class="header" href="#how-is-the-winning-chance-calculated">How is the winning chance calculated?</a></h3>
+<p>Your winning chance depends on how much money you have on your address. Higher balance = higher chance of winning. If you have multiple addresses, you can submit them all at once.</p>
 <p>The COLI holders have an advantage, since the <a href="../COLI/Summary.html">COLI token</a> comes with a 5x multiplier. However, you don't need to hold COLI to win, because ETH, BNB, USDT, USDC, BUSD, DAI have a 1x multiplier.</p>
 <p>Your balance is calculated as the USD equivalent of the tokens on your addresses. <a href="#formulas">Click here to see the formulas</a>.</p>
-<p>Please note that winning probability will be calculated separately for each address. So if you submit multiple addresses that you don't own, you will actually <em>decrease</em> your probability (because there will be a non-zero chance that one of those addresses would win).</p>
+<p>If you want to increase your winning chance, you should join the team. This is because we calculate the winning probability between teams first, then pick the winning team, then calculate the winning probability between team members. <a href="./Teams.html">Learn more about the teams</a>.</p>
+<p>Please note that winning chance will be calculated separately for each address. So if you submit multiple addresses that you don't own, you will actually <em>decrease</em> your chance (because there will be a non-zero chance that one of those addresses would win).</p>
 <h3 id="why-did-you-design-it-this-way"><a class="header" href="#why-did-you-design-it-this-way">Why did you design it this way?</a></h3>
 <p>This system is designed to stop the bots - otherwise they would join the game with zero balances.</p>
 <p>You <strong>don't need</strong> to bet your money. You just need to answer questions about our product. The capital calculation is automatic, it's only used to determine your chance of winning.</p>
@@ -197,10 +199,13 @@
 </li>
 <li>Prize currency: BUSD</li>
 </ul>
-<h4 id="winning-probability"><a class="header" href="#winning-probability">Winning Probability</a></h4>
-<p>Winning Probability = <a href="#your-capital">Your Capital</a> / <a href="#total-capital">Total Capital</a></p>
+<h4 id="winning-chance"><a class="header" href="#winning-chance">Winning Chance</a></h4>
+<p>Team Winning Chance = <a href="#team-capital">Team Capital</a> / <a href="#total-capital">Total Capital</a></p>
+<p>Your Winning Chance = <a href="#your-capital">Your capital</a> / <a href="#team-capital">Team capital</a></p>
 <h4 id="your-capital"><a class="header" href="#your-capital">Your Capital</a></h4>
 <p>Your Capital = Sum of <a href="#capital-on-address">Capital on each of your Addresses</a></p>
+<h4 id="team-capital"><a class="header" href="#team-capital">Team Capital</a></h4>
+<p>Team Capital = Sum of <a href="#capital-on-address">Capital on all team member Addresses</a></p>
 <h4 id="total-capital"><a class="header" href="#total-capital">Total Capital</a></h4>
 <p>Total Capital = Sum of <a href="#capital-on-address">Capital on all participating Addresses</a></p>
 <h4 id="capital-on-address"><a class="header" href="#capital-on-address">Capital On Address</a></h4>
