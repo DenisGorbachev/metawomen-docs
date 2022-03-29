@@ -8,7 +8,7 @@ The round starts every Thursday at 07:00 UTC. The round lasts for 24 hours. Duri
 
 **Important:** [Join our channel](https://t.me/ColiquidityAnnouncements) to get notified when the new round starts (every week). Please enable the notifications for our channel (long tap the channel -> "Enable notifications").
 
-See also: [How is the winning probability calculated?](#how-is-the-winning-probability-calculated)
+See also: [How is the winning chance calculated?](#how-is-the-winning-chance-calculated)
 
 ## Full instruction
 
@@ -17,20 +17,23 @@ See also: [How is the winning probability calculated?](#how-is-the-winning-proba
 3. Read a small text about Coliquidity.
 4. Answer 1 question (find the answer in the text).
 5. Provide your public address for the reward.
+6. Provide your team leader's public address for the reward ([learn more about the teams](./Teams.md))
 
-We will send the reward directly to the winner's address & announce it on our social media channels.
+We will send the reward directly to the winning team leader & member address. After sending, we'll announce it on our social media channels.
 
 ## Frequently Asked Questions
 
-### How is the winning probability calculated?
+### How is the winning chance calculated?
 
-Your winning probability depends on how much money you have on your address. Higher balance = higher chance of winning. If you have multiple addresses, you can submit them all at once.
+Your winning chance depends on how much money you have on your address. Higher balance = higher chance of winning. If you have multiple addresses, you can submit them all at once.
 
 The COLI holders have an advantage, since the [COLI token](../COLI/Summary.md) comes with a 5x multiplier. However, you don't need to hold COLI to win, because ETH, BNB, USDT, USDC, BUSD, DAI have a 1x multiplier.
 
 Your balance is calculated as the USD equivalent of the tokens on your addresses. [Click here to see the formulas](#formulas).
 
-Please note that winning probability will be calculated separately for each address. So if you submit multiple addresses that you don't own, you will actually _decrease_ your probability (because there will be a non-zero chance that one of those addresses would win).
+If you want to increase your winning chance, you should join the team. This is because we calculate the winning probability between teams first, then pick the winning team, then calculate the winning probability between team members. [Learn more about the teams](./Teams.md).
+
+Please note that winning chance will be calculated separately for each address. So if you submit multiple addresses that you don't own, you will actually _decrease_ your chance (because there will be a non-zero chance that one of those addresses would win).
 
 ### Why did you design it this way?
 
@@ -67,13 +70,19 @@ The Learn-To-Earn Game is a "smaller cousin" of [The Rewards Program](../Rewards
   * Next rounds: TBD
 * Prize currency: BUSD
 
-#### Winning Probability
+#### Winning Chance
 
-Winning Probability = [Your Capital](#your-capital) / [Total Capital](#total-capital)
+Team Winning Chance = [Team Capital](#team-capital) / [Total Capital](#total-capital)
+
+Your Winning Chance = [Your capital](#your-capital) / [Team capital](#team-capital)
 
 #### Your Capital
 
 Your Capital = Sum of [Capital on each of your Addresses](#capital-on-address)
+
+#### Team Capital
+
+Team Capital = Sum of [Capital on all team member Addresses](#capital-on-address)
 
 #### Total Capital
 
