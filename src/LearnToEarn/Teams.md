@@ -13,6 +13,6 @@ In the future, we'll add more questions & allow the team leader to answer some q
 
 ## Learn more
 
-* [Summary](Summary.md)
+* [Learn To Earn: game summary](Summary.md)
 * [How is the winning chance calculated?](Summary.md#how-is-the-winning-chance-calculated)
 * [Ask a new question](https://t.me/Coliquidity)
