@@ -1,4 +1,4 @@
-# FAQ for project owners
+# Frequently Asked Questions
 
 ## What’s the best way to make money with Coliquidity?
 
@@ -7,6 +7,37 @@ Coliquidity is better suited for long-term holding. You can make more money this
 Coliquidity profit = Trend profit + LP fees profit.
 
 Since “LP fees profit” is always positive, it is always better to use Coliquidity than simply buying and holding without providing liquidity.
+
+## What exchanges support Coliquidity?
+
+All decentralized exchanges that use liquidity pools can also use Coliquidity. For example:
+
+- Uniswap
+- SushiSwap
+- PancakeSwap
+- TraderJoe
+- … many more
+
+## Who pays for gas?
+
+The user who called the Coliquidity smart contract pays for gas.
+
+If the call results in opening a new pool, the user pays for opening a new pool as well. We recommend that projects make this call from their account, so that regular traders don’t have to pay for opening the pool.
+
+We also have plans to integrate Coliquidity with the [Ethereum Gas Station Network](https://docs.opengsn.org/). As soon as this integration is implemented, the users won’t need to pay for gas anymore.
+
+## How will you open a liquidity pool on PancakeSwap?
+
+We will use Coliquidity to open the SHLD-WBNB pool on PancakeSwap. The specific plan will be announced closer to launch date. However, we can share some details already:
+
+- The price will be lower than on SHLD-WETH pool (to incentivize traders to buy immediately on launch).
+- The Coliquidity pool will have a hard cap (to incentivize providers to deposit earlier to secure their allocation).
+
+## Can I short tokens with Coliquidity?
+
+Yes, you can short the tokens that you own. Please note that when you close the short, you will receive a lot of tokens that you’ve shorted. This happens because closing the short means withdrawing liquidity, and you receive the same token when you withdraw from the pool.
+
+To maximize profit, you should short the tokens that are going down right now, but will be going up in future (according to your analysis).
 
 ## Can I try Coliquidity on testnet?
 
@@ -19,7 +50,7 @@ Click “Contract > Write contract” to see the list of available methods:
 - Use “createOffer” if you want to deposit initial liquidity.
 - Use “createPosition” if you want to match your liquidity with an existing offer & put the combined liquidity into the pool.
 - Use “withdrawPosition” if you want to redeem your LP tokens & withdraw liquidity from the pool.
-- Use “withdrawOffer” if you want to withdraw initial liquidity. Please note that if someone has already created a position using your initial liquidity, you will need to call “withrawPosition” first (for every open position). You can see all your positions with “positionsByMaker” call (see below).
+- Use “withdrawOffer” if you want to withdraw initial liquidity. Please note that if someone has already created a position using your initial liquidity, you will need to call “withdrawPosition” first (for every open position). You can see all your positions with “positionsByMaker” call (see below).
 
 Click “Contract > Read contract” to see the list of available calls:
 
@@ -44,7 +75,7 @@ The timelocked positions are created by accepting timelocked offers. The app wil
 **Long version**
 
 - Suppose you buy & sell the token directly. You lose on LP fees & slippage two times (both when buying & when selling). Your profit depends on the price change, minus LP fees, minus slippage.
-- Suppose you provide [one-sided](../HowItWorks.md) liquidity via Coliquidity. You earn LP fees, you have no slippage. Your profit is a function of the price difference plus gains on fees.
+- Suppose you provide [one-sided](HowItWorks.md) liquidity via Coliquidity. You earn LP fees, you have no slippage. Your profit is a function of the price difference plus gains on fees.
 - Coliquidity makes your position less sensitive to price difference. That means you lose less & gain less compared to a regular long position. However, Coliquidity gives you LP fees. Therefore, Coliquidity gives you a better risk/reward profile (because price sensitivity is decreased symmetrically, but the fees are always a plus)
 
 **Simulations**
@@ -71,7 +102,7 @@ We’re working on a UI update where you will be able to see the withdrawal amou
 
 The smart contract will check **the timelock** of the coliquidity position:
 
-- If the timelock hasn’t expired yet, the smart contract will deny withdrawal.
+- If the timelock hasn't expired yet, the smart contract will deny withdrawal.
 - If the timelock has expired, the smart contract will withdraw the requested part of the position:
   - Send token 1 to the provider of token 1.
   - Send token 2 to the provider of token 2.
@@ -86,8 +117,8 @@ The smart contract will check **the timelock** of the coliquidity position:
 
 No, it’s a different concept.
 
-- Coliquidity allows to provide one-sided liquidity **at the current price**.
-- Uniswap allows to provide one-sided liquidity **strictly above or strictly below** the current price.
+- Coliquidity allows providing one-sided liquidity **at the current price**.
+- Uniswap allows providing one-sided liquidity **strictly above or strictly below** the current price.
 
 With Coliquidity, you’re making money immediately & always. With Uniswap, you’re making money only when the price is within your liquidity range (not immediately, not always).
 
@@ -142,51 +173,51 @@ _Note: this is a temporary instruction for project owners. We are currently deve
 
 1. Choose how much liquidity you want to see in the pool:
 
-   - We recommend to choose the token amount equivalent to $150000 - $200000.
+    - We recommend choosing the token amount equivalent to $150000 - $200000.
 
 2. Approve liquidity amount for depositing into Coliquidity smart contract:
 
-   - Open your token contract on blockchain explorer
-   - Click “Contract”
-   - Click “Write contract”
-   - Find “approve” function
-   - Fill approve function form:
-     - Address: [Coliquidity address - see below]
-       - Open [Coliquidity Info](https://app.shieldfinance.io/coliquidity/info)
-       - Find the address for your network
-       - Copy the address
-     - Amount: [Amount of tokens multiplied by 10 in power of [decimals]]
-       - **Important: the amount must be multiplied by 10 ^ [your token decimals], otherwise you will approve an insufficient amount.**
-   - Click “Write”
-   - Confirm transaction
-   - Wait until transaction is confirmed
+    - Open your token contract on blockchain explorer
+    - Click “Contract”
+    - Click “Write contract”
+    - Find “approve” function
+    - Fill approve function form:
+        - Address: [Coliquidity address - see below]
+            - Open [Coliquidity Info](https://app.shieldfinance.io/coliquidity/info)
+            - Find the address for your network
+            - Copy the address
+        - Amount: [Amount of tokens multiplied by 10 in power of [decimals]]
+            - **Important: the amount must be multiplied by 10 ^ [your token decimals], otherwise you will approve an insufficient amount.**
+    - Click “Write”
+    - Confirm transaction
+    - Wait until transaction is confirmed
 
 3. Deposit liquidity into Coliquidity smart contract:
 
-   - Open Coliquidity
+    - Open Coliquidity
 
 ### Example for $TAUR-$BUSD mainnet pool
 
 1. Approve on [TAUR contract page](https://www.bscscan.com/token/0x19b99162adaab85134e781ac0048c275c31b205a#writeContract):
-   - method:
-   - address: 0xcd9dc4C48DDC0e578bd2C42254841f0223b88a3F
-   - amount: 120000 TAUR \* 10 ^ 18 decimals = 120000000000000000000000
+    - method:
+    - address: 0xcd9dc4C48DDC0e578bd2C42254841f0223b88a3F
+    - amount: 120000 TAUR \* 10 ^ 18 decimals = 120000000000000000000000
 1. Create offer on [Coliquidity contract page](https://bscscan.com/address/0xcd9dc4C48DDC0e578bd2C42254841f0223b88a3F#writeContract):
-   - makerToken: 0x19b99162adaab85134e781ac0048c275c31b205a
-   - makerAmount: 120000 TAUR \* 10 ^ 18 decimals = 120000000000000000000000
-   - taker: 0x0000000000000000000000000000000000000000
-   - takerTokens: [0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56]
-   - makerDenominator: 0
-   - takerDenominator: 0
-   - reinvest: true
-   - pausedUntil: 0
-   - lockedUntil: 0
+    - makerToken: 0x19b99162adaab85134e781ac0048c275c31b205a
+    - makerAmount: 120000 TAUR \* 10 ^ 18 decimals = 120000000000000000000000
+    - taker: 0x0000000000000000000000000000000000000000
+    - takerTokens: [0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56]
+    - makerDenominator: 0
+    - takerDenominator: 0
+    - reinvest: true
+    - pausedUntil: 0
+    - lockedUntil: 0
 
-## Does Coliquidity protect from a rugpull?
+## Does Coliquidity protect from a rug pull?
 
-Yes - if the project sets Offer.lockedUntil parameter to a specific timestamp in future. No rugpull is possible until Offer.lockedUntil is passed.
+Yes - if the project sets Offer.lockedUntil parameter to a specific timestamp in the future. No rug pull is possible until Offer.lockedUntil is passed.
 
-Here’s a more technical explanation. Coliquidity provides a special parameter: “Offer.lockedUntil” ([see contract](https://github.com/ShieldFinanceHQ/contracts/blob/dev/contracts/Coliquidity.sol)). This parameter is checked when the “withdrawPosition” method is called: if the current timestamp is less than Offer.lockedUntil, the withdrawal is denied. Therefore, it is not possible to withdraw liquidity (do a rugpull) before the current timestamp passes Offer.lockedUntil.
+Here’s a more technical explanation. Coliquidity provides a special parameter: “Offer.lockedUntil” ([see contract](https://github.com/ShieldFinanceHQ/contracts/blob/dev/contracts/Coliquidity.sol)). This parameter is checked when the “withdrawPosition” method is called: if the current timestamp is less than Offer.lockedUntil, the withdrawal is denied. Therefore, it is not possible to withdraw liquidity (do a rug pull) before the current timestamp passes Offer.lockedUntil.
 
 Please note that Offer.lockedUntil can be set to 0, which allows withdrawals anytime.
 
@@ -216,7 +247,7 @@ Coliquidity and Market Crash Protection are two different products. We intend to
 
 ## Is Coliquidity similar to Uniswap?
 
-Coliquidity works with existing decentralized exchanges - it doesn’t replace them. So the answer has two parts:
+Coliquidity works with existing decentralized exchanges - it doesn't replace them. So the answer has two parts:
 
 - Yes, you can use Coliquidity to provide liquidity into the pools on Uniswap / SushiSwap / PancakeSwap / other exchanges.
 - No, you can’t use Coliquidity to buy & sell tokens (you can just use existing exchanges).
@@ -232,49 +263,14 @@ Yes, Coliquidity matches the liquidity providers who have different tokens & wan
 - Alice has USDT.
 - Bob has ETH.
 - Alice & Bob want to provide liquidity into ETH-USDT pool.
-- Coliquidity will match them (accept Alice’s USDT and Bob’s ETH, then put it together into the pool).
+- Coliquidity will match them (take Alice’s USDT and Bob’s ETH, then put it together into the pool).
 
 Being a marketplace is **a competitive advantage**. People start trading where others are already trading. So if we get a core user base, it will grow naturally, and people will be wary of using competitors (who are not original implementers of the idea).
-
-We will get the core user base by executing our [marketing plan](#what-is-your-marketing-plan) for Coliquidity.
-
-## What is your marketing plan?
-
-- Launch [Moonshot](https://docs.google.com/document/d/1kzOJbNYqf1kqeMbNsRVADGGh8zwNwMHvSbz0ZngdAOg/edit#) to demonstrate the benefits of Coliquidity to other projects.
-- Ask other projects to tell their followers that they can use Coliquidity to provide liquidity in the project's pool:
-  - Our current partners.
-  - New projects who need to create a new liquidity pool.
-- Ask influencers to tell their followers that they can use Coliquidity to make more money in long-term positions.
-  - Our private investors-influencers.
-  - New influencers who are already supporting us.
-  - New influencers who don’t know about us yet.
-- Ask our marketing partners to spread the information about Coliquidity via word-of-mouth in Telegram groups & Twitter comments.
 
 ## Do you have competitors?
 
 As of 08 Jan 2022, we have not heard of any projects with the same idea.
 
-## What is the project status?
-
-Updated on Nov 08, 2021:
-
-- Done: [Smart contract](https://github.com/ShieldFinanceHQ/contracts/blob/dev/contracts/Coliquidity.sol#L95) + [automated tests](https://github.com/ShieldFinanceHQ/contracts/blob/dev/test/contracts/Coliquidity.test.ts) (security audit pending)
-- Done: [User interface prototype](https://coliquidity.glideapp.io/)
-- Done: [User Interface app](https://app.shieldfinance.io/coliquidity/deposit)
-- Done: [Used Coliquidity during $TAUR token launch](https://medium.com/marnotaur/add-your-one-sided-liquidity-to-taur-busd-pool-36314059e546)
-- Working now: get more partners to launch their tokens using Coliquidity.
-
 ## Do you already have users?
 
 Yes, we already have users on Binance Smart Chain Mainnet (people who deposited during the [Marnotaur token launch](https://medium.com/marnotaur/add-your-one-sided-liquidity-to-taur-busd-pool-36314059e546)).
-
-## What is Coliquidity launch date?
-
-The Coliquidity launch is split into two phases:
-
-- [Done] Soft launch: Coliquidity will be used to launch the tokens of partner projects:
-  - Already launched the [Marnotaur](https://marnotaur.com/en) token.
-  - Accepting proposals from new partners to launch their tokens.
-- Full launch: Coliquidity will become available for the general public.
-
-The full launch date will be announced on our social media channels - please follow us on [Telegram](https://t.me/ShieldFinanceHQ) & [Twitter](https://twitter.com/ShieldFinance) to get notified earlier.

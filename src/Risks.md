@@ -29,7 +29,7 @@
 **Long version**
 
 - Suppose you provide liquidity directly. You make money if the price is stable. You lose money if the price goes down, and you lose twice, because both sides of your position are worth less (base token is worth less because the price is down + quote token is worth less because its quantity has decreased due to selling).
-- Suppose you provide one-sided liquidity via Coliquidity. You make money if the price is stable, because Coliquidity gives you the same LP fees (proportional to your liquidity amount). You lose money if the price goes down, but you lose less than with regular liquidity provisioning, because only the quote token quantity is decreased (you don’t hold the base token, so it doesn’t influence your PnL).
+- Suppose you provide one-sided liquidity via Coliquidity. You make money if the price is stable, because Coliquidity gives you the same LP fees (proportional to your liquidity amount). You lose money if the price goes down, but you lose less than with regular liquidity provisioning, because only the quote token quantity is decreased (you don’t hold the base token, so it doesn't influence your PnL).
 - Coliquidity makes your position behave differently from regular liquidity provider position. You make money if the price goes up (but not as much as with a long position). You lose money if the price goes down (but not as much as with a long position). Essentially, it’s an under-leveraged long position (if you provide the quote token) or an under-leveraged short position (if you provide the base token).
 
 **Simulations**

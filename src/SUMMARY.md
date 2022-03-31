@@ -13,6 +13,7 @@
 - [For yield farmers](ForYieldFarmers.md)
 - [For long-term investors](ForLongTermInvestors.md)
 - [Examples](Examples.md)
+- [FAQ](FAQ.md)
 
 # COLI token
 
@@ -29,8 +30,3 @@
 - [FAQ](Rewards/FAQ.md)
 - [Locks](Rewards/Staking.md)
 - [Teams](Rewards/Teams.md)
-
-# FAQ
-
-- [For project owners](FAQ/ForProjectOwners.md)
-- [For traders](FAQ/ForTraders.md)
