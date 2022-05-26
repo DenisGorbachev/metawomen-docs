@@ -1,0 +1,823 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Coliquidity</title>
+                <meta name="robots" content="noindex" />
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="WhatIsColiquidity.html">What is Coliquidity?</a></li><li class="chapter-item expanded affix "><li class="part-title">General</li><li class="chapter-item expanded "><a href="HowItWorks.html"><strong aria-hidden="true">1.</strong> How it works</a></li><li class="chapter-item expanded "><a href="Pricing.html"><strong aria-hidden="true">2.</strong> Pricing</a></li><li class="chapter-item expanded "><a href="Risks.html"><strong aria-hidden="true">3.</strong> Risks</a></li><li class="chapter-item expanded "><a href="ForProjectOwners.html"><strong aria-hidden="true">4.</strong> For project owners</a></li><li class="chapter-item expanded "><a href="ForYieldFarmers.html"><strong aria-hidden="true">5.</strong> For yield farmers</a></li><li class="chapter-item expanded "><a href="ForLongTermInvestors.html"><strong aria-hidden="true">6.</strong> For long-term investors</a></li><li class="chapter-item expanded "><a href="Examples.html"><strong aria-hidden="true">7.</strong> Examples</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">8.</strong> FAQ</a></li><li class="chapter-item expanded affix "><li class="part-title">COLI token</li><li class="chapter-item expanded "><a href="COLI/Summary.html"><strong aria-hidden="true">9.</strong> Summary</a></li><li class="chapter-item expanded affix "><li class="part-title">Rewards For COLI Holders</li><li class="chapter-item expanded "><a href="Rewards/Summary.html"><strong aria-hidden="true">10.</strong> Summary</a></li><li class="chapter-item expanded "><a href="Rewards/FAQ.html"><strong aria-hidden="true">11.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="Rewards/Staking.html"><strong aria-hidden="true">12.</strong> Locks</a></li><li class="chapter-item expanded "><a href="Rewards/Teams.html"><strong aria-hidden="true">13.</strong> Teams</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Coliquidity</h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        <a href="https://github.com/Coliquidity/docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                                                
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="what-is-coliquidity"><a class="header" href="#what-is-coliquidity">What is Coliquidity?</a></h1>
+<p>Coliquidity is <strong>a new way to trade crypto</strong>:</p>
+<ul>
+<li>More profitable than buying tokens (<a href="FAQ.html#why-coliquidity-is-more-profitable-than-buying-tokens">proof</a>).</li>
+<li>Less risky than providing liquidity (<a href="Risks.html#why-coliquidity-is-less-risky-than-providing-liquidity">proof</a>).</li>
+</ul>
+<p>Normally you need to deposit two tokens into the liquidity pool to earn liquidity provider fees. However, Coliquidity allows you to deposit <strong>only one token</strong>. You don’t need to buy the other token at all. Coliquidity will match your deposit with someone else’s deposit for another token.</p>
+<p>Benefits:</p>
+<ul>
+<li>You get liquidity provider fees</li>
+<li>You get liquidity mining bonuses (if they are provided by the project)</li>
+<li>You don’t pay the trading fees (you earn them instead)</li>
+<li>You don’t lose on slippage.</li>
+</ul>
+<p>Drawbacks:</p>
+<ul>
+<li>You may need to wait for a matching deposit.</li>
+</ul>
+<p>Technical description: Coliquidity is a smart contract that combines 2 tokens from 2 providers to create a new pool or deposit into an existing pool on Uniswap / PancakeSwap / any exchange.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-it-works"><a class="header" href="#how-it-works">How it works</a></h1>
+<ul>
+<li><a href="HowItWorks.html#for-new-pools">For new pools</a></li>
+<li><a href="HowItWorks.html#for-existing-stablecoin-pools">For existing stablecoin pools</a></li>
+<li><a href="HowItWorks.html#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a></li>
+</ul>
+<h2 id="for-new-pools"><a class="header" href="#for-new-pools">For new pools</a></h2>
+<ul>
+<li>The project deposits ABC tokens into the Coliquidity smart contract.</li>
+<li>The investors deposit WETH tokens into the Coliquidity smart contract.</li>
+<li>When there is enough WETH liquidity, the project triggers the creation of a new pool though Coliquidity contract.</li>
+<li>The Coliquidity contract deploys a new ABC-WETH pool using combined liquidity from the project &amp; the investors.</li>
+</ul>
+<h2 id="for-existing-stablecoin-pools"><a class="header" href="#for-existing-stablecoin-pools">For existing stablecoin pools</a></h2>
+<ul>
+<li>Alice &amp; Bob decide to put their stablecoins into the DAI-USDT pool to earn LP fees.</li>
+<li>Alice deposits DAI tokens into the Coliquidity smart contract.</li>
+<li>Bob deposits USDT tokens into the Coliquidity smart contract.</li>
+<li>The Coliquidity contract combines DAI + USDT and puts them into the DAI-USDT pool.</li>
+<li>When either Alice or Bob requests a withdrawal, Alice gets her DAI deposit + DAI fees, Bob gets his USDT deposit + USDT fees.</li>
+<li>If DAI-USDT price doesn't change: both Alice &amp; Bob earn the fees.</li>
+<li>If DAI-USDT price does change: this scenario is equivalent to “<a href="HowItWorks.html#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a>”</li>
+</ul>
+<p>See also:</p>
+<ul>
+<li><a href="FAQ.html#what-if-a-single-provider-requests-a-withdrawal">What if a single provider requests a withdrawal?</a></li>
+</ul>
+<h2 id="for-existing-non-stablecoin-pools"><a class="header" href="#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a></h2>
+<ul>
+<li>Alice deposits ABC tokens into the Coliquidity smart contract.</li>
+<li>Bob deposits WETH tokens into the Coliquidity smart contract.</li>
+<li>The Coliquidity contract combines ABC + WETH and puts them into the ABC-WETH pool.</li>
+<li>When either Alice or Bob requests a withdrawal, Alice gets her ABC deposit + ABC fees, Bob gets his WETH deposit + WETH fees.</li>
+<li>If ABC-WETH price doesn't change: both Alice &amp; Bob earn the fees.</li>
+<li>If ABC-WETH price goes up: there will be less ABC and more WETH in the pool, so Alice will get less ABC + ABC fees, Bob will get more WETH + WETH fees. It works like a long position for Bob.</li>
+<li>If ABC-WETH price goes down: there will be more ABC and less WETH in the pool, so Alice will get more ABC + ABC fees, Bob will get less WETH + WETH fees. It works like a short position for Alice (e.g. she believed ABC would crash short-term but recover long-term, so she put her ABC in the pool to make more ABC short-term).</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-much-does-it-cost"><a class="header" href="#how-much-does-it-cost">How much does it cost?</a></h1>
+<ul>
+<li>The smart contract charges 1% of the user’s profit.</li>
+<li>No charge if no profit.</li>
+<li>No charge if you deposit and withdraw the same amount.</li>
+<li>The fee is calculated as “0.01 * (WithdrawAmount - DepositAmount)”.</li>
+<li>The fee is calculated separately for each participant of coliquidity position.</li>
+<li>The fee is charged upon withdrawal.</li>
+</ul>
+<p>See also:</p>
+<ul>
+<li><a href="WhatIsColiquidity.html">What is Coliquidity</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="risks"><a class="header" href="#risks">Risks</a></h1>
+<h2 id="what-are-the-risks"><a class="header" href="#what-are-the-risks">What are the risks?</a></h2>
+<ul>
+<li><a href="Risks.html#who-is-bearing-impermanent-loss-risk">Impermanent loss risk</a></li>
+<li>Minimal <a href="HowItWorks.html#for-existing-stablecoin-pools">for stablecoin pools</a>.</li>
+<li>Equivalent to long position <a href="HowItWorks.html#for-existing-non-stablecoin-pools">for non-stablecoin pools</a>.</li>
+<li>Smart contract hack risk</li>
+<li>Will be minimized with audits (we have partnered with Zokyo).</li>
+<li>Time-value risk (you need to deposit tokens &amp; wait for somebody to take the other side of your coliquidity position):
+<ul>
+<li>Will be minimized with high volume &amp; high user count of the Coliquidity platform.</li>
+</ul>
+</li>
+</ul>
+<h2 id="what-are-the-non-risks"><a class="header" href="#what-are-the-non-risks">What are the non-risks?</a></h2>
+<ul>
+<li>No smart contract ownership risk</li>
+<li>Coliquidity contract owner can only change the fee, can’t change balances.</li>
+<li>No upgradeable proxy risk:
+<ul>
+<li>Coliquidity contracts are deployed without an upgradeable proxy.</li>
+<li>There will be a version with an upgradeable proxy used during beta testing.</li>
+</ul>
+</li>
+<li>No stuck funds risk:
+<ul>
+<li>You can always withdraw your tokens if nobody takes the other side of your coliquidity position.</li>
+</ul>
+</li>
+</ul>
+<h2 id="why-coliquidity-is-less-risky-than-providing-liquidity"><a class="header" href="#why-coliquidity-is-less-risky-than-providing-liquidity">Why Coliquidity is less risky than providing liquidity?</a></h2>
+<p><strong>Short version</strong></p>
+<ul>
+<li>Because you don’t need to buy the second token.</li>
+</ul>
+<p><strong>Long version</strong></p>
+<ul>
+<li>Suppose you provide liquidity directly. You make money if the price is stable. You lose money if the price goes down, and you lose twice, because both sides of your position are worth less (base token is worth less because the price is down + quote token is worth less because its quantity has decreased due to selling).</li>
+<li>Suppose you provide one-sided liquidity via Coliquidity. You make money if the price is stable, because Coliquidity gives you the same LP fees (proportional to your liquidity amount). You lose money if the price goes down, but you lose less than with regular liquidity provisioning, because only the quote token quantity is decreased (you don’t hold the base token, so it doesn't influence your PnL).</li>
+<li>Coliquidity makes your position behave differently from regular liquidity provider position. You make money if the price goes up (but not as much as with a long position). You lose money if the price goes down (but not as much as with a long position). Essentially, it’s an under-leveraged long position (if you provide the quote token) or an under-leveraged short position (if you provide the base token).</li>
+</ul>
+<p><strong>Simulations</strong></p>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1IL5mPngi4a0mJvuTeiMpebVobhgyK8yAOEfxaMBkBvo/edit#">Coliquidity Simulations</a>
+(see scenarios with “High volatility” = FALSE, they are essentially stablecoin pools)</li>
+</ul>
+<h2 id="who-is-bearing-impermanent-loss-risk"><a class="header" href="#who-is-bearing-impermanent-loss-risk">Who is bearing impermanent loss risk?</a></h2>
+<p>If one provider takes a loss, the other provider makes a profit. This happens because providers withdraw the same type of tokens that they deposited. So, if Alice deposits ABC, Bob deposits USDT, then ABC-USDT price goes up, there will be less ABC and more USDT in the pool, so Alice will take a loss, and Bob will make a profit. It works the other way, too: if the ABC-USDT price goes down, there will be more ABC and less USDT in the pool, so Alice will make a profit, and Bob will take a loss.</p>
+<p>The risk is symmetric:</p>
+<ul>
+<li>If the price goes up, Alice loses and Bob wins</li>
+<li>If the price goes down, Alice wins and Bob loses</li>
+</ul>
+<p>It works a bit like a perpetual swap, but the traders don’t pay trading fees - instead, they receive liquidity provider fees (both of them).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="why-should-i-use-coliquidity-as-a-project-owner"><a class="header" href="#why-should-i-use-coliquidity-as-a-project-owner">Why should I use Coliquidity as a project owner?</a></h1>
+<p>As a project owner, you can create the pool without providing ETH - just provide the tokens and allow community members to provide ETH (works with BNB / MATIC / AVAX, too):</p>
+<ul>
+<li><strong>Save your capital</strong> - don’t use it to create the pool, allow other people to add liquidity.</li>
+<li><strong>Get more liquidity</strong> - simplify the process of adding liquidity into your pool after creation.</li>
+</ul>
+<p>Drawbacks:</p>
+<ul>
+<li>Community members can remove liquidity in the future. Solutions:
+<ul>
+<li>Lock liquidity by setting a date until which they can’t withdraw.</li>
+<li>Incentivize holding liquidity through a <a href="FAQ.html#is-liquidity-mining-possible-with-coliquidity">liquidity mining program</a>.
+Learn more: <a href="HowItWorks.html#for-new-pools">Coliquidity for new pools</a> | <a href="Pricing.html">How much does it cost?</a></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="why-should-i-use-coliquidity-as-a-yield-farmer"><a class="header" href="#why-should-i-use-coliquidity-as-a-yield-farmer">Why should I use Coliquidity as a yield farmer?</a></h1>
+<p>As a yield farmer, you can provide ETH without buying the tokens:</p>
+<ul>
+<li><strong>Save money</strong> - don’t buy the 2nd asset, save on slippage &amp; trading fees.</li>
+<li><strong>Minimize risk</strong> - Avoid holding 2 assets at the same time.
+Drawbacks:</li>
+<li>Some projects may not have a Coliquidity pool. Solution:
+<ul>
+<li>Use a combined strategy: if there’s a Coliquidity pool, provide only one token, if not, provide both tokens.
+Learn more: <a href="HowItWorks.html#for-existing-stablecoin-pools">Coliquidity for existing stablecoin pools</a> | <a href="Pricing.html">How much does it cost?</a></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="why-should-i-use-coliquidity-as-a-long-term-investor"><a class="header" href="#why-should-i-use-coliquidity-as-a-long-term-investor">Why should I use Coliquidity as a long-term investor?</a></h1>
+<p>As a long-term investor, you can accumulate a large long position without slippage &amp; fees.</p>
+<ul>
+<li><strong>Save money</strong> - build a gigalong without slippage &amp; trading fees (the project provides the tokens, you provide the ETH, smart contract puts your liquidity together into the pool).</li>
+<li><strong>Maximize profit</strong> - receive liquidity provider fees while holding a gigalong position.</li>
+</ul>
+<p>Drawbacks:</p>
+<ul>
+<li>Short-term profit is lower. However:
+<ul>
+<li>Short-term loss is lower (same risk-reward ratio).</li>
+<li>Long-term profit is higher: LP fees are always positive (<strong>better</strong> risk-reward ratio with additional fees).
+Learn more: <a href="HowItWorks.html#for-existing-non-stablecoin-pools">Coliquidity for existing non-stablecoin pools</a> | <a href="Pricing.html">How much does it cost?</a></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="can-you-show-by-example-how-to-make-money-using-coliquidity"><a class="header" href="#can-you-show-by-example-how-to-make-money-using-coliquidity">Can you show by example how to make money using Coliquidity?</a></h1>
+<h2 id="specific-example-for-taur-token"><a class="header" href="#specific-example-for-taur-token">Specific example for $TAUR token</a></h2>
+<p>Short version:</p>
+<ol>
+<li>Deposit BUSD.</li>
+<li>Wait until TAUR goes up.</li>
+<li>Withdraw more BUSD (trend profit + liquidity provider fees)</li>
+</ol>
+<p>Detailed instruction:</p>
+<ol>
+<li>Open deposit page for $TAUR token: <a href="https://www.coliquidity.com/deposit?preset=MarnotaurMainnet">click here</a>.</li>
+<li>Input “Amount to deposit” (how much BUSD you want to provide).</li>
+<li>Click “Deposit”.</li>
+<li>Confirm transactions.</li>
+<li>Wait until $TAUR goes up.</li>
+<li>Open withdraw page for $TAUR token: <a href="https://www.coliquidity.com/withdraw?preset=MarnotaurMainnet">click here</a>.</li>
+<li>Find your position.</li>
+<li>Click “Withdraw”.</li>
+<li>Confirm transactions.</li>
+<li>Celebrate! You have withdrawn <strong>more BUSD</strong> than you deposited.</li>
+</ol>
+<h2 id="general-example-for-any-token"><a class="header" href="#general-example-for-any-token">General example for any token</a></h2>
+<ol>
+<li>Find a token that is going up.</li>
+<li>Ensure that this token has already been deposited into the Coliquidity smart contract by the project team.
+<ul>
+<li>If not: you can ask the project team to do it (send them a link to this FAQ).</li>
+</ul>
+</li>
+<li>Open the Coliquidity app using the link provided by the project team (should contain the preset for their token).</li>
+<li>Fill the form to deposit liquidity.</li>
+<li>Wait until the token goes up.</li>
+<li>Open the Coliquidity app to withdraw liquidity.</li>
+<li>Fill the form to withdraw liquidity.</li>
+<li>Celebrate! You have withdrawn <strong>more money</strong> than you deposited.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frequently-asked-questions"><a class="header" href="#frequently-asked-questions">Frequently Asked Questions</a></h1>
+<h2 id="whats-the-best-way-to-make-money-with-coliquidity"><a class="header" href="#whats-the-best-way-to-make-money-with-coliquidity">What’s the best way to make money with Coliquidity?</a></h2>
+<p>Coliquidity is better suited for long-term holding. You can make more money this way, because you will accumulate more LP fees. Meanwhile, if the token continues to go up, you’ll also capitalize on the uptrend.</p>
+<p>Coliquidity profit = Trend profit + LP fees profit.</p>
+<p>Since “LP fees profit” is always positive, it is always better to use Coliquidity than simply buying and holding without providing liquidity.</p>
+<h2 id="what-exchanges-support-coliquidity"><a class="header" href="#what-exchanges-support-coliquidity">What exchanges support Coliquidity?</a></h2>
+<p>All decentralized exchanges that use liquidity pools can also use Coliquidity. For example:</p>
+<ul>
+<li>Uniswap</li>
+<li>SushiSwap</li>
+<li>PancakeSwap</li>
+<li>TraderJoe</li>
+<li>… many more</li>
+</ul>
+<h2 id="who-pays-for-gas"><a class="header" href="#who-pays-for-gas">Who pays for gas?</a></h2>
+<p>The user who called the Coliquidity smart contract pays for gas.</p>
+<p>If the call results in opening a new pool, the user pays for opening a new pool as well. We recommend that projects make this call from their account, so that regular traders don’t have to pay for opening the pool.</p>
+<p>We also have plans to integrate Coliquidity with the <a href="https://docs.opengsn.org/">Ethereum Gas Station Network</a>. As soon as this integration is implemented, the users won’t need to pay for gas anymore.</p>
+<h2 id="how-will-you-open-a-liquidity-pool-on-pancakeswap"><a class="header" href="#how-will-you-open-a-liquidity-pool-on-pancakeswap">How will you open a liquidity pool on PancakeSwap?</a></h2>
+<p>We will use Coliquidity to open the SHLD-WBNB pool on PancakeSwap. The specific plan will be announced closer to launch date. However, we can share some details already:</p>
+<ul>
+<li>The price will be lower than on SHLD-WETH pool (to incentivize traders to buy immediately on launch).</li>
+<li>The Coliquidity pool will have a hard cap (to incentivize providers to deposit earlier to secure their allocation).</li>
+</ul>
+<h2 id="can-i-short-tokens-with-coliquidity"><a class="header" href="#can-i-short-tokens-with-coliquidity">Can I short tokens with Coliquidity?</a></h2>
+<p>Yes, you can short the tokens that you own. Please note that when you close the short, you will receive a lot of tokens that you’ve shorted. This happens because closing the short means withdrawing liquidity, and you receive the same token when you withdraw from the pool.</p>
+<p>To maximize profit, you should short the tokens that are going down right now, but will be going up in future (according to your analysis).</p>
+<h2 id="can-i-try-coliquidity-on-testnet"><a class="header" href="#can-i-try-coliquidity-on-testnet">Can I try Coliquidity on testnet?</a></h2>
+<p>Yes, you can try it on the following pages:</p>
+<ul>
+<li><a href="https://www.coliquidity.com/deposit?preset=MarnotaurTestnet">Marnotaur Testnet preset</a></li>
+</ul>
+<p>Click “Contract &gt; Write contract” to see the list of available methods:</p>
+<ul>
+<li>Use “createOffer” if you want to deposit initial liquidity.</li>
+<li>Use “createPosition” if you want to match your liquidity with an existing offer &amp; put the combined liquidity into the pool.</li>
+<li>Use “withdrawPosition” if you want to redeem your LP tokens &amp; withdraw liquidity from the pool.</li>
+<li>Use “withdrawOffer” if you want to withdraw initial liquidity. Please note that if someone has already created a position using your initial liquidity, you will need to call “withdrawPosition” first (for every open position). You can see all your positions with “positionsByMaker” call (see below).</li>
+</ul>
+<p>Click “Contract &gt; Read contract” to see the list of available calls:</p>
+<ul>
+<li>Use “offersByMaker” to see your offers</li>
+<li>Use “positionsByMaker” to see your positions in which you are the maker (offer creator)</li>
+<li>Use “positionsByMaker” to see your positions in which you are the taker (position creator)</li>
+</ul>
+<h2 id="when-can-i-withdraw"><a class="header" href="#when-can-i-withdraw">When can I withdraw?</a></h2>
+<ul>
+<li>Regular positions: you can withdraw anytime.</li>
+<li>Timelocked positions: you can withdraw as soon as the lock period finishes.</li>
+</ul>
+<p>The timelocked positions are created by accepting timelocked offers. The app will clearly mark such offers &amp; show the lock period, so that you can decide if you want to accept it. Normally, timelocked offers come with additional benefits (for example, extra project tokens).</p>
+<h2 id="why-coliquidity-is-more-profitable-than-buying-tokens"><a class="header" href="#why-coliquidity-is-more-profitable-than-buying-tokens">Why Coliquidity is more profitable than buying tokens?</a></h2>
+<p><strong>Short version</strong></p>
+<ul>
+<li>Because you earn LP fees.</li>
+<li>Because you have no slippage on entry / exit (perfect for whales).</li>
+</ul>
+<p><strong>Long version</strong></p>
+<ul>
+<li>Suppose you buy &amp; sell the token directly. You lose on LP fees &amp; slippage two times (both when buying &amp; when selling). Your profit depends on the price change, minus LP fees, minus slippage.</li>
+<li>Suppose you provide <a href="HowItWorks.html">one-sided</a> liquidity via Coliquidity. You earn LP fees, you have no slippage. Your profit is a function of the price difference plus gains on fees.</li>
+<li>Coliquidity makes your position less sensitive to price difference. That means you lose less &amp; gain less compared to a regular long position. However, Coliquidity gives you LP fees. Therefore, Coliquidity gives you a better risk/reward profile (because price sensitivity is decreased symmetrically, but the fees are always a plus)</li>
+</ul>
+<p><strong>Simulations</strong></p>
+<ul>
+<li>
+<p><a href="https://docs.google.com/spreadsheets/d/1IL5mPngi4a0mJvuTeiMpebVobhgyK8yAOEfxaMBkBvo/edit#">Coliquidity Simulations</a>
+(see scenarios with “High volatility” = TRUE)</p>
+<p><strong>Note</strong>
+Coliquidity works best for long-term positions (it accumulates more LP fees). For very short-term positions, it’s better to simply buy &amp; sell tokens. One exception is high-volume high-volatility markets - in these it’s more profitable to use Coliquidity even for short-term positions.</p>
+</li>
+</ul>
+<h2 id="how-much-will-i-receive-if-i-withdraw-now"><a class="header" href="#how-much-will-i-receive-if-i-withdraw-now">How much will I receive if I withdraw now?</a></h2>
+<p>WithdrawalAmount = PoolLiquidity * PoolShare</p>
+<p>Short example:</p>
+<ul>
+<li>The pool has 1000000 ABC + 200 ETH.</li>
+<li>Your pool share is 2.5%.</li>
+<li>Your withdrawal amount is 5 ETH.</li>
+</ul>
+<p>We’re working on a UI update where you will be able to see the withdrawal amount automatically (no manual calculations).</p>
+<h2 id="what-if-a-single-provider-requests-a-withdrawal"><a class="header" href="#what-if-a-single-provider-requests-a-withdrawal">What if a single provider requests a withdrawal?</a></h2>
+<p>The smart contract will check <strong>the timelock</strong> of the coliquidity position:</p>
+<ul>
+<li>If the timelock hasn't expired yet, the smart contract will deny withdrawal.</li>
+<li>If the timelock has expired, the smart contract will withdraw the requested part of the position:
+<ul>
+<li>Send token 1 to the provider of token 1.</li>
+<li>Send token 2 to the provider of token 2.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>The provider can set the timelock to zero (= no timelock) when creating an offer for coliquidity position.</li>
+<li>The provider can change the default action from “send the token” to “leave the token in the Coliquidity contract” by setting “reinvest” option to “true”. This is recommended for providers who want to invest for long term.</li>
+<li>Both providers will receive tokens at the same time, even if only a single provider requests a withdrawal. This implementation prevents a deadlock, which could happen if both provider votes were required and one of the providers would become unavailable.</li>
+</ul>
+<h2 id="is-coliquidity-the-same-as-uniswap-v3"><a class="header" href="#is-coliquidity-the-same-as-uniswap-v3">Is Coliquidity the same as Uniswap V3?</a></h2>
+<p>No, it’s a different concept.</p>
+<ul>
+<li>Coliquidity allows providing one-sided liquidity <strong>at the current price</strong>.</li>
+<li>Uniswap allows providing one-sided liquidity <strong>strictly above or strictly below</strong> the current price.</li>
+</ul>
+<p>With Coliquidity, you’re making money immediately &amp; always. With Uniswap, you’re making money only when the price is within your liquidity range (not immediately, not always).</p>
+<p>Proof: <a href="https://help.uniswap.org/en/articles/5406286-faq-provide-liquidity-on-uniswap-v3">Uniswap docs</a> (search for “single-sided liquidity”).</p>
+<h2 id="does-coliquidity-work-in-a-bear-market"><a class="header" href="#does-coliquidity-work-in-a-bear-market">Does Coliquidity work in a bear market?</a></h2>
+<p>Yes, you can make money using Coliquidity in a bear market. For example:</p>
+<ul>
+<li>You’re bullish on ETH long-term.</li>
+<li>You’re bearish on ETH short-term.</li>
+<li>You provide ETH into the ETH-USDT pool.</li>
+<li>ETH-USDT price goes down (bear market).</li>
+<li>There is more ETH in the pool / less USDT in the pool.</li>
+<li>You take out more ETH, because your pool share stays the same (always, no matter whether it’s bull or bear market).</li>
+</ul>
+<h2 id="what-pairs-support-coliquidity"><a class="header" href="#what-pairs-support-coliquidity">What pairs support Coliquidity?</a></h2>
+<p>Any pair with a liquidity pool supports Coliquidity.</p>
+<p>We will build an application where the users could provide coliquidity for a single side of the position, see the offers of other users &amp; provide the second side of the mutual coliquidity position.</p>
+<h2 id="what-blockchains-support-coliquidity"><a class="header" href="#what-blockchains-support-coliquidity">What blockchains support Coliquidity?</a></h2>
+<p>Any EVM-compatible blockchain supports Coliquidity. For example:</p>
+<ul>
+<li>Ethereum - ETH</li>
+<li>Binance Smart Chain - BSC</li>
+<li>Polygon - MATIC</li>
+<li>Avalanche - AVAX</li>
+<li>Reef Chain - REEF</li>
+<li>Fantom - FTM</li>
+<li>… many more</li>
+</ul>
+<p>We have plans to port Coliquidity to blockchains with other VM implementations (e.g. Solana).</p>
+<h2 id="what-is-1-click-liquidity"><a class="header" href="#what-is-1-click-liquidity">What is 1-Click Liquidity?</a></h2>
+<p>1-Click Liquidity is a widget for providing liquidity into your pool.</p>
+<p>Most users don’t provide liquidity because it’s too hard: they have to calculate how much of your token they should buy to provide liquidity at correct ratio. It takes mental effort, and it takes time. So most users just skip this opportunity, leaving your pool with low liquidity.</p>
+<p>1-Click Liquidity is a solution for this problem. It allows the users to provide liquidity into your existing pool in a <strong>single click</strong>. Technically, it is a widget for your project website. The widget has a form with “Amount” field &amp; submit button. The “Amount” field is prefilled with desired amount of liquidity. To provide liquidity, the user simply needs to submit the form (make 1 click).</p>
+<p>All without leaving your project website.</p>
+<p>Interested to learn more? Schedule a call with us (if you have a direct contact), or send a message to our general <a href="https://t.me/ShieldFinanceHQ">Telegram group</a>.</p>
+<h2 id="how-to-prepare-for-a-token-launch"><a class="header" href="#how-to-prepare-for-a-token-launch">How to prepare for a token launch?</a></h2>
+<p><em>Note: this is a temporary instruction for project owners. We are currently developing a user interface that would automate most of these steps.</em></p>
+<ol>
+<li>
+<p>Choose how much liquidity you want to see in the pool:</p>
+<ul>
+<li>We recommend choosing the token amount equivalent to $150000 - $200000.</li>
+</ul>
+</li>
+<li>
+<p>Approve liquidity amount for depositing into Coliquidity smart contract:</p>
+<ul>
+<li>Open your token contract on blockchain explorer</li>
+<li>Click “Contract”</li>
+<li>Click “Write contract”</li>
+<li>Find “approve” function</li>
+<li>Fill approve function form:
+<ul>
+<li>Address: [Coliquidity address - see below]
+<ul>
+<li>Open <a href="https://www.coliquidity.com/info">Coliquidity Info</a></li>
+<li>Find the address for your network</li>
+<li>Copy the address</li>
+</ul>
+</li>
+<li>Amount: [Amount of tokens multiplied by 10 in power of [decimals]]
+<ul>
+<li><strong>Important: the amount must be multiplied by 10 ^ [your token decimals], otherwise you will approve an insufficient amount.</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Click “Write”</li>
+<li>Confirm transaction</li>
+<li>Wait until transaction is confirmed</li>
+</ul>
+</li>
+<li>
+<p>Deposit liquidity into Coliquidity smart contract:</p>
+<ul>
+<li>Open Coliquidity</li>
+</ul>
+</li>
+</ol>
+<h3 id="example-for-taur-busd-mainnet-pool"><a class="header" href="#example-for-taur-busd-mainnet-pool">Example for $TAUR-$BUSD mainnet pool</a></h3>
+<ol>
+<li>Approve on <a href="https://www.bscscan.com/token/0x19b99162adaab85134e781ac0048c275c31b205a#writeContract">TAUR contract page</a>:
+<ul>
+<li>method:</li>
+<li>address: 0xcd9dc4C48DDC0e578bd2C42254841f0223b88a3F</li>
+<li>amount: 120000 TAUR * 10 ^ 18 decimals = 120000000000000000000000</li>
+</ul>
+</li>
+<li>Create offer on <a href="https://bscscan.com/address/0xcd9dc4C48DDC0e578bd2C42254841f0223b88a3F#writeContract">Coliquidity contract page</a>:
+<ul>
+<li>makerToken: 0x19b99162adaab85134e781ac0048c275c31b205a</li>
+<li>makerAmount: 120000 TAUR * 10 ^ 18 decimals = 120000000000000000000000</li>
+<li>taker: 0x0000000000000000000000000000000000000000</li>
+<li>takerTokens: [0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56]</li>
+<li>makerDenominator: 0</li>
+<li>takerDenominator: 0</li>
+<li>reinvest: true</li>
+<li>pausedUntil: 0</li>
+<li>lockedUntil: 0</li>
+</ul>
+</li>
+</ol>
+<h2 id="does-coliquidity-protect-from-a-rug-pull"><a class="header" href="#does-coliquidity-protect-from-a-rug-pull">Does Coliquidity protect from a rug pull?</a></h2>
+<p>Yes - if the project sets Offer.lockedUntil parameter to a specific timestamp in the future. No rug pull is possible until Offer.lockedUntil is passed.</p>
+<p>Here’s a more technical explanation. Coliquidity provides a special parameter: “Offer.lockedUntil” (<a href="https://github.com/ShieldFinanceHQ/contracts/blob/dev/contracts/Coliquidity.sol">see contract</a>). This parameter is checked when the “withdrawPosition” method is called: if the current timestamp is less than Offer.lockedUntil, the withdrawal is denied. Therefore, it is not possible to withdraw liquidity (do a rug pull) before the current timestamp passes Offer.lockedUntil.</p>
+<p>Please note that Offer.lockedUntil can be set to 0, which allows withdrawals anytime.</p>
+<h2 id="is-liquidity-mining-possible-with-coliquidity"><a class="header" href="#is-liquidity-mining-possible-with-coliquidity">Is liquidity mining possible with Coliquidity?</a></h2>
+<p>Yes, please see details below:</p>
+<p>Please note that LP tokens do not show up in the users’ wallets - they are locked in the Coliquidity contract. That means you need to adjust the reward calculation algorithm to make a call to fetch the LP token balance from the Coliquidity contract. Otherwise, you can run the same liquidity mining program as you planned.</p>
+<h2 id="i-run-the-abc-project-should-i-provide-abc-tokens-into-the-coliquidity-contract"><a class="header" href="#i-run-the-abc-project-should-i-provide-abc-tokens-into-the-coliquidity-contract">I run the ABC project. Should I provide ABC tokens into the Coliquidity contract?</a></h2>
+<p>Yes, if you want to get more liquidity.</p>
+<p>More liquidity → Less slippage → More traders → Higher volume.</p>
+<h2 id="can-i-migrate-my-existing-liquidity-to-coliquidity"><a class="header" href="#can-i-migrate-my-existing-liquidity-to-coliquidity">Can I migrate my existing liquidity to Coliquidity?</a></h2>
+<ul>
+<li>If you plan to provide liquidity with only one token: yes, you can migrate liquidity manually using the following steps (we’ll automate this in our app soon):
+<ul>
+<li>Withdraw liquidity from the pool.</li>
+<li>(Optional) Consolidate position: swap one token for another to double the size of your liquidity position.</li>
+<li>Deposit liquidity into the Coliquidity contract.</li>
+</ul>
+</li>
+<li>If you plan to provide liquidity with both tokens: no need to migrate. However, please consider that one of the tokens may go down in value relative to another token. With Coliquidity, you can prevent such loss by converting the full position into this token and providing liquidity using only this token.</li>
+</ul>
+<h2 id="is-coliquidity-related-to-market-crash-protection"><a class="header" href="#is-coliquidity-related-to-market-crash-protection">Is Coliquidity related to Market Crash Protection?</a></h2>
+<p>Coliquidity and Market Crash Protection are two different products. We intend to develop them separately, see which one generates more revenue &amp; focus on that one (choose the most successful product).</p>
+<h2 id="is-coliquidity-similar-to-uniswap"><a class="header" href="#is-coliquidity-similar-to-uniswap">Is Coliquidity similar to Uniswap?</a></h2>
+<p>Coliquidity works with existing decentralized exchanges - it doesn't replace them. So the answer has two parts:</p>
+<ul>
+<li>Yes, you can use Coliquidity to provide liquidity into the pools on Uniswap / SushiSwap / PancakeSwap / other exchanges.</li>
+<li>No, you can’t use Coliquidity to buy &amp; sell tokens (you can just use existing exchanges).</li>
+</ul>
+<p>Additionally, Coliquidity is similar to Uniswap because it’s also a marketplace (<a href="FAQ.html#is-coliquidity-a-marketplace">read more</a>).</p>
+<p>See also: <a href="FAQ.html#is-coliquidity-the-same-as-uniswap-v3">Is Coliquidity the same as Uniswap V3?</a></p>
+<h2 id="is-coliquidity-a-marketplace"><a class="header" href="#is-coliquidity-a-marketplace">Is Coliquidity a marketplace?</a></h2>
+<p>Yes, Coliquidity matches the liquidity providers who have different tokens &amp; want to deposit into the same pool together. For example:</p>
+<ul>
+<li>Alice has USDT.</li>
+<li>Bob has ETH.</li>
+<li>Alice &amp; Bob want to provide liquidity into ETH-USDT pool.</li>
+<li>Coliquidity will match them (take Alice’s USDT and Bob’s ETH, then put it together into the pool).</li>
+</ul>
+<p>Being a marketplace is <strong>a competitive advantage</strong>. People start trading where others are already trading. So if we get a core user base, it will grow naturally, and people will be wary of using competitors (who are not original implementers of the idea).</p>
+<h2 id="do-you-have-competitors"><a class="header" href="#do-you-have-competitors">Do you have competitors?</a></h2>
+<p>As of 08 Jan 2022, we have not heard of any projects with the same idea.</p>
+<h2 id="do-you-already-have-users"><a class="header" href="#do-you-already-have-users">Do you already have users?</a></h2>
+<p>Yes, we already have users on Binance Smart Chain Mainnet (people who deposited during the <a href="https://medium.com/marnotaur/add-your-one-sided-liquidity-to-taur-busd-pool-36314059e546">Marnotaur token launch</a>).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="coli-token"><a class="header" href="#coli-token">COLI token</a></h1>
+<p>COLI token is the primary token of the Coliquidity project. It has the following utilities:</p>
+<ul>
+<li><strong>Burning</strong> - 50% of the fees are used to buy &amp; burn the COLI token - permanent supply reduction!</li>
+<li><strong>Staking</strong> - <a href="COLI/../Rewards/Summary.html">see Rewards Program</a></li>
+<li><strong>Governance</strong> - Change fee structure &amp; other contract parameters.</li>
+</ul>
+<h2 id="how-to-buy-coli-token"><a class="header" href="#how-to-buy-coli-token">How to buy COLI token?</a></h2>
+<ul>
+<li>Buy COLI on Uniswap: <a href="https://app.uniswap.org/#/swap?inputCurrency=ETH&amp;outputCurrency=0xd49efa7bc0d339d74f487959c573d518ba3f8437&amp;use=V2">open trading page</a></li>
+<li>Buy COLI on PancakeSwap: <a href="https://pancakeswap.finance/swap?inputCurrency=0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56&amp;outputCurrency=0x3470C81026C8085b7B743695f851353043Ff0d0D">open trading page</a></li>
+</ul>
+<h2 id="coli-token-addresses"><a class="header" href="#coli-token-addresses">COLI token addresses</a></h2>
+<ul>
+<li>COLI on ETH: 0xd49EFA7BC0D339D74f487959C573d518BA3F8437</li>
+<li>COLI on BSC: 0x3470C81026C8085b7B743695f851353043Ff0d0D</li>
+<li>COLI-WETH Uniswap V2 Pool on ETH (<a href="https://app.uniswap.org/#/swap?inputCurrency=ETH&amp;outputCurrency=0xd49efa7bc0d339d74f487959c573d518ba3f8437&amp;use=V2">trade here</a>): 0x5ecdc0d5d89fa727612d271bc040043120381757</li>
+<li>COLI-BUSD PancakeSwap Pool on BSC (<a href="https://pancakeswap.finance/swap?outputCurrency=0x3470C81026C8085b7B743695f851353043Ff0d0D">trade here</a>): 0x7cc6bad190dc8a4fb9029603e4e7fe9805aa0e1e</li>
+</ul>
+<h2 id="how-can-i-bridge-the-coli-token-from-eth-to-bsc"><a class="header" href="#how-can-i-bridge-the-coli-token-from-eth-to-bsc">How can I bridge the COLI token from ETH to BSC?</a></h2>
+<p>Use <a href="https://portalbridge.com/#/transfer">https://portalbridge.com/#/transfer</a></p>
+<h2 id="what-happened-with-the-old-shld-token"><a class="header" href="#what-happened-with-the-old-shld-token">What happened with the old SHLD token?</a></h2>
+<p>We just renamed SHLD to COLI at the same token address. Technically it's the same token, just with a different name. We've kept all the balances as-is.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rewards-program-for-coli-holders"><a class="header" href="#rewards-program-for-coli-holders">Rewards Program for COLI Holders</a></h1>
+<ul>
+<li>You can get <strong>1% weekly (67% APY)</strong> paid in Binance USD stablecoin (<a href="Rewards/FAQ.html#how-much-exactly-can-i-get">learn more</a>).</li>
+<li>To get the rewards, you should <a href="https://pancakeswap.finance/swap?outputCurrency=0x3470C81026C8085b7B743695f851353043Ff0d0D">buy</a> &amp; <a href="Rewards/Staking.html">stake COLI</a>.</li>
+<li>To get additional bonuses, you should <a href="Rewards/Teams.html">create a team</a>.</li>
+</ul>
+<p>Also, you need to <a href="Rewards/FAQ.html#what-questions-should-i-answer">answer the questions</a> about <a href="Rewards/../WhatIsColiquidity.html">Coliquidity</a> (our product) every week. If you don't want to answer the questions, you can <a href="Rewards/Teams.html">join the team</a>, and the team leader will do it for you.</p>
+<p>This is our marketing initiative to get people to learn about Coliquidity.</p>
+<p>More information:</p>
+<ul>
+<li><a href="Rewards/FAQ.html">Frequently Asked Questions</a></li>
+<li><a href="Rewards/Staking.html">Staking</a></li>
+<li><a href="Rewards/Teams.html">Teams</a></li>
+<li><a href="https://t.me/Coliquidity">Ask New Question</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rewards-program-faq"><a class="header" href="#rewards-program-faq">Rewards Program FAQ</a></h1>
+<!-- markdownlint-disable MD001 -->
+<h3 id="how-much-exactly-can-i-get"><a class="header" href="#how-much-exactly-can-i-get">How much exactly can I get?</a></h3>
+<ul>
+<li>You can get <strong>1% weekly (67% APY)</strong> on your COLI deposit in BUSD.</li>
+<li>Exact formula: <code>PriceOfColi * AmountOfColi * 1%</code></li>
+<li>Example:
+<ul>
+<li>You invest $2000 to buy 1000000 COLI at $0.0020.</li>
+<li>COLI price goes 2x up to $0.0040.</li>
+<li>Your deposit value increases to $4000.</li>
+<li>You get paid <code>$4000 * 1%</code> = <code>$40</code> in one week.</li>
+</ul>
+</li>
+</ul>
+<h3 id="how-can-i-get-the-rewards"><a class="header" href="#how-can-i-get-the-rewards">How can I get the rewards?</a></h3>
+<ul>
+<li><a href="Rewards/FAQ.html#how-can-i-buy-the-coli-token">Buy COLI</a></li>
+<li><a href="Rewards/Staking.html">Stake COLI</a></li>
+<li><a href="Rewards/FAQ.html#what-questions-should-i-answer">Answer questions</a> each week.</li>
+</ul>
+<p>If you don't want to answer the questions, you can <a href="Rewards/Teams.html">join the team</a>, and the team leader will do it for you.</p>
+<h3 id="when-can-i-get-the-rewards"><a class="header" href="#when-can-i-get-the-rewards">When can I get the rewards?</a></h3>
+<p>Every week on Tuesday at 10:00 UTC.</p>
+<h3 id="how-can-i-withdraw-the-rewards"><a class="header" href="#how-can-i-withdraw-the-rewards">How can I withdraw the rewards?</a></h3>
+<p>You will receive the rewards automatically. We will send them to the same wallet address that you used to deposit $COLI (on Binance Smart Chain).</p>
+<h3 id="if-i-buy-coli-now-when-do-i-get-the-rewards"><a class="header" href="#if-i-buy-coli-now-when-do-i-get-the-rewards">If I buy COLI now, when do I get the rewards?</a></h3>
+<p>You will get the rewards at the next distribution date + every week afterwards.</p>
+<p>For the first week, you will get rewards proportionally to the deposit active time.</p>
+<p>Also read: <a href="Rewards/FAQ.html#how-can-i-get-the-rewards">How can I get the rewards?</a></p>
+<h3 id="what-currency-will-i-receive"><a class="header" href="#what-currency-will-i-receive">What currency will I receive?</a></h3>
+<p>You will receive Binance USD stablecoin (BUSD) (<a href="https://www.binance.com/en/busd">learn more</a>).</p>
+<h3 id="what-blockchain-will-the-program-work-on"><a class="header" href="#what-blockchain-will-the-program-work-on">What blockchain will the program work on?</a></h3>
+<p>Binance Smart Chain.</p>
+<p>We'll consider adding other blockchains.</p>
+<h3 id="how-do-you-calculate-the-coli-price"><a class="header" href="#how-do-you-calculate-the-coli-price">How do you calculate the COLI price?</a></h3>
+<p>COLI price = average of &quot;weekly average prices of all COLI liquidity pools&quot;.</p>
+<h3 id="what-questions-should-i-answer"><a class="header" href="#what-questions-should-i-answer">What questions should I answer?</a></h3>
+<p>The questions will be about <a href="Rewards/../WhatIsColiquidity.html">Coliquidity</a> (our product). We will prepare 3-5 new questions every week. The questions form will be protected by a CAPTCHA to stop the bots.</p>
+<p>If you don't want to answer the questions, you can <a href="Rewards/Teams.html">join the team</a>, and the team leader will do it for you.</p>
+<h3 id="will-i-get-the-reward-if-i-answer-some-questions-incorrectly"><a class="header" href="#will-i-get-the-reward-if-i-answer-some-questions-incorrectly">Will I get the reward if I answer some questions incorrectly?</a></h3>
+<p>No.</p>
+<h3 id="how-will-you-pay-the-rewards"><a class="header" href="#how-will-you-pay-the-rewards">How will you pay the rewards?</a></h3>
+<p>We'll use our marketing budget and the &quot;Rewards&quot; allocation according to the tokenomics.</p>
+<h3 id="how-long-will-you-run-the-rewards-program"><a class="header" href="#how-long-will-you-run-the-rewards-program">How long will you run the rewards program?</a></h3>
+<p>We plan to run the rewards program indefinitely, while it continues to attract new users for Coliquidity (our product).</p>
+<h3 id="how-can-i-buy-the-coli-token"><a class="header" href="#how-can-i-buy-the-coli-token">How can I buy the COLI token?</a></h3>
+<p>You can buy directly on Uniswap or PancakeSwap. The links for buying are available below. When you open the link, you should agree to import the COLI token address (done automatically on the page for buying):</p>
+<ul>
+<li><a href="https://pancakeswap.finance/swap?outputCurrency=0x3470C81026C8085b7B743695f851353043Ff0d0D">Buy COLI on PancakeSwap</a></li>
+<li><a href="https://app.uniswap.org/#/swap?inputCurrency=ETH&amp;outputCurrency=0xd49efa7bc0d339d74f487959c573d518ba3f8437&amp;use=V2">Buy COLI on Uniswap</a></li>
+</ul>
+<h3 id="can-i-sell-the-coli-token-later"><a class="header" href="#can-i-sell-the-coli-token-later">Can I sell the COLI token later?</a></h3>
+<p>Yes.</p>
+<h3 id="why-are-you-doing-this"><a class="header" href="#why-are-you-doing-this">Why are you doing this?</a></h3>
+<p>We want to attract users for <a href="Rewards/../WhatIsColiquidity.html">Coliquidity</a> (our product). To attract users, we are giving rewards. Also, we educate users about Coliquidity by requiring them to answer questions about our product to receive the rewards.</p>
+<h3 id="i-have-another-question"><a class="header" href="#i-have-another-question">I have another question</a></h3>
+<p>Please send it to our <a href="https://t.me/Coliquidity">Telegram group</a>.</p>
+<h3 id="learn-more"><a class="header" href="#learn-more">Learn more</a></h3>
+<ul>
+<li><a href="Rewards/Staking.html">Staking</a></li>
+<li><a href="Rewards/Teams.html">Teams</a></li>
+<li><a href="Rewards/FAQ.html">Frequently Asked Questions</a></li>
+<li><a href="https://t.me/Coliquidity">Ask New Question</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="staking"><a class="header" href="#staking">Staking</a></h1>
+<ul>
+<li>You should stake your $COLI to receive the rewards.</li>
+<li>You will get <strong>1% weekly (67% APY)</strong> paid in Binance USD stablecoin (<a href="Rewards/FAQ.html#how-much-exactly-can-i-get">learn more</a>).</li>
+<li>Min stake time: 3 months.</li>
+<li>Max stake time: 36 months.</li>
+</ul>
+<h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
+<h3 id="i-already-have-coli-can-i-stake-them-too"><a class="header" href="#i-already-have-coli-can-i-stake-them-too">I already have $COLI. Can I stake them too?</a></h3>
+<p>Yes.</p>
+<h2 id="learn-more-1"><a class="header" href="#learn-more-1">Learn more</a></h2>
+<ul>
+<li><a href="Rewards/Staking.html">Staking</a></li>
+<li><a href="Rewards/Teams.html">Teams</a></li>
+<li><a href="Rewards/FAQ.html">Frequently Asked Questions</a></li>
+<li><a href="https://t.me/Coliquidity">Ask New Question</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rewards-program-teams"><a class="header" href="#rewards-program-teams">Rewards Program Teams</a></h1>
+<ul>
+<li>Team leaders can get +30% bonus on the total team's payout (see below).</li>
+<li>Team members can get the questions answered by the team leader (see below).</li>
+</ul>
+<h2 id="for-team-leaders"><a class="header" href="#for-team-leaders">For team leaders</a></h2>
+<ul>
+<li>You can get +30% bonus of your whole team's payout by creating a team.</li>
+<li>You can create a team with your followers on social media, or with your friends from a chat group.</li>
+<li>All bonuses are paid in addition to normal payout.</li>
+<li>There's no minimum requirement - you can create or join the team with any amount of COLI.</li>
+</ul>
+<p>Learn more:</p>
+<ul>
+<li><a href="Rewards/Teams.html#how-much-can-i-earn-as-a-team-leader">How much can I earn as a team leader?</a></li>
+<li><a href="Rewards/Teams.html#how-can-i-create-a-team">How can I create a team?</a></li>
+</ul>
+<h2 id="for-team-members"><a class="header" href="#for-team-members">For team members</a></h2>
+<ul>
+<li>The team leader will answer the questions on your behalf. You save time and get a more predictable payout (remember: correct answers are needed to receive the reward each week).</li>
+</ul>
+<p>Learn more:</p>
+<ul>
+<li><a href="Rewards/Teams.html#how-can-i-join-a-team">How can I join a team?</a></li>
+</ul>
+<h2 id="faq-1"><a class="header" href="#faq-1">FAQ</a></h2>
+<h3 id="how-much-can-i-earn-as-a-team-leader"><a class="header" href="#how-much-can-i-earn-as-a-team-leader">How much can I earn as a team leader?</a></h3>
+<p>It is very profitable to be a team leader. See the calculation:</p>
+<ul>
+<li>You invest $500.</li>
+<li>You attract 2 team members who invest $5000 each ($10000 total).</li>
+<li>You get $35 <strong>weekly</strong> ($30 from your team deposit + $5 from your own deposit).</li>
+<li>$35 weekly = $1820 in a year.</li>
+</ul>
+<p>If $COLI price doubles, you get double reward (<a href="Rewards/FAQ.html#how-much-exactly-can-i-get">see why</a>).</p>
+<p>You can also sell $COLI later.</p>
+<h3 id="how-can-i-create-a-team"><a class="header" href="#how-can-i-create-a-team">How can I create a team?</a></h3>
+<p>Just ask other people to <a href="Rewards/Teams.html#how-can-i-join-a-team">join your team</a> by giving them your publicly available wallet address. You can use an existing address or create a new one.</p>
+<p>Your public wallet address is your team ID. So technically, you already have a team. However, only teams with 3+ members qualify for bonuses - that's why you should team up with your followers.</p>
+<h3 id="how-can-i-join-a-team"><a class="header" href="#how-can-i-join-a-team">How can I join a team?</a></h3>
+<ul>
+<li>Open our app (<em>under construction</em>)</li>
+<li>Enter team leader's address</li>
+<li>Confirm the transaction</li>
+</ul>
+<p>This transaction doesn't send any money - it only confirms your team membership.</p>
+<h3 id="can-i-change-the-team"><a class="header" href="#can-i-change-the-team">Can I change the team?</a></h3>
+<p>Yes.</p>
+<h3 id="can-i-create-a-team-with-only-myself"><a class="header" href="#can-i-create-a-team-with-only-myself">Can I create a team with only myself?</a></h3>
+<p>No, every team needs at least 3 members (you + 2 additional members).</p>
+<p>We will disqualify people for creating fake teams.</p>
+<h2 id="learn-more-2"><a class="header" href="#learn-more-2">Learn more</a></h2>
+<ul>
+<li><a href="Rewards/Staking.html">Staking</a></li>
+<li><a href="Rewards/Teams.html">Teams</a></li>
+<li><a href="Rewards/FAQ.html">Frequently Asked Questions</a></li>
+<li><a href="https://t.me/Coliquidity">Ask New Question</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+                        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+                
+    </body>
+</html>
