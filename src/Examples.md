@@ -10,12 +10,12 @@ Short version:
 
 Detailed instruction:
 
-1. Open deposit page for $TAUR token: [click here](https://app.shieldfinance.io/coliquidity/deposit?preset=MarnotaurMainnet).
+1. Open deposit page for $TAUR token: [click here](https://www.coliquidity.com/deposit?preset=MarnotaurMainnet).
 2. Input “Amount to deposit” (how much BUSD you want to provide).
 3. Click “Deposit”.
 4. Confirm transactions.
 5. Wait until $TAUR goes up.
-6. Open withdraw page for $TAUR token: [click here](https://app.shieldfinance.io/coliquidity/withdraw?preset=MarnotaurMainnet).
+6. Open withdraw page for $TAUR token: [click here](https://www.coliquidity.com/withdraw?preset=MarnotaurMainnet).
 7. Find your position.
 8. Click “Withdraw”.
 9. Confirm transactions.

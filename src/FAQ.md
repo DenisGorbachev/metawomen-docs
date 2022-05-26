@@ -183,7 +183,7 @@ _Note: this is a temporary instruction for project owners. We are currently deve
     - Find “approve” function
     - Fill approve function form:
         - Address: [Coliquidity address - see below]
-            - Open [Coliquidity Info](https://app.shieldfinance.io/coliquidity/info)
+            - Open [Coliquidity Info](https://www.coliquidity.com/info)
             - Find the address for your network
             - Copy the address
         - Amount: [Amount of tokens multiplied by 10 in power of [decimals]]
