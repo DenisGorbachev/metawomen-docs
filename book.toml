@@ -1,14 +1,14 @@
 [book]
-authors = ["Denis Gorbachev"]
+authors = ["MetaWomen"]
 language = "en"
 multilingual = true
 src = "src"
-title = "Coliquidity"
+title = "MetaWomen"
 
 [build]
 create-missing = false
 
 [output.html]
-edit-url-template = "https://github.com/Coliquidity/docs/edit/main/{path}"
-git-repository-url = "https://github.com/Coliquidity/docs"
+edit-url-template = "https://github.com/{org}/{repo}/edit/main/{path}"
+git-repository-url = "https://github.com/{org}/{repo}"
 git-repository-icon = "fa-github"
