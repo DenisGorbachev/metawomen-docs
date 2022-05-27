@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="../Tokenomics/Summary.html"><strong aria-hidden="true">1.</strong> Summary</a></li><li class="chapter-item expanded "><a href="../Tokenomics/NFTCollection.html" class="active"><strong aria-hidden="true">2.</strong> NFT collection</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Tokenomics/Minting.html"><strong aria-hidden="true">2.1.</strong> Minting</a></li></ol></li><li class="chapter-item expanded "><a href="../Tokenomics/Token.html"><strong aria-hidden="true">3.</strong> Reward token</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="../Tokenomics/Summary.html"><strong aria-hidden="true">1.</strong> Summary</a></li><li class="chapter-item expanded "><a href="../Tokenomics/NFTCollection.html" class="active"><strong aria-hidden="true">2.</strong> NFT collection</a></li><li class="chapter-item expanded "><a href="../Tokenomics/Token.html"><strong aria-hidden="true">3.</strong> Reward token</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -158,7 +158,7 @@
 <h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
 <li>Initial supply: <code>1000</code></li>
-<li>Mintable: yes, by users (<a href="./Minting.html">see docs</a>)</li>
+<li>Mintable: yes, by users (<a href="#mint">see docs</a>)</li>
 </ul>
 <h2 id="characteristics"><a class="header" href="#characteristics">Characteristics</a></h2>
 <ul>
@@ -173,7 +173,7 @@
 <li>Increases: by <code>1</code> after each successful <a href="#learn">learning action</a></li>
 </ul>
 </li>
-<li><strong>Potential</strong> determines if this NFT can be used to <a href="./Minting.html">mint new NFTs</a>.
+<li><strong>Potential</strong> determines if this NFT can be used to <a href="#mint">mint new NFTs</a>.
 <ul>
 <li>Initial value: <code>7</code></li>
 <li>Min value: <code>0</code></li>
@@ -203,7 +203,7 @@
 <li>Initial value: <code>1</code></li>
 </ul>
 </li>
-<li><strong>Child level</strong> determines the child NFT level (<a href="./Minting.html">see minting</a>)
+<li><strong>Child level</strong> determines the child NFT level (<a href="#mint">see minting</a>)
 <ul>
 <li>Initial value: <code>1</code></li>
 </ul>
@@ -256,7 +256,7 @@
 <ul>
 <li>Increases <code>NFT Experience</code> by 1</li>
 <li>Decreases <code>NFT Energy</code> by 5000</li>
-<li>Increases <code>User MWL Balance</code> by <code>BasicIncome * Power</code></li>
+<li>Increases <code>User MWL Balance</code> by <code>RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck)</code></li>
 </ul>
 <h3 id="mint"><a class="header" href="#mint">Mint</a></h3>
 <p>Inputs:</p>
@@ -350,7 +350,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../Tokenomics/Minting.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="../Tokenomics/Token.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -364,7 +364,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../Tokenomics/Minting.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="../Tokenomics/Token.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>

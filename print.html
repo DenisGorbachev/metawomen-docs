@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="Tokenomics/Summary.html"><strong aria-hidden="true">1.</strong> Summary</a></li><li class="chapter-item expanded "><a href="Tokenomics/NFTCollection.html"><strong aria-hidden="true">2.</strong> NFT collection</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Tokenomics/Minting.html"><strong aria-hidden="true">2.1.</strong> Minting</a></li></ol></li><li class="chapter-item expanded "><a href="Tokenomics/Token.html"><strong aria-hidden="true">3.</strong> Reward token</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="Tokenomics/Summary.html"><strong aria-hidden="true">1.</strong> Summary</a></li><li class="chapter-item expanded "><a href="Tokenomics/NFTCollection.html"><strong aria-hidden="true">2.</strong> NFT collection</a></li><li class="chapter-item expanded "><a href="Tokenomics/Token.html"><strong aria-hidden="true">3.</strong> Reward token</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -174,7 +174,7 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
 <li>Initial supply: <code>1000</code></li>
-<li>Mintable: yes, by users (<a href="Tokenomics/./Minting.html">see docs</a>)</li>
+<li>Mintable: yes, by users (<a href="Tokenomics/NFTCollection.html#mint">see docs</a>)</li>
 </ul>
 <h2 id="characteristics"><a class="header" href="#characteristics">Characteristics</a></h2>
 <ul>
@@ -189,7 +189,7 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <li>Increases: by <code>1</code> after each successful <a href="Tokenomics/NFTCollection.html#learn">learning action</a></li>
 </ul>
 </li>
-<li><strong>Potential</strong> determines if this NFT can be used to <a href="Tokenomics/./Minting.html">mint new NFTs</a>.
+<li><strong>Potential</strong> determines if this NFT can be used to <a href="Tokenomics/NFTCollection.html#mint">mint new NFTs</a>.
 <ul>
 <li>Initial value: <code>7</code></li>
 <li>Min value: <code>0</code></li>
@@ -219,7 +219,7 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <li>Initial value: <code>1</code></li>
 </ul>
 </li>
-<li><strong>Child level</strong> determines the child NFT level (<a href="Tokenomics/./Minting.html">see minting</a>)
+<li><strong>Child level</strong> determines the child NFT level (<a href="Tokenomics/NFTCollection.html#mint">see minting</a>)
 <ul>
 <li>Initial value: <code>1</code></li>
 </ul>
@@ -272,7 +272,7 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <ul>
 <li>Increases <code>NFT Experience</code> by 1</li>
 <li>Decreases <code>NFT Energy</code> by 5000</li>
-<li>Increases <code>User MWL Balance</code> by <code>BasicIncome * Power</code></li>
+<li>Increases <code>User MWL Balance</code> by <code>RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck)</code></li>
 </ul>
 <h3 id="mint"><a class="header" href="#mint">Mint</a></h3>
 <p>Inputs:</p>
@@ -356,16 +356,6 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <h2 id="implementation-details"><a class="header" href="#implementation-details">Implementation details</a></h2>
 <ul>
 <li>Omnichain using <a href="https://github.com/LayerZero-Labs/solidity-examples/tree/main/contracts/token/onft">LayerZero ONFT standard</a> (can be listed on multiple marketplaces on different blockchains).</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="minting"><a class="header" href="#minting">Minting</a></h1>
-<p>Users can mint new MetaWomen NFTs.</p>
-<p>Requirements:</p>
-<ul>
-<li>Have at least 2 MetaWomen NFTs that match the following conditions:
-<ul>
-<li>Have not been used to mint</li>
-</ul>
-</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="metawomen-reward-token"><a class="header" href="#metawomen-reward-token">MetaWomen Reward Token</a></h1>
 <h2 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h2>
