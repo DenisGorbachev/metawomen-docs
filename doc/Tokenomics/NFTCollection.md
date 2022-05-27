@@ -81,7 +81,7 @@ Effects:
 
 * Increases `NFT Experience` by 1
 * Decreases `NFT Energy` by 5000
-* Increases `User MWR Balance` by `RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck) * 0.9 ^ Fatigue`
+* Increases `User MWR Balance` by `RANDOM(BasicIncome * Power, BasicIncome * Power * 1.1 ^ Luck) * 0.8 ^ Fatigue`
 
 ### Mint
 
