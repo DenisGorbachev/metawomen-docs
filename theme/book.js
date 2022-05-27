@@ -660,8 +660,10 @@ function playground_text(playground) {
   // sidebarList.append(affix)
   const socials = [
     { name: 'Website', link: 'https://metawomen.ae/' },
-    // { name: 'Telegram', link: 'https://t.me/Coliquidity' },
+    { name: 'Telegram', link: 'https://t.me/joinchat/tSeH950di5gzOTUy' },
     { name: 'Instagram', link: 'https://instagram.com/meta_women_girls' },
+    { name: 'YouTube', link: 'https://m.youtube.com/channel/UCD5O7LmiIk9Cn5JZufECkLA' },
+    { name: 'TikTok', link: 'https://vm.tiktok.com/ZSJT4qFwb/' },
     // { name: 'Twitter', link: 'https://twitter.com/Coliquidity' },
     // { name: 'Anchor Podcasts', link: 'https://anchor.fm/Coliquidity' },
     // { name: 'Medium', link: 'https://coliquidity.medium.com/' },
