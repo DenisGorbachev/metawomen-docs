@@ -2,7 +2,8 @@
 
 ## Value propositions
 
-* Earn MWR token via Learn-to-Earn / Work-to-Earn mechanics.
+* Earn MWR token via Learn-to-Earn mechanics (answering quizzes).
+* Earn MWR token via Work-to-Earn mechanics (helping community members).
 * Gain private access to our closed community.
 
 ## Parameters
