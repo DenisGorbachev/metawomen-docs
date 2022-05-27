@@ -1,6 +1,6 @@
 # Welcome, friend
 
-We're glad you've come to **learn** - because MetaWomen is a Learn-to-Earn project that allows the users to **receive rewards** for learning useful life skills. You can take some of our courses for free - however, only those users who purchased the MetaWomen NFT will be able to earn the MWL rewards token.
+MetaWomen is a Learn-to-Earn project that allows the users to **receive rewards** for learning useful life skills. You can take some of our courses for free - however, only those users who purchased the MetaWomen NFT will be able to earn the MWL rewards token.
 
 Use the quick links to explore:
 

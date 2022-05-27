@@ -2,7 +2,7 @@
 authors = ["MetaWomen"]
 language = "en"
 multilingual = true
-src = "src"
+src = "doc"
 title = "MetaWomen"
 
 [build]
