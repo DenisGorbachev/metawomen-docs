@@ -2,12 +2,12 @@
 
 ## Value propositions
 
-* Earn MWL token via Learn-to-Earn mechanics.
+* Earn MWR token via Learn-to-Earn / Work-to-Earn mechanics.
 * Gain private access to our closed community.
 
 ## Parameters
 
-* Initial supply: `1000`
+* Initial supply: `1000` (more can be minted by users)
 * Mintable: yes, by users ([see docs](#mint))
 
 ## Characteristics
@@ -61,7 +61,7 @@
 
 ## Constants
 
-* **BasicIncome** determines the base amount of MWL tokens per [Learn action](#learn)
+* **BasicIncome** determines the base amount of MWR tokens per [Learn action](#learn)
   * Value: `1000`
 
 ## Actions
@@ -80,7 +80,7 @@ Effects:
 
 * Increases `NFT Experience` by 1
 * Decreases `NFT Energy` by 5000
-* Increases `User MWL Balance` by `RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck) * 0.9 ^ Fatigue`
+* Increases `User MWR Balance` by `RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck) * 0.9 ^ Fatigue`
 
 ### Mint
 
@@ -96,14 +96,14 @@ Checks:
 * `Parent B` must have `Potential` greater than `0`
 * `Parent A` must not have minted in the last 48 hours
 * `Parent B` must not have minted in the last 48 hours
-* `User MWL Balance` must be at least:
-  * `MWLBalanceForMint = BasicIncome * 50 * 1.2 ^ (Potential.max - getLowestPotential(ParentA, ParentB))`
+* `User MWR Balance` must be at least:
+  * `MWRBalanceForMint = BasicIncome * 50 * 1.2 ^ (Potential.max - getLowestPotential(ParentA, ParentB))`
 
 Effects:
 
 * Decreases `Parent A Potential` by `1`
 * Decreases `Parent B Potential` by `1`
-* Decreases `User MWL Balance` by `the formula above`
+* Decreases `User MWR Balance` by `the formula above`
 * Mints a new NFT:
   * Characteristics:
     * Level: max of (`Parent A Child Level` or `Parent B Child Level`)
@@ -118,13 +118,13 @@ Checks:
 
 * `NFT Experience` must be greater than:
   * `MinExperience = 10 * 1.2 ^ CurrentLevel`
-* `User MWL Balance` must be at least:
-  * `MWLBalanceForLevelUp = BasicIncome * MinExperience * 1.3 ^ TargetLevel`
+* `User MWR Balance` must be at least:
+  * `MWRBalanceForLevelUp = BasicIncome * MinExperience * 1.3 ^ TargetLevel`
 
 Effects:
 
 * Increases `NFT Level` by `1`
-* Decreases `User MWL Balance` by `the formula above`
+* Decreases `User MWR Balance` by `the formula above`
 
 ### Increase attribute
 
@@ -155,13 +155,13 @@ Inputs:
 Checks:
 
 * `NFT Fatigue` must be greater than `0`
-* `User MWL Balance` must be at least:
-  * `MWLBalanceForRest = BasicIncome * NFT Experience * 0.1`
+* `User MWR Balance` must be at least:
+  * `MWRBalanceForRest = BasicIncome * NFT Experience * 0.1`
 
 Effects:
 
 * Sets `NFT Fatigue` to `0`
-* Decreases `User MWL Balance` by `the formula above`
+* Decreases `User MWR Balance` by `the formula above`
 
 ## Implementation details
 
