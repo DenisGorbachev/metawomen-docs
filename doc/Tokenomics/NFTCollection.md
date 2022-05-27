@@ -9,7 +9,7 @@
 ## Parameters
 
 * Initial supply: `1000` (more can be minted by users)
-* Mintable: yes, by users ([see docs](#mint))
+* Mintable: yes ([see docs](#mint))
 
 ## Characteristics
 
