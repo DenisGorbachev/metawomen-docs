@@ -158,7 +158,7 @@
 </ul>
 <h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
-<li>Initial supply: <code>1000</code> (more can be minted by users)</li>
+<li>Initial supply: <code>1000</code> (can be <a href="#mint">minted by users</a>)</li>
 <li>Mintable: yes (<a href="#mint">see docs</a>)</li>
 </ul>
 <h2 id="characteristics"><a class="header" href="#characteristics">Characteristics</a></h2>
@@ -363,6 +363,21 @@
 <ul>
 <li>Sets <code>NFT Fatigue</code> to <code>0</code></li>
 <li>Decreases <code>User MWR Balance</code> by <code>the formula above</code></li>
+</ul>
+<h3 id="slash"><a class="header" href="#slash">Slash</a></h3>
+<p>Inputs:</p>
+<ul>
+<li><code>NFT</code> - a MetaWomen NFT</li>
+</ul>
+<p>Checks:</p>
+<ul>
+<li><code>NFT Level</code> must be greater than <code>1</code></li>
+<li><code>NFT Last Action</code> was at least 3 days ago</li>
+</ul>
+<p>Effects:</p>
+<ul>
+<li>Decreases <code>NFT Level</code> by <code>1</code></li>
+<li>Resets <code>NFT Last Action</code> to <code>current timestamp</code></li>
 </ul>
 <h2 id="implementation-details"><a class="header" href="#implementation-details">Implementation details</a></h2>
 <ul>

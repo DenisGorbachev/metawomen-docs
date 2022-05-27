@@ -173,7 +173,7 @@ This document describes the complete tokenomics of our project. It is aimed at p
 </ul>
 <h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
-<li>Initial supply: <code>1000</code> (more can be minted by users)</li>
+<li>Initial supply: <code>1000</code> (can be <a href="Tokenomics/NFTCollection.html#mint">minted by users</a>)</li>
 <li>Mintable: yes (<a href="Tokenomics/NFTCollection.html#mint">see docs</a>)</li>
 </ul>
 <h2 id="characteristics"><a class="header" href="#characteristics">Characteristics</a></h2>
@@ -379,6 +379,21 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <li>Sets <code>NFT Fatigue</code> to <code>0</code></li>
 <li>Decreases <code>User MWR Balance</code> by <code>the formula above</code></li>
 </ul>
+<h3 id="slash"><a class="header" href="#slash">Slash</a></h3>
+<p>Inputs:</p>
+<ul>
+<li><code>NFT</code> - a MetaWomen NFT</li>
+</ul>
+<p>Checks:</p>
+<ul>
+<li><code>NFT Level</code> must be greater than <code>1</code></li>
+<li><code>NFT Last Action</code> was at least 3 days ago</li>
+</ul>
+<p>Effects:</p>
+<ul>
+<li>Decreases <code>NFT Level</code> by <code>1</code></li>
+<li>Resets <code>NFT Last Action</code> to <code>current timestamp</code></li>
+</ul>
 <h2 id="implementation-details"><a class="header" href="#implementation-details">Implementation details</a></h2>
 <ul>
 <li>Omnichain using <a href="https://github.com/LayerZero-Labs/solidity-examples/tree/main/contracts/token/onft">LayerZero ONFT standard</a> (can be listed on multiple marketplaces on different blockchains).</li>
@@ -386,9 +401,9 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <div style="break-before: page; page-break-before: always;"></div><h1 id="metawomen-reward-token"><a class="header" href="#metawomen-reward-token">MetaWomen Reward Token</a></h1>
 <h2 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h2>
 <ul>
-<li>Symbol: MWT</li>
+<li>Symbol: MWR</li>
 <li>Max supply: uncapped</li>
-<li>Initial supply: 0</li>
+<li>Initial supply: <code>100000</code></li>
 <li>Minting: yes, only after successful <a href="Tokenomics/./NFTCollection.html#learn">Learn action</a></li>
 </ul>
 <h2 id="implementation-details-1"><a class="header" href="#implementation-details-1">Implementation details</a></h2>
