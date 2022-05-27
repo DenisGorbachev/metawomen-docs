@@ -8,7 +8,7 @@
 ## Parameters
 
 * Initial supply: `1000`
-* Mintable: yes, by users ([see docs](./Minting.md))
+* Mintable: yes, by users ([see docs](#mint))
 
 ## Characteristics
 
@@ -17,7 +17,7 @@
 * **Experience** determines max available level
   * Initial value: `0`
   * Increases: by `1` after each successful [learning action](#learn)
-* **Potential** determines if this NFT can be used to [mint new NFTs](./Minting.md).
+* **Potential** determines if this NFT can be used to [mint new NFTs](#mint).
   * Initial value: `7`
   * Min value: `0`
   * Decreases: by `1` after each successful minting action
@@ -32,7 +32,7 @@
   * Initial value: `1`
 * **Luck** determines max multiplier of reward per action
   * Initial value: `1`
-* **Child level** determines the child NFT level ([see minting](./Minting.md))
+* **Child level** determines the child NFT level ([see minting](#mint))
   * Initial value: `1`
 
 ## Secondary attributes
@@ -76,7 +76,7 @@ Effects:
 
 * Increases `NFT Experience` by 1
 * Decreases `NFT Energy` by 5000
-* Increases `User MWL Balance` by `BasicIncome * Power`
+* Increases `User MWL Balance` by `RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck)`
 
 ### Mint
 
