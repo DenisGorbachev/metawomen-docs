@@ -16,11 +16,15 @@
   * Initial value: `1`
 * **Experience** determines max available level
   * Initial value: `0`
-  * Increases: by `1` after each successful [learning action](#learn)
+  * Increases: by `1` after each successful [Learn action](#learn)
 * **Potential** determines if this NFT can be used to [mint new NFTs](#mint).
   * Initial value: `7`
   * Min value: `0`
-  * Decreases: by `1` after each successful minting action
+  * Decreases: by `1` after each successful [Mint action](#mint)
+* **Fatigue** determines max token reward per action
+  * Initial value: `0`
+  * Increases: by `1` after each successful [Learn action](#learn)
+  * Decreases: to `0` after each successful [Rest action](#rest)
 
 ## Primary attributes
 
@@ -76,7 +80,7 @@ Effects:
 
 * Increases `NFT Experience` by 1
 * Decreases `NFT Energy` by 5000
-* Increases `User MWL Balance` by `RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck)`
+* Increases `User MWL Balance` by `RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck) * 0.9 ^ Fatigue`
 
 ### Mint
 
@@ -141,6 +145,23 @@ Effects:
 Notes:
 
 * This action is free but irreversible.
+
+### Rest
+
+Inputs:
+
+* `NFT` - a MetaWomen NFT
+
+Checks:
+
+* `NFT Fatigue` must be greater than `0`
+* `User MWL Balance` must be at least:
+  * `MWLBalanceForRest = BasicIncome * NFT Experience * 0.1`
+
+Effects:
+
+* Sets `NFT Fatigue` to `0`
+* Decreases `User MWL Balance` by `the formula above`
 
 ## Implementation details
 
