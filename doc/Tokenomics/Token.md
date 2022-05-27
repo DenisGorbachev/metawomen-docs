@@ -5,7 +5,7 @@
 * Symbol: MWT
 * Max supply: uncapped
 * Initial supply: 0
-* Minting: yes, only after successful learning action
+* Minting: yes, only after successful [Learn action](./NFTCollection.md#learn)
 
 ## Implementation details
 
