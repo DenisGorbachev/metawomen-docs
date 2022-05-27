@@ -4,8 +4,8 @@ MetaWomen is a Learn-to-Earn project that allows the users to **receive rewards*
 
 Use the quick links to explore:
 
-* [NFT collection parameters](./Tokenomics/NFTCollection.md)
-* [Reward token parameters](./Tokenomics/Token.md)
+* [MetaWomen NFT collection parameters](./Tokenomics/NFTCollection.md)
+* [MetaWomen MWL reward token parameters](./Tokenomics/Token.md)
 
 ## Our ethos
 
