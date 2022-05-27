@@ -186,14 +186,21 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <li><strong>Experience</strong> determines max available level
 <ul>
 <li>Initial value: <code>0</code></li>
-<li>Increases: by <code>1</code> after each successful <a href="Tokenomics/NFTCollection.html#learn">learning action</a></li>
+<li>Increases: by <code>1</code> after each successful <a href="Tokenomics/NFTCollection.html#learn">Learn action</a></li>
 </ul>
 </li>
 <li><strong>Potential</strong> determines if this NFT can be used to <a href="Tokenomics/NFTCollection.html#mint">mint new NFTs</a>.
 <ul>
 <li>Initial value: <code>7</code></li>
 <li>Min value: <code>0</code></li>
-<li>Decreases: by <code>1</code> after each successful minting action</li>
+<li>Decreases: by <code>1</code> after each successful <a href="Tokenomics/NFTCollection.html#mint">Mint action</a></li>
+</ul>
+</li>
+<li><strong>Fatigue</strong> determines max token reward per action
+<ul>
+<li>Initial value: <code>0</code></li>
+<li>Increases: by <code>1</code> after each successful <a href="Tokenomics/NFTCollection.html#learn">Learn action</a></li>
+<li>Decreases: to <code>0</code> after each successful <a href="Tokenomics/NFTCollection.html#rest">Rest action</a></li>
 </ul>
 </li>
 </ul>
@@ -272,7 +279,7 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <ul>
 <li>Increases <code>NFT Experience</code> by 1</li>
 <li>Decreases <code>NFT Energy</code> by 5000</li>
-<li>Increases <code>User MWL Balance</code> by <code>RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck)</code></li>
+<li>Increases <code>User MWL Balance</code> by <code>RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck) * 0.9 ^ Fatigue</code></li>
 </ul>
 <h3 id="mint"><a class="header" href="#mint">Mint</a></h3>
 <p>Inputs:</p>
@@ -352,6 +359,25 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <p>Notes:</p>
 <ul>
 <li>This action is free but irreversible.</li>
+</ul>
+<h3 id="rest"><a class="header" href="#rest">Rest</a></h3>
+<p>Inputs:</p>
+<ul>
+<li><code>NFT</code> - a MetaWomen NFT</li>
+</ul>
+<p>Checks:</p>
+<ul>
+<li><code>NFT Fatigue</code> must be greater than <code>0</code></li>
+<li><code>User MWL Balance</code> must be at least:
+<ul>
+<li><code>MWLBalanceForRest = BasicIncome * NFT Experience * 0.1</code></li>
+</ul>
+</li>
+</ul>
+<p>Effects:</p>
+<ul>
+<li>Sets <code>NFT Fatigue</code> to <code>0</code></li>
+<li>Decreases <code>User MWL Balance</code> by <code>the formula above</code></li>
 </ul>
 <h2 id="implementation-details"><a class="header" href="#implementation-details">Implementation details</a></h2>
 <ul>
