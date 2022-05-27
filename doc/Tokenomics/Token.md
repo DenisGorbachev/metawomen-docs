@@ -2,9 +2,9 @@
 
 ## Parameters
 
-* Symbol: MWT
+* Symbol: MWR
 * Max supply: uncapped
-* Initial supply: 0
+* Initial supply: `100000`
 * Minting: yes, only after successful [Learn action](./NFTCollection.md#learn)
 
 ## Implementation details

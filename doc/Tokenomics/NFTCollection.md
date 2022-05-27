@@ -8,7 +8,7 @@
 
 ## Parameters
 
-* Initial supply: `1000` (more can be minted by users)
+* Initial supply: `1000` (can be [minted by users](#mint))
 * Mintable: yes ([see docs](#mint))
 
 ## Characteristics
@@ -163,6 +163,22 @@ Effects:
 
 * Sets `NFT Fatigue` to `0`
 * Decreases `User MWR Balance` by `the formula above`
+
+### Slash
+
+Inputs:
+
+* `NFT` - a MetaWomen NFT
+
+Checks:
+
+* `NFT Level` must be greater than `1`
+* `NFT Last Action` was at least 3 days ago
+
+Effects:
+
+* Decreases `NFT Level` by `1`
+* Resets `NFT Last Action` to `current timestamp`
 
 ## Implementation details
 
