@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="Tokenomics/Summary.html"><strong aria-hidden="true">1.</strong> Summary</a></li><li class="chapter-item expanded "><a href="HowItWorks.html"><strong aria-hidden="true">2.</strong> NFT collection</a></li><li class="chapter-item expanded "><a href="Pricing.html"><strong aria-hidden="true">3.</strong> Reward token</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="Tokenomics/Summary.html"><strong aria-hidden="true">1.</strong> Summary</a></li><li class="chapter-item expanded "><a href="Tokenomics/NFTCollection.html"><strong aria-hidden="true">2.</strong> NFT collection</a></li><li class="chapter-item expanded "><a href="Tokenomics/Token.html"><strong aria-hidden="true">3.</strong> Reward token</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -147,56 +147,80 @@
 
                 <div id="content" class="content">
                     <main>
-                        <div style="break-before: page; page-break-before: always;"></div><h1 id="summary"><a class="header" href="#summary">Summary</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="how-it-works"><a class="header" href="#how-it-works">How it works</a></h1>
+                        <h1 id="welcome-friend"><a class="header" href="#welcome-friend">Welcome, friend</a></h1>
+<p>We're glad you've come to <strong>learn</strong> - because MetaWomen is a Learn-to-Earn project that allows the users to <strong>receive rewards</strong> for learning useful life skills. You can take some of our courses for free - however, only those users who purchased the MetaWomen NFT will be able to earn the MWL rewards token.</p>
+<p>Use the quick links to explore:</p>
 <ul>
-<li><a href="HowItWorks.html#for-new-pools">For new pools</a></li>
-<li><a href="HowItWorks.html#for-existing-stablecoin-pools">For existing stablecoin pools</a></li>
-<li><a href="HowItWorks.html#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a></li>
+<li><a href="./Tokenomics/NFTCollection.html">NFT collection parameters</a></li>
+<li><a href="./Tokenomics/Token.html">Reward token parameters</a></li>
 </ul>
-<h2 id="for-new-pools"><a class="header" href="#for-new-pools">For new pools</a></h2>
+<h2 id="our-ethos"><a class="header" href="#our-ethos">Our ethos</a></h2>
+<p>We believe that today's girls, girls and women are the future of the world! That's why their upbringing and education are important from childhood. There is an incredible potential in women, which was not used to show, but now it's a new time!</p>
+<p>We are the same spirit of GREAT, SUCCESS, LOVE, PEOPLE, PROSPERITY, VALUES AND TRENDS, created by a great desire to help you become a BETTER person!</p>
+<p>It's time to assert yourself, to be heard, to realize your potential, to lead, to be happy and independent!</p>
+<!--
+
+Welcome to MetaWomen wiki!
+This document describes the complete tokenomics of our project. It is aimed at professional investors, and contains all terms & formulas that show the project's underlying model.
+
+-->
+<div style="break-before: page; page-break-before: always;"></div><h1 id="summary"><a class="header" href="#summary">Summary</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="metawomen-nft-collection"><a class="header" href="#metawomen-nft-collection">MetaWomen NFT Collection</a></h1>
+<h2 id="value-propositions"><a class="header" href="#value-propositions">Value propositions</a></h2>
 <ul>
-<li>The project deposits ABC tokens into the Coliquidity smart contract.</li>
-<li>The investors deposit WETH tokens into the Coliquidity smart contract.</li>
-<li>When there is enough WETH liquidity, the project triggers the creation of a new pool though Coliquidity contract.</li>
-<li>The Coliquidity contract deploys a new ABC-WETH pool using combined liquidity from the project &amp; the investors.</li>
+<li>Earn MWL token via Learn-to-Earn mechanics.</li>
+<li>Gain private access to our closed community.</li>
 </ul>
-<h2 id="for-existing-stablecoin-pools"><a class="header" href="#for-existing-stablecoin-pools">For existing stablecoin pools</a></h2>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
-<li>Alice &amp; Bob decide to put their stablecoins into the DAI-USDT pool to earn LP fees.</li>
-<li>Alice deposits DAI tokens into the Coliquidity smart contract.</li>
-<li>Bob deposits USDT tokens into the Coliquidity smart contract.</li>
-<li>The Coliquidity contract combines DAI + USDT and puts them into the DAI-USDT pool.</li>
-<li>When either Alice or Bob requests a withdrawal, Alice gets her DAI deposit + DAI fees, Bob gets his USDT deposit + USDT fees.</li>
-<li>If DAI-USDT price doesn't change: both Alice &amp; Bob earn the fees.</li>
-<li>If DAI-USDT price does change: this scenario is equivalent to “<a href="HowItWorks.html#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a>”</li>
+<li>Initial supply: 1000</li>
+<li>Mintable: yes, by users (<a href="Tokenomics/./Minting.html">see docs</a>)</li>
 </ul>
-<p>See also:</p>
+<h2 id="attributes"><a class="header" href="#attributes">Attributes</a></h2>
 <ul>
-<li><a href="FAQ.html#what-if-a-single-provider-requests-a-withdrawal">What if a single provider requests a withdrawal?</a></li>
+<li><strong>Level</strong> determines max count of available upgrades
+<ul>
+<li>Initial value: 1</li>
 </ul>
-<h2 id="for-existing-non-stablecoin-pools"><a class="header" href="#for-existing-non-stablecoin-pools">For existing non-stablecoin pools</a></h2>
+</li>
+<li><strong>Experience</strong> determines max available level
 <ul>
-<li>Alice deposits ABC tokens into the Coliquidity smart contract.</li>
-<li>Bob deposits WETH tokens into the Coliquidity smart contract.</li>
-<li>The Coliquidity contract combines ABC + WETH and puts them into the ABC-WETH pool.</li>
-<li>When either Alice or Bob requests a withdrawal, Alice gets her ABC deposit + ABC fees, Bob gets his WETH deposit + WETH fees.</li>
-<li>If ABC-WETH price doesn't change: both Alice &amp; Bob earn the fees.</li>
-<li>If ABC-WETH price goes up: there will be less ABC and more WETH in the pool, so Alice will get less ABC + ABC fees, Bob will get more WETH + WETH fees. It works like a long position for Bob.</li>
-<li>If ABC-WETH price goes down: there will be more ABC and less WETH in the pool, so Alice will get more ABC + ABC fees, Bob will get less WETH + WETH fees. It works like a short position for Alice (e.g. she believed ABC would crash short-term but recover long-term, so she put her ABC in the pool to make more ABC short-term).</li>
+<li>Initial value: 0</li>
+<li>Increments: by 1 after each successful learning action</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="how-much-does-it-cost"><a class="header" href="#how-much-does-it-cost">How much does it cost?</a></h1>
+</li>
+<li><strong>Power</strong> determines max token reward per action
 <ul>
-<li>The smart contract charges 1% of the user’s profit.</li>
-<li>No charge if no profit.</li>
-<li>No charge if you deposit and withdraw the same amount.</li>
-<li>The fee is calculated as “0.01 * (WithdrawAmount - DepositAmount)”.</li>
-<li>The fee is calculated separately for each participant of coliquidity position.</li>
-<li>The fee is charged upon withdrawal.</li>
+<li>Initial value: 1</li>
 </ul>
-<p>See also:</p>
+</li>
+<li><strong>Endurance</strong> determines max count of actions per day
 <ul>
-<li><a href="WhatIsColiquidity.html">What is Coliquidity</a></li>
+<li>Initial value: 1</li>
+</ul>
+</li>
+<li><strong>Luck</strong> determines max multiplier of reward per action
+<ul>
+<li>Initial value: 1</li>
+</ul>
+</li>
+</ul>
+<h2 id="implementation-details"><a class="header" href="#implementation-details">Implementation details</a></h2>
+<ul>
+<li>Omnichain using <a href="https://github.com/LayerZero-Labs/solidity-examples/tree/main/contracts/token/onft">LayerZero ONFT standard</a> (can be listed on multiple marketplaces on different blockchains).</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="metawomen-reward-token"><a class="header" href="#metawomen-reward-token">MetaWomen Reward Token</a></h1>
+<h2 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h2>
+<ul>
+<li>Symbol: MWT</li>
+<li>Max supply: uncapped</li>
+<li>Initial supply: 0</li>
+<li>Minting: yes, only after successful learning action</li>
+</ul>
+<h2 id="implementation-details-1"><a class="header" href="#implementation-details-1">Implementation details</a></h2>
+<ul>
+<li>Omnichain using <a href="https://www.portalbridge.com/#/transfer">Wormhole</a>.</li>
+<li>Home blockchain: Binance Smart Chain.</li>
 </ul>
 
                     </main>
