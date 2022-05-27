@@ -148,11 +148,11 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
-<p>MetaWomen is a Learn-to-Earn project that allows the users to <strong>receive rewards</strong> for learning useful life skills. You can take some of our courses for free - however, only those users who purchased the <a href="Tokenomics/NFTCollection.html">MetaWomen NFT</a> will be able to earn the <a href="Tokenomics/NFTCollection.html">MWL rewards token</a>.</p>
+<p>MetaWomen is a Learn-to-Earn project that allows the users to <strong>receive rewards</strong> for learning useful life skills. You can take some of our courses for free - however, only those users who purchased the <a href="Tokenomics/NFTCollection.html">MetaWomen NFT</a> will be able to earn the <a href="Tokenomics/NFTCollection.html">MWR rewards token</a>.</p>
 <p>Use the quick links to explore:</p>
 <ul>
 <li><a href="Tokenomics/NFTCollection.html">MetaWomen NFT collection parameters</a></li>
-<li><a href="Tokenomics/Token.html">MetaWomen MWL reward token parameters</a></li>
+<li><a href="Tokenomics/Token.html">MetaWomen MWR reward token parameters</a></li>
 </ul>
 <h2 id="our-ethos"><a class="header" href="#our-ethos">Our ethos</a></h2>
 <p>We believe that today's girls, girls and women are the future of the world! That's why their upbringing and education are important from childhood. There is an incredible potential in women, which was not used to show, but now it's a new time!</p>
@@ -167,12 +167,12 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <div style="break-before: page; page-break-before: always;"></div><h1 id="metawomen-nft-collection"><a class="header" href="#metawomen-nft-collection">MetaWomen NFT Collection</a></h1>
 <h2 id="value-propositions"><a class="header" href="#value-propositions">Value propositions</a></h2>
 <ul>
-<li>Earn MWL token via Learn-to-Earn mechanics.</li>
+<li>Earn MWR token via Learn-to-Earn / Work-to-Earn mechanics.</li>
 <li>Gain private access to our closed community.</li>
 </ul>
 <h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
-<li>Initial supply: <code>1000</code></li>
+<li>Initial supply: <code>1000</code> (more can be minted by users)</li>
 <li>Mintable: yes, by users (<a href="Tokenomics/NFTCollection.html#mint">see docs</a>)</li>
 </ul>
 <h2 id="characteristics"><a class="header" href="#characteristics">Characteristics</a></h2>
@@ -258,7 +258,7 @@ This document describes the complete tokenomics of our project. It is aimed at p
 -->
 <h2 id="constants"><a class="header" href="#constants">Constants</a></h2>
 <ul>
-<li><strong>BasicIncome</strong> determines the base amount of MWL tokens per <a href="Tokenomics/NFTCollection.html#learn">Learn action</a>
+<li><strong>BasicIncome</strong> determines the base amount of MWR tokens per <a href="Tokenomics/NFTCollection.html#learn">Learn action</a>
 <ul>
 <li>Value: <code>1000</code></li>
 </ul>
@@ -278,7 +278,7 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <ul>
 <li>Increases <code>NFT Experience</code> by 1</li>
 <li>Decreases <code>NFT Energy</code> by 5000</li>
-<li>Increases <code>User MWL Balance</code> by <code>RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck) * 0.9 ^ Fatigue</code></li>
+<li>Increases <code>User MWR Balance</code> by <code>RANDOM(BasicIncome * Power, BasicIncome * Power * 1.2 ^ Luck) * 0.9 ^ Fatigue</code></li>
 </ul>
 <h3 id="mint"><a class="header" href="#mint">Mint</a></h3>
 <p>Inputs:</p>
@@ -293,9 +293,9 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <li><code>Parent B</code> must have <code>Potential</code> greater than <code>0</code></li>
 <li><code>Parent A</code> must not have minted in the last 48 hours</li>
 <li><code>Parent B</code> must not have minted in the last 48 hours</li>
-<li><code>User MWL Balance</code> must be at least:
+<li><code>User MWR Balance</code> must be at least:
 <ul>
-<li><code>MWLBalanceForMint = BasicIncome * 50 * 1.2 ^ (Potential.max - getLowestPotential(ParentA, ParentB))</code></li>
+<li><code>MWRBalanceForMint = BasicIncome * 50 * 1.2 ^ (Potential.max - getLowestPotential(ParentA, ParentB))</code></li>
 </ul>
 </li>
 </ul>
@@ -303,7 +303,7 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <ul>
 <li>Decreases <code>Parent A Potential</code> by <code>1</code></li>
 <li>Decreases <code>Parent B Potential</code> by <code>1</code></li>
-<li>Decreases <code>User MWL Balance</code> by <code>the formula above</code></li>
+<li>Decreases <code>User MWR Balance</code> by <code>the formula above</code></li>
 <li>Mints a new NFT:
 <ul>
 <li>Characteristics:
@@ -326,16 +326,16 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <li><code>MinExperience = 10 * 1.2 ^ CurrentLevel</code></li>
 </ul>
 </li>
-<li><code>User MWL Balance</code> must be at least:
+<li><code>User MWR Balance</code> must be at least:
 <ul>
-<li><code>MWLBalanceForLevelUp = BasicIncome * MinExperience * 1.3 ^ TargetLevel</code></li>
+<li><code>MWRBalanceForLevelUp = BasicIncome * MinExperience * 1.3 ^ TargetLevel</code></li>
 </ul>
 </li>
 </ul>
 <p>Effects:</p>
 <ul>
 <li>Increases <code>NFT Level</code> by <code>1</code></li>
-<li>Decreases <code>User MWL Balance</code> by <code>the formula above</code></li>
+<li>Decreases <code>User MWR Balance</code> by <code>the formula above</code></li>
 </ul>
 <h3 id="increase-attribute"><a class="header" href="#increase-attribute">Increase attribute</a></h3>
 <p>Inputs:</p>
@@ -367,16 +367,16 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <p>Checks:</p>
 <ul>
 <li><code>NFT Fatigue</code> must be greater than <code>0</code></li>
-<li><code>User MWL Balance</code> must be at least:
+<li><code>User MWR Balance</code> must be at least:
 <ul>
-<li><code>MWLBalanceForRest = BasicIncome * NFT Experience * 0.1</code></li>
+<li><code>MWRBalanceForRest = BasicIncome * NFT Experience * 0.1</code></li>
 </ul>
 </li>
 </ul>
 <p>Effects:</p>
 <ul>
 <li>Sets <code>NFT Fatigue</code> to <code>0</code></li>
-<li>Decreases <code>User MWL Balance</code> by <code>the formula above</code></li>
+<li>Decreases <code>User MWR Balance</code> by <code>the formula above</code></li>
 </ul>
 <h2 id="implementation-details"><a class="header" href="#implementation-details">Implementation details</a></h2>
 <ul>
