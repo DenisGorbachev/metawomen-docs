@@ -170,7 +170,7 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <li>Earn MWR token via Learn-to-Earn mechanics (answering quizzes).</li>
 <li>Earn MWR token via Work-to-Earn mechanics (helping community members).</li>
 <li>Gain private access to our closed community.</li>
-<li>Place your course at the top of the list.</li>
+<li>Place your content at the top of the list.</li>
 </ul>
 <h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
 <ul>
@@ -394,6 +394,25 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <ul>
 <li>Decreases <code>NFT Level</code> by <code>1</code></li>
 <li>Resets <code>NFT Last Action</code> to <code>current timestamp</code></li>
+</ul>
+<h3 id="freeze"><a class="header" href="#freeze">Freeze</a></h3>
+<p>Inputs:</p>
+<ul>
+<li><code>NFT</code> - a MetaWomen NFT</li>
+<li><code>duration</code> - freeze duration in seconds</li>
+</ul>
+<p>Checks:</p>
+<ul>
+<li><code>User MWR Balance</code> must be at least:
+<ul>
+<li><code>MWRBalanceForFreeze = BasicIncome * duration / (24 * 60 * 60)</code></li>
+</ul>
+</li>
+</ul>
+<p>Effects:</p>
+<ul>
+<li>Extends <code>NFT Frozen Until</code> by <code>duration</code></li>
+<li>Decreases <code>User MWR Balance</code> by <code>the formula above</code></li>
 </ul>
 <h2 id="implementation-details"><a class="header" href="#implementation-details">Implementation details</a></h2>
 <ul>
