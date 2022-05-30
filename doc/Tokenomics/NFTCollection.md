@@ -5,7 +5,7 @@
 * Earn MWR token via Learn-to-Earn mechanics (answering quizzes).
 * Earn MWR token via Work-to-Earn mechanics (helping community members).
 * Gain private access to our closed community.
-* Place your course at the top of the list.
+* Place your content at the top of the list.
 
 ## Parameters
 
@@ -180,6 +180,23 @@ Effects:
 
 * Decreases `NFT Level` by `1`
 * Resets `NFT Last Action` to `current timestamp`
+
+### Freeze
+
+Inputs:
+
+* `NFT` - a MetaWomen NFT
+* `duration` - freeze duration in seconds
+
+Checks:
+
+* `User MWR Balance` must be at least:
+  * `MWRBalanceForFreeze = BasicIncome * duration / (24 * 60 * 60)`
+
+Effects:
+
+* Extends `NFT Frozen Until` by `duration`
+* Decreases `User MWR Balance` by `the formula above`
 
 ## Implementation details
 
