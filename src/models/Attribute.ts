@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { getDuplicatesRefinement } from 'src/util/zod'
+import { getDuplicatesRefinement } from 'src/util/src/zod'
 
 export const AttributeSchema = z.object({
   name: z.string().min(1),

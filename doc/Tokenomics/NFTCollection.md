@@ -119,7 +119,7 @@ Inputs:
 Checks:
 
 * `NFT Experience` must be greater than:
-  * `MinExperience = 10 * 1.2 ^ CurrentLevel`
+  * `MinExperience = 10 * CurrentLevel ^ 1.2`
 * `User MWR Balance` must be at least:
   * `MWRBalanceForLevelUp = BasicIncome * MinExperience * 1.3 ^ TargetLevel`
 

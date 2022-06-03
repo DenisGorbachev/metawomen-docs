@@ -1,33 +1,50 @@
 {
-  "name": "coliquidity-docs",
+  "name": "metawomen-docs",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:Coliquidity/docs.git",
+  "repository": "git@github.com:DenisGorbachev/metawomen-docs.git",
   "author": "Denis Gorbachev <829578+DenisGorbachev@users.noreply.github.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "postinstall": "lefthook install",
     "dev": "mdbook serve",
     "lint:all": "yarn lint:code:all && yarn lint:markdown:all",
     "lint:code": "eslint --fix --ignore-path .gitignore --max-warnings=0",
     "lint:code:all": "yarn lint:code .",
     "lint:markdown:all": "yarn lint:markdown:text . && yarn lint:markdown:links .",
     "lint:markdown:text": "markdownlint --fix --ignore-path .gitignore",
-    "lint:markdown:links": "remark --use remark-validate-links --use remark-lint-no-dead-urls --ignore-path .gitignore -q -f"
+    "lint:markdown:links": "remark --use remark-validate-links --use remark-lint-no-dead-urls --ignore-path .gitignore -q -f",
+    "typecheck": "tsc --noEmit",
+    "typecheck:files": "tsc-files --noEmit src/util/src/*.d.ts",
+    "test": "jest --setupFiles dotenv/config --all",
+    "test:watch": "jest --setupFiles dotenv/config --watchAll --bail",
+    "test:nock:off": "set NOCK_OFF=true NOCK_BACK_MODE=wild && yarn test",
+    "test:nock:record": "set NOCK_BACK_MODE=record && yarn test",
+    "test:warnings": "node --trace-warnings node_modules/.bin/jest --setupFiles dotenv/config --no-cache",
+    "test:warnings:watch": "yarn test:warnings --watchAll --bail",
+    "postinstall": "lefthook install"
+  },
+  "engines": {
+    "node": "^14.17.0"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.182",
+    "@swc/core": "^1.2.196",
+    "dotenv": "^16.0.1",
     "lodash": "^4.17.21",
     "markdown-link-check": "^3.9.0",
+    "markdown-table": "^3.0.2",
     "markdownlint-cli": "^0.30.0",
+    "ts-node": "^10.8.0",
     "typescript": "^4.7.2",
+    "yargs": "^17.5.1",
     "zod": "^3.17.3"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",
     "@babel/eslint-parser": "^7.15.7",
     "@babel/eslint-plugin": "^7.13.15",
-    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@types/lodash": "^4.14.182",
+    "@types/yargs": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
     "babel-eslint": "^9.0.0",
     "eslint": "^7.31.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -37,8 +54,11 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "^28.1.0",
     "remark-cli": "^10.0.1",
     "remark-lint-no-dead-urls": "^1.1.0",
-    "remark-validate-links": "^11.0.2"
-  }
+    "remark-validate-links": "^11.0.2",
+    "ts-jest": "^28.0.4"
+  },
+  "packageManager": "yarn@3.2.1"
 }
