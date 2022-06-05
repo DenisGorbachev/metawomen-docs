@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { getDuplicatesRefinement } from 'src/util/src/zod'
+import { getDuplicatesRefinement } from '../util/src/zod.js'
 
 const attribute = () => z.number().int().min(0)
 

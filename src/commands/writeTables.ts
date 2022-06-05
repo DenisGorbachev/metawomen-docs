@@ -6,11 +6,11 @@ import { Path } from '../util/src/filesystem.js'
 import { readFile, writeFile } from 'fs/promises'
 import { impl } from '../util/src/todo.js'
 import { flatten, range } from 'lodash-es'
-import { getMinExperienceForUpgrade, getMinTokenAmountForUpgrade, getTokenMinedAmountMax, getTokenMinedAmountMin } from '../formulas.js'
+import { getMinExperienceForUpgrade, getMinTokenAmountForUpgrade, getTokenAmountForFreezePerDayFloored, getTokenMinedAmountMax, getTokenMinedAmountMin } from '../formulas.js'
 import { nail } from '../util/src/string.js'
 import { markdownTable } from 'markdown-table'
 import { fileURLToPath } from 'url'
-import { Language, LanguageSchema } from '../models/Language.js'
+import { Language, LanguageSchema, parseLanguage } from '../models/Language.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
@@ -27,38 +27,37 @@ export const builder = function (argv: Argv) {
       requiresArg: true,
       demandOption: true,
       choices: LanguageSchema.options,
-      description: 'A folder for tables',
     })
     .option('folder', {
       alias: 'f',
       string: true,
       requiresArg: true,
       demandOption: true,
-      description: 'A folder for tables',
     })
 }
 
 export interface Args extends Arguments {
-  language: Language
-  folder: Path
+  language: string
+  folder: string
 }
 
 export const handler = async function (args: Args) {
   const { folder, language } = args
   const env = await loadEnv()
-  await writeTables(language, folder)
+  const $language = parseLanguage(language as Language)
+  await writeTables($language, folder)
 }
 
 export async function writeTables(language: Language, folder: Path) {
   return together([
     writeLevelProgression,
     writeReturnOnInvestment,
-    // writeSlashing,
+    writeSlashing,
   ], language, folder)
 }
 
 function getFilename(language: Language, folder: string, name: string) {
-  return `${folder}/Tokenomics/Tables/${name}.${language}.generated.md`
+  return `${folder}/Tokenomics/DataSheets/${name}.${language}.generated.md`
 }
 
 async function getLanguage(name: string) {
@@ -77,6 +76,13 @@ export async function writeReturnOnInvestment(language: Language, folder: Path) 
   const baseFilename = 'ReturnOnInvestment'
   const keys: ROIStatKey[] = ['power', 'luck', 'tokenMinedAmountMin', 'tokenMinedAmountMax']
   const stats = getROIStats()
+  return writeTable(language, folder, baseFilename, keys, stats)
+}
+
+export async function writeSlashing(language: Language, folder: Path) {
+  const baseFilename = 'Slashing'
+  const keys: SlashingStatKey[] = ['frozenNFTCount', 'burnedTokenAmount']
+  const stats = getSlashingStats()
   return writeTable(language, folder, baseFilename, keys, stats)
 }
 
@@ -99,10 +105,6 @@ export async function writeTable<Stat extends AbstractStat>(language: Language, 
   `).trim()
   console.info(filename)
   return writeFile(filename, content)
-}
-
-function writeSlashing(folder: Path) {
-  throw impl()
 }
 
 function getLevelStats(): LevelStat[] {
@@ -133,6 +135,17 @@ function getROIStats(): ROIStat[] {
   return flatten(result)
 }
 
+function getSlashingStats(): SlashingStat[] {
+  const from = 10
+  const to = 500
+  return range(from, to + 1, 10).map(frozenNFTCount => {
+    return {
+      frozenNFTCount,
+      burnedTokenAmount: frozenNFTCount * getTokenAmountForFreezePerDayFloored(1),
+    }
+  })
+}
+
 export type AbstractStat = Record<string, string | number>
 
 interface LevelStat extends AbstractStat {
@@ -151,3 +164,10 @@ interface ROIStat extends AbstractStat {
 }
 
 type ROIStatKey = keyof ROIStat
+
+interface SlashingStat extends AbstractStat {
+  frozenNFTCount: number
+  burnedTokenAmount: number
+}
+
+type SlashingStatKey = keyof SlashingStat

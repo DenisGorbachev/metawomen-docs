@@ -10,3 +10,8 @@ pre-commit:
     lint-markdown-links:
       glob: "*.md"
       run: yarn lint:markdown:links {all_files} # lint all files, because renames may introduce broken links
+    typecheck:
+      glob: "*.{ts,tsx}"
+      run: yarn typecheck
+    test:
+      run: yarn test --passWithNoTests

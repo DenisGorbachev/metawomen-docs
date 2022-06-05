@@ -1,5 +1,6 @@
 import { expect } from './util/src/chai.js'
 import { BasicExperience, BasicIncome } from './constants.js'
+import { day } from './util/src/duration.js'
 
 /**
  * How much experience the user needs to upgrade to `level`
@@ -25,3 +26,16 @@ export function getTokenMinedAmountMin(power: number, luck: number) {
 export function getTokenMinedAmountMax(power: number, luck: number) {
   return Math.floor(getTokenMinedAmountMin(power, luck) * Math.pow(luck, 1.3))
 }
+
+/**
+ * @param duration milliseconds
+ */
+export function getTokenAmountForFreeze(duration: Milliseconds) {
+  return BasicIncome * duration / day
+}
+
+export function getTokenAmountForFreezePerDayFloored(dayCount: number) {
+  return getTokenAmountForFreeze(dayCount * day)
+}
+
+export type Milliseconds = number
