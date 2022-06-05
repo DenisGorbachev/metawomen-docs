@@ -1,5 +1,5 @@
-import { parseAttributeUid, Attribute, AttributeSchema } from '../models/Attribute'
-import { getFinder, getInserter, getName } from 'src/util/src/zod'
+import { parseAttributeUid, Attribute, AttributeSchema } from '../models/Attribute.js'
+import { getFinder, getInserter, getName } from '../util/src/zod.js'
 
 export const allAttributes: Attribute[] = []
 

@@ -4,7 +4,7 @@
   "Slashing": "Slashing",
   "level": "Level",
   "minExperience": "Min experience",
-  "minTokenAmount": "Upgrade cost",
+  "minTokenAmount": "Upgrade cost (MWR)",
   "power": "Power",
   "luck": "Luck",
   "tokenMinedAmountMin": "MWR per action (min)",
