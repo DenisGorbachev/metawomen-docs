@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Reward token - MetaWomen</title>
+        <title>Level progression - MetaWomen</title>
                 
 
         <!-- Custom HTML head -->
@@ -14,21 +14,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-                <link rel="icon" href="../favicon.svg">
-                        <link rel="shortcut icon" href="../favicon.png">
-                <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-                <link rel="stylesheet" href="../css/print.css" media="print">
+                <link rel="icon" href="../../favicon.svg">
+                        <link rel="shortcut icon" href="../../favicon.png">
+                <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+                <link rel="stylesheet" href="../../css/print.css" media="print">
         
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-                <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../../fonts/fonts.css">
         
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
@@ -36,7 +36,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "../";
+            var path_to_root = "../../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="../Tokenomics/NFTCollection.html"><strong aria-hidden="true">1.</strong> NFT collection</a></li><li class="chapter-item expanded "><a href="../Tokenomics/Token.html" class="active"><strong aria-hidden="true">2.</strong> Reward token</a></li><li class="chapter-item expanded "><a href="../Tokenomics/DataSheets.html"><strong aria-hidden="true">3.</strong> Data sheets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Tokenomics/DataSheets/LevelProgression.en.generated.html"><strong aria-hidden="true">3.1.</strong> Level progression</a></li><li class="chapter-item expanded "><a href="../Tokenomics/DataSheets/ReturnOnInvestment.en.generated.html"><strong aria-hidden="true">3.2.</strong> Return On Investment</a></li><li class="chapter-item expanded "><a href="../Tokenomics/DataSheets/Slashing.en.generated.html"><strong aria-hidden="true">3.3.</strong> Slashing</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="../../Tokenomics/NFTCollection.html"><strong aria-hidden="true">1.</strong> NFT collection</a></li><li class="chapter-item expanded "><a href="../../Tokenomics/Token.html"><strong aria-hidden="true">2.</strong> Reward token</a></li><li class="chapter-item expanded "><a href="../../Tokenomics/DataSheets.html"><strong aria-hidden="true">3.</strong> Data sheets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Tokenomics/DataSheets/LevelProgression.en.generated.html" class="active"><strong aria-hidden="true">3.1.</strong> Level progression</a></li><li class="chapter-item expanded "><a href="../../Tokenomics/DataSheets/ReturnOnInvestment.en.generated.html"><strong aria-hidden="true">3.2.</strong> Return On Investment</a></li><li class="chapter-item expanded "><a href="../../Tokenomics/DataSheets/Slashing.en.generated.html"><strong aria-hidden="true">3.3.</strong> Slashing</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -114,13 +114,13 @@
                     <h1 class="menu-title">MetaWomen</h1>
 
                     <div class="right-buttons">
-                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                                <a href="../../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                                                                         <a href="https://github.com/{org}/{repo}" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                                                                        <a href="https://github.com/{org}/{repo}/edit/main/doc/Tokenomics/Token.md" title="Suggest an edit" aria-label="Suggest an edit">
+                                                                        <a href="https://github.com/{org}/{repo}/edit/main/doc/Tokenomics/DataSheets/LevelProgression.en.generated.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
                         
@@ -149,29 +149,49 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="metawomen-reward-token"><a class="header" href="#metawomen-reward-token">MetaWomen Reward Token</a></h1>
-<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
-<ul>
-<li>Symbol: MWR</li>
-<li>Max supply: uncapped</li>
-<li>Initial supply: <code>100000</code></li>
-<li>Minting: yes, only after successful <a href="./NFTCollection.html#learn">Learn action</a></li>
-</ul>
-<h2 id="implementation-details"><a class="header" href="#implementation-details">Implementation details</a></h2>
-<ul>
-<li>Omnichain using <a href="https://www.portalbridge.com/#/transfer">Wormhole</a>.</li>
-<li>Home blockchain: Binance Smart Chain.</li>
-</ul>
+                        <h1 id="level-progression"><a class="header" href="#level-progression">Level progression</a></h1>
+<table><thead><tr><th>Level</th><th>Min experience</th><th>Upgrade cost (MWR)</th></tr></thead><tbody>
+<tr><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>2</td><td>10</td><td>15000</td></tr>
+<tr><td>3</td><td>22</td><td>49500</td></tr>
+<tr><td>4</td><td>37</td><td>124875</td></tr>
+<tr><td>5</td><td>52</td><td>263250</td></tr>
+<tr><td>6</td><td>68</td><td>516375</td></tr>
+<tr><td>7</td><td>85</td><td>968203</td></tr>
+<tr><td>8</td><td>103</td><td>1759851</td></tr>
+<tr><td>9</td><td>121</td><td>3101097</td></tr>
+<tr><td>10</td><td>139</td><td>5343626</td></tr>
+<tr><td>11</td><td>158</td><td>9111076</td></tr>
+<tr><td>12</td><td>177</td><td>15310067</td></tr>
+<tr><td>13</td><td>197</td><td>25560028</td></tr>
+<tr><td>14</td><td>217</td><td>42232432</td></tr>
+<tr><td>15</td><td>237</td><td>69187234</td></tr>
+<tr><td>16</td><td>257</td><td>112538729</td></tr>
+<tr><td>17</td><td>278</td><td>182601752</td></tr>
+<tr><td>18</td><td>299</td><td>294593114</td></tr>
+<tr><td>19</td><td>320</td><td>472925401</td></tr>
+<tr><td>20</td><td>342</td><td>758158534</td></tr>
+<tr><td>21</td><td>364</td><td>1210393449</td></tr>
+<tr><td>22</td><td>386</td><td>1925323646</td></tr>
+<tr><td>23</td><td>408</td><td>3052585678</td></tr>
+<tr><td>24</td><td>430</td><td>4825778829</td></tr>
+<tr><td>25</td><td>453</td><td>7625852824</td></tr>
+<tr><td>26</td><td>475</td><td>11994304939</td></tr>
+<tr><td>27</td><td>498</td><td>18862622715</td></tr>
+<tr><td>28</td><td>521</td><td>29600682032</td></tr>
+<tr><td>29</td><td>545</td><td>46446367680</td></tr>
+<tr><td>30</td><td>568</td><td>72609734429</td></tr>
+</tbody></table>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../Tokenomics/NFTCollection.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../../Tokenomics/DataSheets.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../Tokenomics/DataSheets.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="../../Tokenomics/DataSheets/ReturnOnInvestment.en.generated.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -181,11 +201,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../Tokenomics/NFTCollection.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../../Tokenomics/DataSheets.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../Tokenomics/DataSheets.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="../../Tokenomics/DataSheets/ReturnOnInvestment.en.generated.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>
@@ -200,13 +220,13 @@
         </script>
         
         
-                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+                <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
         
-        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         
