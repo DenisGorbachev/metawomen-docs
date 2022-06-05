@@ -1,4 +1,4 @@
-const { getConfig } = require('./src/util/src/dotenv.js')
+const { getConfig } = require('./src/util/src/dotenv.cjs')
 
 module.exports = async () => {
   const config = getConfig()

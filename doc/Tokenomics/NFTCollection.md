@@ -63,8 +63,10 @@
 
 ## Constants
 
-* **BasicIncome** determines the base amount of MWR tokens per [Learn action](#learn)
+* **BasicIncome** determines the base amount of MWR tokens per [Learn action](#learn).
   * Value: `1000`
+* **BasicExperience** determines the base experience for use in formulas.
+  * Value: `10`
 
 ## Actions
 
@@ -82,7 +84,7 @@ Effects:
 
 * Increases `NFT Experience` by 1
 * Decreases `NFT Energy` by 5000
-* Increases `User MWR Balance` by `RANDOM(BasicIncome * Power, BasicIncome * Power * 1.1 ^ Luck) * 0.8 ^ Fatigue`
+* Increases `User MWR Balance` by `RANDOM(BasicIncome * Power, BasicIncome * Power * Luck ^ 1.3) * 0.8 ^ Fatigue`
 
 ### Mint
 
@@ -119,9 +121,9 @@ Inputs:
 Checks:
 
 * `NFT Experience` must be greater than:
-  * `MinExperience = 10 * CurrentLevel ^ 1.2`
+  * `MinExperience = BasicExperience * CurrentLevel ^ 1.2`
 * `User MWR Balance` must be at least:
-  * `MWRBalanceForLevelUp = BasicIncome * MinExperience * 1.3 ^ TargetLevel`
+  * `MWRBalanceForLevelUp = BasicIncome * MinExperience * 1.5 ^ CurrentLevel`
 
 Effects:
 

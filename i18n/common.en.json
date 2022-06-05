@@ -1,5 +1,11 @@
 {
+  "LevelProgression": "Level progression",
+  "ReturnOnInvestment": "Return On Investment",
   "level": "Level",
   "minExperience": "Min experience",
-  "minTokenAmount": "Upgrade cost"
+  "minTokenAmount": "Upgrade cost",
+  "power": "Power",
+  "luck": "Luck",
+  "tokenMinedAmountMin": "MWR per action (min)",
+  "tokenMinedAmountMax": "MWR per action (max)"
 }

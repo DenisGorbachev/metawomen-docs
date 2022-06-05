@@ -5,10 +5,15 @@ import { loadEnv } from '../util/src/env.js'
 import { Path } from '../util/src/filesystem.js'
 import { readFile, writeFile } from 'fs/promises'
 import { impl } from '../util/src/todo.js'
-import { range } from 'lodash'
-import { getMinExperienceForUpgrade, getMinTokenAmountForUpgrade } from '../formulas.js'
+import { flatten, range } from 'lodash-es'
+import { getMinExperienceForUpgrade, getMinTokenAmountForUpgrade, getTokenMinedAmountMax, getTokenMinedAmountMin } from '../formulas.js'
 import { nail } from '../util/src/string.js'
 import { markdownTable } from 'markdown-table'
+import { fileURLToPath } from 'url'
+import { Language, LanguageSchema } from '../models/Language.js'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 export const command = getCommandName(__filename)
 
@@ -16,34 +21,44 @@ export const describe = 'Generate tables'
 
 export const builder = function (argv: Argv) {
   return argv
+    .option('language', {
+      alias: 'l',
+      string: true,
+      requiresArg: true,
+      demandOption: true,
+      choices: LanguageSchema.options,
+      description: 'A folder for tables',
+    })
     .option('folder', {
       alias: 'f',
       string: true,
       requiresArg: true,
+      demandOption: true,
       description: 'A folder for tables',
     })
 }
 
 export interface Args extends Arguments {
+  language: Language
   folder: Path
 }
 
 export const handler = async function (args: Args) {
-  const { folder } = args
+  const { folder, language } = args
   const env = await loadEnv()
-  return writeTables(folder)
+  await writeTables(language, folder)
 }
 
-export async function writeTables(folder: Path) {
+export async function writeTables(language: Language, folder: Path) {
   return together([
     writeLevelProgression,
-    // writeReturnOnInvestment,
+    writeReturnOnInvestment,
     // writeSlashing,
-  ], folder)
+  ], language, folder)
 }
 
-function getFilename(folder: string, name: string) {
-  return `${folder}/Tokenomics/Tables/${name}.generated.md`
+function getFilename(language: Language, folder: string, name: string) {
+  return `${folder}/Tokenomics/Tables/${name}.${language}.generated.md`
 }
 
 async function getLanguage(name: string) {
@@ -51,30 +66,39 @@ async function getLanguage(name: string) {
   return JSON.parse(raw.toString())
 }
 
-export async function writeLevelProgression(folder: Path) {
+export async function writeLevelProgression(language: Language, folder: Path) {
   const baseFilename = 'LevelProgression'
-  const baseTablename = 'Level progression'
-  const stats = getLevelStats()
-  const lang = await getLanguage('en')
-  const filename = getFilename(folder, baseFilename)
   const keys: LevelStatKey[] = ['level', 'minExperience', 'minTokenAmount']
-  const table = getTable(baseTablename, lang, keys, stats)
-  return writeFile(filename, nail(`
-  # ${baseTablename}
-  
-  ${table}
-  `).trim())
+  const stats = getLevelStats()
+  return writeTable(language, folder, baseFilename, keys, stats)
 }
 
-function getTable<Stat extends AbstractStat>(name: string, lang: Record<keyof Stat, string>, keys: Array<keyof Stat>, stats: Stat[]) {
+export async function writeReturnOnInvestment(language: Language, folder: Path) {
+  const baseFilename = 'ReturnOnInvestment'
+  const keys: ROIStatKey[] = ['power', 'luck', 'tokenMinedAmountMin', 'tokenMinedAmountMax']
+  const stats = getROIStats()
+  return writeTable(language, folder, baseFilename, keys, stats)
+}
+
+export function getTable<Stat extends AbstractStat>(lang: Record<keyof Stat, string>, keys: Array<keyof Stat>, stats: Stat[]) {
   const header = keys.map(k => lang[k])
   const rows = stats.map(s => keys.map(k => s[k].toString()))
   const table = [header, ...rows]
   return markdownTable(table)
 }
 
-function writeReturnOnInvestment(folder: Path) {
-  throw impl()
+export async function writeTable<Stat extends AbstractStat>(language: Language, folder: string, baseFilename: string, keys: Array<keyof Stat>, stats: Stat[]) {
+  const lang = await getLanguage(language)
+  const baseTablename = lang[baseFilename]
+  const table = getTable(lang, keys, stats)
+  const filename = getFilename(language, folder, baseFilename)
+  const content = nail(`
+  # ${baseTablename}
+  
+  ${table}
+  `).trim()
+  console.info(filename)
+  return writeFile(filename, content)
 }
 
 function writeSlashing(folder: Path) {
@@ -84,7 +108,7 @@ function writeSlashing(folder: Path) {
 function getLevelStats(): LevelStat[] {
   const from = 1
   const to = 30
-  return range(from, to).map(level => {
+  return range(from, to + 1).map(level => {
     return {
       level,
       minExperience: getMinExperienceForUpgrade(level),
@@ -93,7 +117,23 @@ function getLevelStats(): LevelStat[] {
   })
 }
 
-type AbstractStat = Record<string, string | number>
+function getROIStats(): ROIStat[] {
+  const powerFrom = 1
+  const powerTo = 5
+  const luckFrom = 1
+  const luckTo = 5
+  const result = range(powerFrom, powerTo + 1).map(power => {
+    return range(luckFrom, luckTo + 1).map(luck => ({
+      power,
+      luck,
+      tokenMinedAmountMin: getTokenMinedAmountMin(power, luck),
+      tokenMinedAmountMax: getTokenMinedAmountMax(power, luck),
+    }))
+  })
+  return flatten(result)
+}
+
+export type AbstractStat = Record<string, string | number>
 
 interface LevelStat extends AbstractStat {
   level: number
@@ -102,3 +142,12 @@ interface LevelStat extends AbstractStat {
 }
 
 type LevelStatKey = keyof LevelStat
+
+interface ROIStat extends AbstractStat {
+  power: number
+  luck: number
+  tokenMinedAmountMin: number
+  tokenMinedAmountMax: number
+}
+
+type ROIStatKey = keyof ROIStat
