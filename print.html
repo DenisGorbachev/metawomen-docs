@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="Tokenomics/NFTCollection.html"><strong aria-hidden="true">1.</strong> NFT collection</a></li><li class="chapter-item expanded "><a href="Tokenomics/Token.html"><strong aria-hidden="true">2.</strong> Reward token</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="Tokenomics/NFTCollection.html"><strong aria-hidden="true">1.</strong> NFT collection</a></li><li class="chapter-item expanded "><a href="Tokenomics/Token.html"><strong aria-hidden="true">2.</strong> Reward token</a></li><li class="chapter-item expanded "><a href="Tokenomics/DataSheets.html"><strong aria-hidden="true">3.</strong> Data sheets</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -260,9 +260,14 @@ This document describes the complete tokenomics of our project. It is aimed at p
 -->
 <h2 id="constants"><a class="header" href="#constants">Constants</a></h2>
 <ul>
-<li><strong>BasicIncome</strong> determines the base amount of MWR tokens per <a href="Tokenomics/NFTCollection.html#learn">Learn action</a>
+<li><strong>BasicIncome</strong> determines the base amount of MWR tokens per <a href="Tokenomics/NFTCollection.html#learn">Learn action</a>.
 <ul>
 <li>Value: <code>1000</code></li>
+</ul>
+</li>
+<li><strong>BasicExperience</strong> determines the base experience for use in formulas.
+<ul>
+<li>Value: <code>10</code></li>
 </ul>
 </li>
 </ul>
@@ -280,7 +285,7 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <ul>
 <li>Increases <code>NFT Experience</code> by 1</li>
 <li>Decreases <code>NFT Energy</code> by 5000</li>
-<li>Increases <code>User MWR Balance</code> by <code>RANDOM(BasicIncome * Power, BasicIncome * Power * 1.1 ^ Luck) * 0.8 ^ Fatigue</code></li>
+<li>Increases <code>User MWR Balance</code> by <code>RANDOM(BasicIncome * Power, BasicIncome * Power * Luck ^ 1.3) * 0.8 ^ Fatigue</code></li>
 </ul>
 <h3 id="mint"><a class="header" href="#mint">Mint</a></h3>
 <p>Inputs:</p>
@@ -325,12 +330,12 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <ul>
 <li><code>NFT Experience</code> must be greater than:
 <ul>
-<li><code>MinExperience = 10 * CurrentLevel ^ 1.2</code></li>
+<li><code>MinExperience = BasicExperience * CurrentLevel ^ 1.2</code></li>
 </ul>
 </li>
 <li><code>User MWR Balance</code> must be at least:
 <ul>
-<li><code>MWRBalanceForLevelUp = BasicIncome * MinExperience * 1.3 ^ TargetLevel</code></li>
+<li><code>MWRBalanceForLevelUp = BasicIncome * MinExperience * 1.5 ^ CurrentLevel</code></li>
 </ul>
 </li>
 </ul>
@@ -430,6 +435,12 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <ul>
 <li>Omnichain using <a href="https://www.portalbridge.com/#/transfer">Wormhole</a>.</li>
 <li>Home blockchain: Binance Smart Chain.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="metawomen-data-sheets"><a class="header" href="#metawomen-data-sheets">MetaWomen Data Sheets</a></h1>
+<ul>
+<li><a href="Tokenomics/DataSheets/LevelProgression.en.generated.html">Level progression</a></li>
+<li><a href="Tokenomics/DataSheets/ReturnOnInvestment.en.generated.html">Return On Investment</a></li>
+<li><a href="Tokenomics/DataSheets/Slashing.en.generated.html">Slashing</a></li>
 </ul>
 
                     </main>
