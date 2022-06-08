@@ -35,7 +35,7 @@
     "@types/lodash-es": "^4.17.6",
     "dotenv": "^16.0.1",
     "lodash-es": "^4.17.21",
-    "markdown-link-check": "^3.9.0",
+    "markdown-link-check": "^3.10.2",
     "markdown-table": "^3.0.2",
     "markdownlint-cli": "^0.31.1",
     "random": "^3.0.6",
