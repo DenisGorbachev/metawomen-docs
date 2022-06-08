@@ -7,6 +7,10 @@
   "type": "module",
   "scripts": {
     "dev": "mdbook serve",
+    "build": "yarn prebuild && mdbook build",
+    "prebuild": "yarn write:datasheets && yarn write:code",
+    "write:datasheets": "./cli.ts writeDataSheets --language en --folder doc/Tokenomics/DataSheets",
+    "write:code": "./cli.ts writeCode --language en --folder doc/Tokenomics/Code",
     "lint:all": "yarn lint:code:all && yarn lint:markdown:all",
     "lint:code": "eslint --fix --ignore-path .gitignore --max-warnings=0",
     "lint:code:all": "yarn lint:code .",

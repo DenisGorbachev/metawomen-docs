@@ -3,21 +3,22 @@ import { getCommandName } from '../util/src/yargs.js'
 import { together } from '../util/src/promise.js'
 import { loadEnv } from '../util/src/env.js'
 import { Path } from '../util/src/filesystem.js'
-import { readFile, writeFile } from 'fs/promises'
-import { impl } from '../util/src/todo.js'
+import { writeFile } from 'fs/promises'
 import { flatten, range } from 'lodash-es'
 import { getMinExperienceForUpgrade, getMinTokenAmountForUpgrade, getTokenAmountForFreezePerDayFloored, getTokenMinedAmountMax, getTokenMinedAmountMin } from '../formulas.js'
 import { nail } from '../util/src/string.js'
 import { markdownTable } from 'markdown-table'
 import { fileURLToPath } from 'url'
 import { Language, LanguageSchema, parseLanguage } from '../models/Language.js'
+import { getFilename, getLang } from './utils.js'
+import { ensure } from '../util/src/ensure.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 export const command = getCommandName(__filename)
 
-export const describe = 'Generate tables'
+export const describe = 'Write data sheets'
 
 export const builder = function (argv: Argv) {
   return argv
@@ -45,10 +46,10 @@ export const handler = async function (args: Args) {
   const { folder, language } = args
   const env = await loadEnv()
   const $language = parseLanguage(language as Language)
-  await writeTables($language, folder)
+  await writeDataSheets($language, folder)
 }
 
-export async function writeTables(language: Language, folder: Path) {
+export async function writeDataSheets(language: Language, folder: Path) {
   return together([
     writeLevelProgression,
     writeReturnOnInvestment,
@@ -56,34 +57,25 @@ export async function writeTables(language: Language, folder: Path) {
   ], language, folder)
 }
 
-function getFilename(language: Language, folder: string, name: string) {
-  return `${folder}/Tokenomics/DataSheets/${name}.${language}.generated.md`
-}
-
-async function getLanguage(name: string) {
-  const raw = await readFile(`${__dirname}/../../i18n/common.${name}.json`)
-  return JSON.parse(raw.toString())
-}
-
 export async function writeLevelProgression(language: Language, folder: Path) {
   const baseFilename = 'LevelProgression'
   const keys: LevelStatKey[] = ['level', 'minExperience', 'minTokenAmount']
   const stats = getLevelStats()
-  return writeTable(language, folder, baseFilename, keys, stats)
+  return writeDataSheet(language, folder, baseFilename, keys, stats)
 }
 
 export async function writeReturnOnInvestment(language: Language, folder: Path) {
   const baseFilename = 'ReturnOnInvestment'
   const keys: ROIStatKey[] = ['power', 'luck', 'tokenMinedAmountMin', 'tokenMinedAmountMax']
   const stats = getROIStats()
-  return writeTable(language, folder, baseFilename, keys, stats)
+  return writeDataSheet(language, folder, baseFilename, keys, stats)
 }
 
 export async function writeSlashing(language: Language, folder: Path) {
   const baseFilename = 'Slashing'
   const keys: SlashingStatKey[] = ['frozenNFTCount', 'burnedTokenAmount']
   const stats = getSlashingStats()
-  return writeTable(language, folder, baseFilename, keys, stats)
+  return writeDataSheet(language, folder, baseFilename, keys, stats)
 }
 
 export function getTable<Stat extends AbstractStat>(lang: Record<keyof Stat, string>, keys: Array<keyof Stat>, stats: Stat[]) {
@@ -93,16 +85,16 @@ export function getTable<Stat extends AbstractStat>(lang: Record<keyof Stat, str
   return markdownTable(table)
 }
 
-export async function writeTable<Stat extends AbstractStat>(language: Language, folder: string, baseFilename: string, keys: Array<keyof Stat>, stats: Stat[]) {
-  const lang = await getLanguage(language)
-  const baseTablename = lang[baseFilename]
+export async function writeDataSheet<Stat extends AbstractStat>(language: Language, folder: string, baseFilename: string, keys: Array<keyof Stat>, stats: Stat[]) {
+  const lang = await getLang(language)
+  const baseTablename = ensure(lang[baseFilename])
   const table = getTable(lang, keys, stats)
   const filename = getFilename(language, folder, baseFilename)
   const content = nail(`
   # ${baseTablename}
   
   ${table}
-  `).trim()
+  `).trim() + '\n'
   console.info(filename)
   return writeFile(filename, content)
 }

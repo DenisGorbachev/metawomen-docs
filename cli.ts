@@ -2,7 +2,8 @@
 
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
-import * as generateTables from './src/commands/writeTables.js'
+import * as writeDataSheets from './src/commands/writeDataSheets.js'
+import * as writeCode from './src/commands/writeCode.js'
 
 Error.stackTraceLimit = Infinity
 
@@ -13,7 +14,8 @@ const parser = yargs(hideBin(process.argv))
     default: false,
     description: 'Run with verbose logging',
   })
-  .command(generateTables)
+  .command(writeDataSheets)
+  .command(writeCode)
   .strict()
   .help()
   // .fail(false)

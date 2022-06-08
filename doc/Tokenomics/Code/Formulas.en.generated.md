@@ -1,3 +1,6 @@
+# Formulas
+  
+```typescript
 import { BasicExperience, BasicIncome, MaxPotential } from './constants.js'
 import { Milliseconds } from './types.js'
 import { day } from './util/src/duration.js'
@@ -65,3 +68,5 @@ export function getTokenAmountForFreeze(duration: Milliseconds) {
 export function getTokenAmountForFreezePerDayFloored(dayCount: number) {
   return getTokenAmountForFreeze(dayCount * day)
 }
+
+```
