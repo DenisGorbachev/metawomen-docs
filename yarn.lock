@@ -5168,6 +5168,7 @@ __metadata:
     markdown-link-check: ^3.9.0
     markdown-table: ^3.0.2
     markdownlint-cli: ^0.30.0
+    random: ^3.0.6
     remark-cli: ^10.0.1
     remark-lint-no-dead-urls: ^1.1.0
     remark-validate-links: ^11.0.2
@@ -6173,6 +6174,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"random@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "random@npm:3.0.6"
+  dependencies:
+    seedrandom: ^3.0.5
+  checksum: 3e900ebadafda77e6e321180e1f813a08adbed35dcc0d283fea4d73ddd82eaabd5aa1c26ce251d6e7e3205650ae5d9210a82be058b03e4607eb3ae53adb8798b
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -6489,6 +6499,13 @@ __metadata:
   version: 1.2.4
   resolution: "sax@npm:1.2.4"
   checksum: d3df7d32b897a2c2f28e941f732c71ba90e27c24f62ee918bd4d9a8cfb3553f2f81e5493c7f0be94a11c1911b643a9108f231dd6f60df3fa9586b5d2e3e9e1fe
+  languageName: node
+  linkType: hard
+
+"seedrandom@npm:^3.0.5":
+  version: 3.0.5
+  resolution: "seedrandom@npm:3.0.5"
+  checksum: 728b56bc3bc1b9ddeabd381e449b51cb31bdc0aa86e27fcd0190cea8c44613d5bcb2f6bb63ed79f78180cbe791c20b8ec31a9627f7b7fc7f476fd2bdb7e2da9f
   languageName: node
   linkType: hard
 

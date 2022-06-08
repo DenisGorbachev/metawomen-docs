@@ -51,16 +51,6 @@
   * Implementation details:
     * Calculate the current energy level dynamically: `const energy = getEnergy(events)`
 
-<!--
-* **Mint energy** determines if the user can take a [Mint action](#mint)
-  * Initial value: `172800` (24 hours * 60 minutes * 60 seconds)
-  * Max value: `172800`
-  * Increased by: `1` per second
-  * Decreased by: `172800` per [Mint](#mint) action
-  * Implementation details:
-    * Calculate the current energy level dynamically: `const mintEnergy = getMintEnergy(events)`
--->
-
 ## Constants
 
 * **BasicIncome** determines the base amount of MWR tokens per [Learn action](#learn).
