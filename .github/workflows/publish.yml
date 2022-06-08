@@ -22,6 +22,8 @@ jobs:
           mdbook-version: '0.4.10'
           # mdbook-version: 'latest'
 
+      - run: git submodule foreach yarn install
+
       - run: yarn install
 
       - run: yarn build
