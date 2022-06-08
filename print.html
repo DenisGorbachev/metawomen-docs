@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="Tokenomics/NFTCollection.html"><strong aria-hidden="true">1.</strong> NFT collection</a></li><li class="chapter-item expanded "><a href="Tokenomics/Token.html"><strong aria-hidden="true">2.</strong> Reward token</a></li><li class="chapter-item expanded "><a href="Tokenomics/DataSheets.html"><strong aria-hidden="true">3.</strong> Data sheets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Tokenomics/DataSheets/LevelProgression.en.generated.html"><strong aria-hidden="true">3.1.</strong> Level progression</a></li><li class="chapter-item expanded "><a href="Tokenomics/DataSheets/ReturnOnInvestment.en.generated.html"><strong aria-hidden="true">3.2.</strong> Return On Investment</a></li><li class="chapter-item expanded "><a href="Tokenomics/DataSheets/Slashing.en.generated.html"><strong aria-hidden="true">3.3.</strong> Slashing</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="Overview.html">Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tokenomics</li><li class="chapter-item expanded "><a href="Tokenomics/NFTCollection.html"><strong aria-hidden="true">1.</strong> NFT collection</a></li><li class="chapter-item expanded "><a href="Tokenomics/Token.html"><strong aria-hidden="true">2.</strong> Reward token</a></li><li class="chapter-item expanded "><a href="Tokenomics/DataSheets.html"><strong aria-hidden="true">3.</strong> Data sheets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Tokenomics/DataSheets/LevelProgression.en.generated.html"><strong aria-hidden="true">3.1.</strong> Level progression</a></li><li class="chapter-item expanded "><a href="Tokenomics/DataSheets/ReturnOnInvestment.en.generated.html"><strong aria-hidden="true">3.2.</strong> Return On Investment</a></li><li class="chapter-item expanded "><a href="Tokenomics/DataSheets/Slashing.en.generated.html"><strong aria-hidden="true">3.3.</strong> Slashing</a></li></ol></li><li class="chapter-item expanded "><a href="Tokenomics/Code/Formulas.en.generated.html"><strong aria-hidden="true">4.</strong> Formulas</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -547,6 +547,76 @@ This document describes the complete tokenomics of our project. It is aimed at p
 <tr><td>490</td><td>490000</td></tr>
 <tr><td>500</td><td>500000</td></tr>
 </tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="formulas"><a class="header" href="#formulas">Formulas</a></h1>
+<pre><code class="language-typescript">import { BasicExperience, BasicIncome, MaxPotential } from './constants.js'
+import { Milliseconds } from './types.js'
+import { day } from './util/src/duration.js'
+import { expect } from './util/src/chai.js'
+import { Random } from 'random'
+
+/**
+ * How much experience the user needs to upgrade to `level`
+ */
+export function getMinExperienceForUpgrade(level: number) {
+  expect(level).to.be.greaterThanOrEqual(1)
+  return Math.floor(BasicExperience * Math.pow(level - 1, 1.2))
+}
+
+/**
+ * How many tokens the user needs to upgrade to `level`
+ */
+export function getMinTokenAmountForUpgrade(level: number) {
+  expect(level).to.be.greaterThanOrEqual(1)
+  const minExperience = getMinExperienceForUpgrade(level)
+  return Math.floor(BasicIncome * minExperience * Math.pow(1.5, (level - 1)))
+}
+
+/**
+ * How many tokens the user will mine with each basic action
+ */
+export function getTokenMinedAmount(random: Random, power: number, luck: number, fatigue: number) {
+  const min = getTokenMinedAmountMin(power, luck)
+  const max = getTokenMinedAmountMax(power, luck)
+  const getRandomAmount = random.uniform(min, max)
+  return Math.floor(getRandomAmount() * Math.pow(fatigue, 0.8))
+}
+
+export function getTokenMinedAmountMin(power: number, luck: number) {
+  return Math.floor(BasicIncome * power)
+}
+
+export function getTokenMinedAmountMax(power: number, luck: number) {
+  return Math.floor(getTokenMinedAmountMin(power, luck) * Math.pow(luck, 1.3))
+}
+
+/**
+ * How many tokens the user needs to mint a new NFT
+ * Parent potential drops -&gt; Mint cost increases
+ */
+export function getMinTokenAmountForMint(parentAPotential: number, parentBPotential: number) {
+  const potentialDiff = MaxPotential - Math.min(parentAPotential, parentBPotential)
+  return Math.floor(BasicIncome * 50 * Math.pow(1.2, potentialDiff))
+}
+
+/**
+ * How many tokens the user needs to rest (drop fatigue to 0)
+ */
+export function getMinTokenAmountForRest(experience: number) {
+  return Math.floor(BasicIncome * experience * 0.1)
+}
+
+/**
+ * How many tokens the user needs to freeze the NFT (prevent slashing)
+ */
+export function getTokenAmountForFreeze(duration: Milliseconds) {
+  return Math.floor(BasicIncome * duration / day)
+}
+
+export function getTokenAmountForFreezePerDayFloored(dayCount: number) {
+  return getTokenAmountForFreeze(dayCount * day)
+}
+
+</code></pre>
 
                     </main>
 
